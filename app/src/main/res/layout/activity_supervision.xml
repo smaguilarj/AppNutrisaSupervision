@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
+    tools:context=".ui.main.view.SupervisionActivity">
+
+    <ImageView
+        android:id="@+id/imageView_logo"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:padding="15dp"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/nutrisalogoverde" />
+
+    <ImageView
+        android:id="@+id/img_visita_rapida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:singleLine="true"
+        app:layout_constraintEnd_toStartOf="@+id/imgViewOperaciones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_logo"
+        app:srcCompat="@drawable/ic_abeja_bicolor" />
+
+    <TextView
+        android:id="@+id/txv_rapida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Visita Rápida\n a  Tienda"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/img_visita_rapida"
+        app:layout_constraintStart_toStartOf="@+id/img_visita_rapida"
+        app:layout_constraintTop_toBottomOf="@+id/img_visita_rapida" />
+
+    <ImageView
+        android:id="@+id/imgViewOperaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_visita_rapida"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_visita_rapida"
+        app:layout_constraintTop_toTopOf="@+id/img_visita_rapida"
+        app:srcCompat="@drawable/ic_abeja_bicolor" />
+
+    <TextView
+        android:id="@+id/txv_operaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Visita Auditoria\n Operaciones"
+       android:gravity="center"
+        android:maxLines="2"
+        android:lines="2"
+        app:layout_constraintEnd_toEndOf="@+id/imgViewOperaciones"
+        app:layout_constraintStart_toStartOf="@+id/imgViewOperaciones"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewOperaciones" />
+
+    <ImageView
+        android:id="@+id/imgViewRegional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="@+id/imgViewOperaciones"
+        app:layout_constraintStart_toStartOf="@+id/img_visita_rapida"
+        app:layout_constraintTop_toBottomOf="@+id/txv_rapida"
+        app:srcCompat="@drawable/ic_abeja_bicolor" />
+
+    <TextView
+        android:id="@+id/txv_regional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Visita Auditoria \n Regional"
+        android:inputType="textMultiLine"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/imgViewRegional"
+        app:layout_constraintStart_toStartOf="@+id/imgViewRegional"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewRegional" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
