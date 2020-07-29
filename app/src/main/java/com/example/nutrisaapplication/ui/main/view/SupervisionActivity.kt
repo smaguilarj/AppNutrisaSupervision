@@ -11,6 +11,10 @@ class SupervisionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_supervision)
         img_visita_rapida.setOnClickListener {
+            this.startActivity( Intent(this, MenuActivity::class.java))
+        }
+
+        imgViewOperaciones.setOnClickListener {
             this.startActivity( Intent(this, HomeActivity::class.java))
         }
     }

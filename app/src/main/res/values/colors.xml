@@ -3,8 +3,9 @@
     <color name="colorPrimary">#c0df16</color>
     <color name="colorprimaryLight">#f6ff58</color>
     <color name="colorPrimaryDark">#c0df16</color>
-    <color name="colorAccent">#e3e935</color>
+    <color name="colorAccent">#b9d9eb</color>
     <color name="secondaryLightColor">#F0EC74</color>
     <color name="primaryTextColor">#000000</color>
-    <color name="secondaryTextColor">#b9d9eb</color>
+    <color name="secondaryTextColor">#e3e935</color>
+    <color name="secundaryText">#818181</color>
 </resources>
