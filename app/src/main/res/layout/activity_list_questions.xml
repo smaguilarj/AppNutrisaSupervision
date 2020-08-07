@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/secondaryLightColor"
+    android:backgroundTint="@color/common_google_signin_btn_text_dark_pressed"
     android:background="@color/common_google_signin_btn_text_dark_pressed"
     tools:context=".ui.main.view.VisitaRapidaActivity">
 
@@ -14,7 +14,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="36dp"
         android:text="Selecciona tu región"
         android:textColor="@color/primaryTextColor"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +36,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:visibility="visible"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
@@ -68,6 +69,7 @@
         android:id="@+id/spinner_distrito"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
@@ -109,8 +111,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -119,6 +121,7 @@
         app:srcCompat="@mipmap/ic_launcher" />
 
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:id="@+id/layoutNombre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -129,6 +132,7 @@
         app:counterEnabled="true"
         app:counterMaxLength="40"
         app:errorEnabled="true"
+        app:hintTextColor="@color/primaryTextColor"
         app:layout_constraintBottom_toTopOf="@+id/layout_responsable"
         app:layout_constraintEnd_toEndOf="@+id/spinner_tienda"
         app:layout_constraintStart_toStartOf="@+id/spinner_tienda"
@@ -141,7 +145,7 @@
             android:layout_marginTop="34dp"
             android:hint="Nombre del evaluador"
             android:inputType="textEmailAddress"
-            android:textAlignment="center"
+            android:textAlignment="viewStart"
             android:textColor="@color/primaryTextColor"
             android:textColorHint="@color/primaryTextColor"
             app:layout_constraintEnd_toEndOf="parent"
@@ -159,6 +163,8 @@
         app:counterEnabled="true"
         app:counterMaxLength="40"
         app:errorEnabled="true"
+        app:hintTextColor="@color/primaryTextColor"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         app:layout_constraintBottom_toTopOf="@+id/layout_comentarios"
         app:layout_constraintEnd_toEndOf="@+id/spinner_tienda"
         app:layout_constraintHorizontal_bias="0.0"
@@ -172,7 +178,7 @@
             android:layout_marginTop="34dp"
             android:hint="Responsable del turno"
             android:inputType="textEmailAddress"
-            android:textAlignment="center"
+            android:textAlignment="viewStart"
             android:textColor="@color/primaryTextColor"
             android:textColorHint="@color/primaryTextColor"
             app:layout_constraintEnd_toEndOf="parent"
@@ -191,7 +197,8 @@
         app:counterEnabled="true"
         app:counterMaxLength="40"
         app:errorEnabled="true"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:hintTextColor="@color/primaryTextColor"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:layout_constraintEnd_toEndOf="@+id/spinner_tienda"
         app:layout_constraintStart_toStartOf="@+id/spinner_tienda"
         app:layout_constraintTop_toBottomOf="@+id/layout_responsable">
@@ -203,7 +210,7 @@
             android:layout_marginTop="34dp"
             android:hint="Comentarios opcionales de entrada"
             android:inputType="textEmailAddress"
-            android:textAlignment="center"
+            android:textAlignment="viewStart"
             android:textColor="@color/primaryTextColor"
             android:textColorHint="@color/primaryTextColor"
             app:layout_constraintEnd_toEndOf="parent"
@@ -211,15 +218,5 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="Siguiente"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/layout_comentarios"
-        app:layout_constraintTop_toBottomOf="@+id/layout_comentarios" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

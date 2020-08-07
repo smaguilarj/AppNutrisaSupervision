@@ -8,13 +8,17 @@
             <item name="colorAccent">#03A9F4</item>
 <!--        <item name="colorAccent"> #F5B7C3</item>-->
     </style>
+    <style name="AppTheme2" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">#03A9F4</item>
+    </style>
     <style name="ActionBarTitleTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textColor">@color/primaryTextColor</item>
     </style>
     <style name="NoActionBar" parent="Theme.AppCompat.NoActionBar">
         <item name="android:textColor">@color/primaryTextColor</item>
         <item name="colorPrimary">@color/colorPrimary</item>
-<!--        <item name="colorPrimaryDark">@color/colorPrimary</item>-->
         <item name="colorAccent">#03A9F4</item>
     </style>
 </resources>
