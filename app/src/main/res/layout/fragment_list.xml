@@ -40,7 +40,7 @@
         android:text="Iniciar Visita\nRapida"
         android:textColor="@color/primaryTextColor"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/topUpRowFloatingActionButtonBrand2"
+        app:layout_constraintEnd_toStartOf="@+id/topUpRowFloatingActionButtonBrandFachada"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/FloatingActionButtonInicio" />
 
@@ -59,13 +59,13 @@
         android:src="@drawable/ic_ice_gota"
         app:fabCustomSize="60dp"
         app:fabSize="normal"
-        app:layout_constraintEnd_toEndOf="@+id/topUpRowFloatingActionButtonBrand2"
-        app:layout_constraintStart_toStartOf="@+id/topUpRowFloatingActionButtonBrand2"
+        app:layout_constraintEnd_toEndOf="@+id/topUpRowFloatingActionButtonBrandFachada"
+        app:layout_constraintStart_toStartOf="@+id/topUpRowFloatingActionButtonBrandFachada"
         app:layout_constraintTop_toTopOf="@+id/floatingActionButton"
         app:maxImageSize="30dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/topUpRowFloatingActionButtonBrand2"
+        android:id="@+id/topUpRowFloatingActionButtonBrandFachada"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -80,7 +80,7 @@
         app:fabCustomSize="60dp"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="@+id/FloatingActionButtonInicio"
-        app:layout_constraintEnd_toStartOf="@+id/floatingActionButton2"
+        app:layout_constraintEnd_toStartOf="@+id/floatingButtonPiso"
         app:layout_constraintStart_toEndOf="@+id/FloatingActionButtonInicio"
         app:layout_constraintTop_toTopOf="@+id/FloatingActionButtonInicio"
         app:maxImageSize="30dp" />
@@ -95,9 +95,9 @@
         android:text="Fachada"
         android:textColor="@color/primaryTextColor"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/topUpRowFloatingActionButtonBrand2"
-        app:layout_constraintStart_toStartOf="@+id/topUpRowFloatingActionButtonBrand2"
-        app:layout_constraintTop_toBottomOf="@+id/topUpRowFloatingActionButtonBrand2" />
+        app:layout_constraintEnd_toEndOf="@+id/topUpRowFloatingActionButtonBrandFachada"
+        app:layout_constraintStart_toStartOf="@+id/topUpRowFloatingActionButtonBrandFachada"
+        app:layout_constraintTop_toBottomOf="@+id/topUpRowFloatingActionButtonBrandFachada" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -132,7 +132,7 @@
         app:layout_constraintTop_toBottomOf="@+id/floatingActionButton" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
+        android:id="@+id/floatingButtonPiso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -141,9 +141,9 @@
         app:fabCustomSize="60dp"
         android:backgroundTint="@color/colorAccent"
         android:src="@drawable/ic_ice_gota"
-        app:layout_constraintBottom_toBottomOf="@+id/topUpRowFloatingActionButtonBrand2"
+        app:layout_constraintBottom_toBottomOf="@+id/topUpRowFloatingActionButtonBrandFachada"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
-        app:layout_constraintTop_toTopOf="@+id/topUpRowFloatingActionButtonBrand2"
+        app:layout_constraintTop_toTopOf="@+id/topUpRowFloatingActionButtonBrandFachada"
         app:maxImageSize="30dp"
         app:srcCompat="@drawable/ic_abeja_naranja" />
 
@@ -156,9 +156,9 @@
         android:text="Piso de Venta"
         android:textColor="#101010"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/floatingActionButton2"
-        app:layout_constraintStart_toStartOf="@+id/floatingActionButton2"
-        app:layout_constraintTop_toBottomOf="@+id/floatingActionButton2" />
+        app:layout_constraintEnd_toEndOf="@+id/floatingButtonPiso"
+        app:layout_constraintStart_toStartOf="@+id/floatingButtonPiso"
+        app:layout_constraintTop_toBottomOf="@+id/floatingButtonPiso" />
 
     <TextView
         android:id="@+id/textView7"
@@ -236,8 +236,8 @@
         android:backgroundTint="@color/colorAccent"
         android:src="@drawable/ic_ice_gota"
         app:layout_constraintBottom_toBottomOf="@+id/FloatingActionButton2"
-        app:layout_constraintEnd_toEndOf="@+id/floatingActionButton2"
-        app:layout_constraintStart_toStartOf="@+id/floatingActionButton2"
+        app:layout_constraintEnd_toEndOf="@+id/floatingButtonPiso"
+        app:layout_constraintStart_toStartOf="@+id/floatingButtonPiso"
         app:layout_constraintTop_toTopOf="@+id/FloatingActionButton2"
         app:maxImageSize="30dp"
         app:srcCompat="@drawable/ic_abeja_naranja" />
