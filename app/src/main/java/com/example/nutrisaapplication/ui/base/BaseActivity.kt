@@ -101,7 +101,6 @@ open class BaseActivity : AppCompatActivity() {
         if (saveInStack) {
             ft.addToBackStack(tag)
         }
-
         ft.commit()
     }
 

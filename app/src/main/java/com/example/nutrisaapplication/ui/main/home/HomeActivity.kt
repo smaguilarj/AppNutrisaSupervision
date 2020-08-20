@@ -1,6 +1,5 @@
-package com.example.nutrisaapplication.ui.main.view
+package com.example.nutrisaapplication.ui.main.home
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import com.example.nutrisaapplication.R

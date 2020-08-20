@@ -1,6 +1,5 @@
-package com.example.nutrisaapplication.ui.main.view
+package com.example.nutrisaapplication.ui.main.home
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.nutrisaapplication.R
 import com.example.nutrisaapplication.ui.base.BaseActivity
+import com.example.nutrisaapplication.ui.main.home_regional.view.HomeRegionalActivity
+import com.example.nutrisaapplication.ui.main.view.VisitaRapidaActivity
+import kotlinx.android.synthetic.main.activity_supervision.*
 import kotlinx.android.synthetic.main.fragment_blank.*
 
 /**
@@ -26,12 +28,13 @@ class VisitToStoreFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         linearLayout.setOnClickListener {
-            (activity as BaseActivity).changeActivity(ListQuestionsActivity::class.java)
+            (activity as BaseActivity).changeActivity(VisitaRapidaActivity::class.java)
         }
 
         imgInicio.setOnClickListener {
-            (activity as BaseActivity).changeActivity(ListQuestionsActivity::class.java)
+            (activity as BaseActivity).changeActivity(VisitaRapidaActivity::class.java)
         }
+
     }
 
 }

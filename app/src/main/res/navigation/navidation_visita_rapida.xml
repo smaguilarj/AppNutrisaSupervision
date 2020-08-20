@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navidation_visita_rapida"
+    app:startDestination="@id/menuFragment">
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.nutrisaapplication.ui.main.menuVisita.MenuFragment"
+        android:label="MenuFragment"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_menuFragment_to_visitaRapidaActivity"
+            app:destination="@id/visitaRapidaActivity" />
+        <action
+            android:id="@+id/action_menuFragment_to_barraFragment"
+            app:destination="@id/barraFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_cajaFragment"
+            app:destination="@id/cajaFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_fachadaFragment"
+            app:destination="@id/fachadaFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_pisoFragment"
+            app:destination="@id/pisoFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_bodegaPizarraFragment"
+            app:destination="@id/bodegaPizarraFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/visitaRapidaActivity"
+        android:name="com.example.nutrisaapplication.ui.main.view.VisitaRapidaActivity"
+        android:label="activity_list_questions"
+        tools:layout="@layout/activity_list_questions" />
+    <fragment
+        android:id="@+id/barraFragment"
+        android:name="com.example.nutrisaapplication.ui.main.barra.BarraFragment"
+        android:label="fragment_barra"
+        tools:layout="@layout/fragment_barra" >
+        <action
+            android:id="@+id/action_barraFragment_to_cajaFragment"
+            app:destination="@id/cajaFragment" />
+        <action
+            android:id="@+id/action_barraFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/cajaFragment"
+        android:name="com.example.nutrisaapplication.ui.main.caja.CajaFragment"
+        android:label="fragment_caja"
+        tools:layout="@layout/fragment_caja" >
+        <action
+            android:id="@+id/action_cajaFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+
+        <action
+            android:id="@+id/action_cajaFragment_to_bodegaPizarraFragment"
+            app:destination="@id/bodegaPizarraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pisoFragment"
+        android:name="com.example.nutrisaapplication.ui.main.piso.view.PisoFragment"
+        android:label="PisoFragment"
+        tools:layout="@layout/fragment_piso" >
+        <action
+            android:id="@+id/action_pisoFragment_to_barraFragment"
+            app:destination="@id/barraFragment" />
+        <action
+            android:id="@+id/action_pisoFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fachadaFragment"
+        android:name="com.example.nutrisaapplication.ui.main.fachada.FachadaFragment"
+        android:label="FachadaFragment"
+        tools:layout="@layout/fragment_fachada" >
+        <action
+            android:id="@+id/action_fachadaFragment_to_pisoFragment"
+            app:destination="@id/pisoFragment"
+           />
+    </fragment>
+    <fragment
+        android:id="@+id/bodegaPizarraFragment"
+        android:name="com.example.nutrisaapplication.ui.main.bodega.BodegaPizarraFragment"
+        android:label="BodegaPizarraFragment"
+        tools:layout="@layout/fragment_bodega_pizarra">
+        <action
+            android:id="@+id/action_bodegaPizarraFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_bodegaPizarraFragment_to_planTrabajoFragment"
+            app:destination="@id/planTrabajoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/planTrabajoFragment"
+        android:name="com.example.nutrisaapplication.ui.main.plan_trabajo.PlanTrabajoFragment"
+        android:label="fragment_plan_trabajo"
+        tools:layout="@layout/fragment_plan_trabajo" >
+        <action
+            android:id="@+id/action_planTrabajoFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+</navigation>

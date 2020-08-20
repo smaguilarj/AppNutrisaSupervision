@@ -1,4 +1,4 @@
-package com.example.nutrisaapplication.ui.main.view
+package com.example.nutrisaapplication.ui.main.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,9 +7,8 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.WindowManager
 import android.widget.Toast
-import androidx.core.widget.addTextChangedListener
-import androidx.core.widget.doBeforeTextChanged
 import com.example.nutrisaapplication.R
+import com.example.nutrisaapplication.ui.main.supervision.SupervisionActivity
 import com.example.nutrisaapplication.utils.Validations
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*

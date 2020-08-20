@@ -4,180 +4,184 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.view.FachadaActivity">
+    tools:context=".ui.main.fachada.FachadaFragment">
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="9dp"
         android:text="@string/pregunta1"
         android:textColor="@color/primaryTextColor"
+        app:layout_constraintBottom_toTopOf="@+id/imb_na18"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/imb_na18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_block_50"
         android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+        app:layout_constraintBottom_toBottomOf="@+id/imb_no18"
         app:layout_constraintEnd_toEndOf="@+id/textView6"
-        app:layout_constraintStart_toEndOf="@+id/imageButton2"
-        app:layout_constraintTop_toTopOf="@+id/imageButton2" />
+        app:layout_constraintStart_toEndOf="@+id/imb_no18"
+        app:layout_constraintTop_toTopOf="@+id/imb_no18" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/imb_no18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/imb_acept"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
-        app:layout_constraintStart_toEndOf="@+id/imb_acept"
-        app:layout_constraintTop_toTopOf="@+id/imb_acept"
+        app:layout_constraintBottom_toBottomOf="@+id/imb_yes18"
+        app:layout_constraintEnd_toStartOf="@+id/imb_na18"
+        app:layout_constraintStart_toEndOf="@+id/imb_yes18"
+        app:layout_constraintTop_toTopOf="@+id/imb_yes18"
         android:background="@android:color/transparent"
         app:srcCompat="@mipmap/ic_cancel" />
 
     <ImageButton
-        android:id="@+id/imb_acept"
+        android:id="@+id/imb_yes18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/imb_no18"
         app:layout_constraintStart_toStartOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         app:srcCompat="@drawable/ic_done_50" />
 
     <TextView
-        android:id="@+id/tv_na"
+        android:id="@+id/tv_na7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="N/A"
         android:textColor="@color/primaryTextColor"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton"
-        app:layout_constraintStart_toStartOf="@+id/imageButton"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+        app:layout_constraintEnd_toEndOf="@+id/imb_na18"
+        app:layout_constraintStart_toStartOf="@+id/imb_na18"
+        app:layout_constraintTop_toBottomOf="@+id/imb_na18" />
 
     <TextView
-        android:id="@+id/tv_yes"
+        android:id="@+id/tv_yes7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SI"
         android:textColor="@color/primaryTextColor"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imb_acept"
-        app:layout_constraintStart_toStartOf="@+id/imb_acept"
-        app:layout_constraintTop_toBottomOf="@+id/imb_acept" />
+        app:layout_constraintEnd_toEndOf="@+id/imb_yes18"
+        app:layout_constraintStart_toStartOf="@+id/imb_yes18"
+        app:layout_constraintTop_toBottomOf="@+id/imb_yes18" />
 
     <TextView
-        android:id="@+id/tv_not"
+        android:id="@+id/tv_not7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NO"
         android:textColor="@color/primaryTextColor"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton2"
-        app:layout_constraintStart_toStartOf="@+id/imageButton2"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2"/>
+        app:layout_constraintEnd_toEndOf="@+id/imb_no18"
+        app:layout_constraintStart_toStartOf="@+id/imb_no18"
+        app:layout_constraintTop_toBottomOf="@+id/imb_no18"/>
 
 
     <TextView
-        android:id="@+id/tv_question2"
+        android:id="@+id/tv_question19"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/pregunta2"
         android:textAlignment="textStart"
         android:textColor="@color/primaryTextColor"
+        app:layout_constraintBottom_toTopOf="@+id/imb_na19"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toBottomOf="@+id/img_question" />
+        app:layout_constraintTop_toBottomOf="@+id/img_question18" />
 
     <ImageButton
-        android:id="@+id/imab_na"
+        android:id="@+id/imb_na19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:src="@drawable/ic_block_50"
-        app:layout_constraintBottom_toBottomOf="@+id/imb2_cancel"
-        app:layout_constraintEnd_toEndOf="@+id/tv_question2"
-        app:layout_constraintStart_toEndOf="@+id/imb2_cancel"
-        app:layout_constraintTop_toTopOf="@+id/imb2_cancel" />
+        app:layout_constraintBottom_toBottomOf="@+id/imb_no19"
+        app:layout_constraintEnd_toEndOf="@+id/tv_question19"
+        app:layout_constraintStart_toEndOf="@+id/imb_no19"
+        app:layout_constraintTop_toTopOf="@+id/imb_no19" />
 
     <ImageButton
-        android:id="@+id/imb2_cancel"
+        android:id="@+id/imb_no19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="@+id/imb2_acept"
-        app:layout_constraintEnd_toStartOf="@+id/imab_na"
-        app:layout_constraintStart_toEndOf="@+id/imb2_acept"
-        app:layout_constraintTop_toTopOf="@+id/imb2_acept"
+        app:layout_constraintBottom_toBottomOf="@+id/imb_yes19"
+        app:layout_constraintEnd_toStartOf="@+id/imb_na19"
+        app:layout_constraintStart_toEndOf="@+id/imb_yes19"
+        app:layout_constraintTop_toTopOf="@+id/imb_yes19"
         app:srcCompat="@mipmap/ic_cancel" />
 
     <ImageButton
-        android:id="@+id/imb2_acept"
+        android:id="@+id/imb_yes19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
-        app:layout_constraintEnd_toStartOf="@+id/imb2_cancel"
-        app:layout_constraintStart_toStartOf="@+id/tv_question2"
-        app:layout_constraintTop_toBottomOf="@+id/tv_question2"
+        app:layout_constraintEnd_toStartOf="@+id/imb_no19"
+        app:layout_constraintStart_toStartOf="@+id/tv_question19"
+        app:layout_constraintTop_toBottomOf="@+id/tv_question19"
         app:srcCompat="@drawable/ic_done_50" />
 
     <TextView
-        android:id="@+id/tv_na2"
+        android:id="@+id/tv_na12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="N/A"
         android:textColor="@color/primaryTextColor"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imab_na"
-        app:layout_constraintStart_toStartOf="@+id/imab_na"
-        app:layout_constraintTop_toBottomOf="@+id/imab_na" />
+        app:layout_constraintEnd_toEndOf="@+id/imb_na19"
+        app:layout_constraintStart_toStartOf="@+id/imb_na19"
+        app:layout_constraintTop_toBottomOf="@+id/imb_na19" />
 
     <ImageView
-        android:id="@+id/img_question"
+        android:id="@+id/img_question18"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="@+id/tv_na"
-        app:layout_constraintStart_toStartOf="@+id/imb_acept"
+        app:layout_constraintEnd_toEndOf="@+id/tv_na7"
+        app:layout_constraintStart_toStartOf="@+id/imb_yes18"
         app:layout_constraintTop_toBottomOf="@+id/edt_1"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <TextView
-        android:id="@+id/tv_yes2"
+        android:id="@+id/tv_yes12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SI"
         android:textColor="@color/primaryTextColor"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imb2_acept"
-        app:layout_constraintStart_toStartOf="@+id/imb2_acept"
-        app:layout_constraintTop_toBottomOf="@+id/imb2_acept" />
+        app:layout_constraintEnd_toEndOf="@+id/imb_yes19"
+        app:layout_constraintStart_toStartOf="@+id/imb_yes19"
+        app:layout_constraintTop_toBottomOf="@+id/imb_yes19" />
 
     <TextView
-        android:id="@+id/tv_not2"
+        android:id="@+id/tv_not12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NO"
         android:textColor="@color/primaryTextColor"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imb2_cancel"
-        app:layout_constraintStart_toStartOf="@+id/imb2_cancel"
-        app:layout_constraintTop_toBottomOf="@+id/imb2_cancel"/>
+        app:layout_constraintEnd_toEndOf="@+id/imb_no19"
+        app:layout_constraintStart_toStartOf="@+id/imb_no19"
+        app:layout_constraintTop_toBottomOf="@+id/imb_no19"/>
 
     <ImageView
-        android:id="@+id/imageViewPhoto"
+        android:id="@+id/img_question19"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="@+id/imab_na"
-        app:layout_constraintStart_toStartOf="@+id/imb2_acept"
-        app:layout_constraintTop_toBottomOf="@+id/edt_2"
+        app:layout_constraintEnd_toEndOf="@+id/imb_na19"
+        app:layout_constraintStart_toStartOf="@+id/imb_yes19"
+        app:layout_constraintTop_toBottomOf="@+id/edt_19"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -208,7 +212,7 @@
         app:hintTextColor="@color/primaryTextColor"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toBottomOf="@+id/tv_not">
+        app:layout_constraintTop_toBottomOf="@+id/tv_not7">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edt1"
@@ -221,23 +225,23 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edt_2"
+        android:id="@+id/edt_19"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:maxLines="2"
         app:counterEnabled="true"
         app:counterMaxLength="40"
         app:errorEnabled="true"
         app:hintAnimationEnabled="true"
         app:hintTextColor="@color/primaryTextColor"
+        app:layout_constraintBottom_toTopOf="@+id/img_question19"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toBottomOf="@+id/tv_not2">
+        app:layout_constraintTop_toBottomOf="@+id/tv_not12">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt2"
+            android:id="@+id/edt12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Escribe aqui tu comentario "
@@ -245,14 +249,26 @@
             android:inputType="textAutoComplete"
             android:maxLines="2" />
     </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/title_fachada"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonFachada"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:text="Enviar datos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"

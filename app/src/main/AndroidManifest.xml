@@ -17,32 +17,36 @@
         android:screenOrientation="userPortrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.main.piso.view.PisoActivity"
+        <activity android:name=".ui.main.home_regional.view.HomeRegionalActivity"
             android:screenOrientation="userPortrait"
-            android:theme="@style/AppTheme2"/>
+            android:theme="@style/AppTheme2"></activity>
         <activity
-            android:name=".ui.main.view.FachadaActivity"
-            android:screenOrientation="userPortrait"
-            android:theme="@style/AppTheme2" />
-        <activity
-            android:name=".ui.main.view.ListQuestionsActivity"
+            android:name=".ui.main.piso.view.PisoActivity"
             android:screenOrientation="userPortrait"
             android:theme="@style/AppTheme2" />
         <activity
-            android:name=".ui.main.view.MenuActivity"
+            android:name=".ui.main.fachada.FachadaActivity"
             android:screenOrientation="userPortrait"
             android:theme="@style/AppTheme2" />
         <activity
             android:name=".ui.main.view.VisitaRapidaActivity"
+            android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".ui.main.menuVisita.MenuActivity"
+            android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".ui.main.quickVisit.QuickVisitActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="userPortrait"
             android:theme="@style/AppTheme2" />
         <activity
-            android:name=".ui.main.view.SupervisionActivity"
+            android:name=".ui.main.supervision.SupervisionActivity"
             android:screenOrientation="userPortrait"
             android:theme="@style/AppTheme2" />
         <activity
-            android:name=".ui.main.view.LoginActivity"
+            android:name=".ui.main.login.LoginActivity"
             android:screenOrientation="userPortrait"
             android:theme="@style/NoActionBar">
             <intent-filter>
@@ -52,7 +56,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.main.view.HomeActivity"
+            android:name=".ui.main.home.HomeActivity"
             android:screenOrientation="userPortrait"
             android:theme="@style/AppTheme2" />
     </application>

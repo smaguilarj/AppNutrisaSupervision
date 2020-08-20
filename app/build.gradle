@@ -27,6 +27,8 @@ android {
 }
 
 dependencies {
+
+    def nav_version = "2.3.0"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -46,5 +48,8 @@ dependencies {
     //Image Picker Library
     implementation 'com.github.florent37:inline-activity-result-kotlin:1.0.1'
     implementation 'com.github.dhaval2404:imagepicker-support:1.1'
+    //navigationFragment
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
 }

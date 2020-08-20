@@ -20,71 +20,76 @@
 
     <ImageView
         android:id="@+id/imgVisitaRapida"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="16dp"
         android:clickable="true"
         android:singleLine="true"
-        app:layout_constraintEnd_toStartOf="@+id/imgViewOperaciones"
+        app:layout_constraintEnd_toStartOf="@+id/imgOperacionesRegional"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_logo"
-        app:srcCompat="@drawable/ic_abeja_bicolor" />
+        app:srcCompat="@drawable/ic_abeja_naranja" />
 
     <TextView
         android:id="@+id/txv_rapida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Visita Rápida\n a  Tienda"
+        android:layout_marginTop="8dp"
         android:gravity="center"
+        android:text="Visita Rápida\n a  Tienda"
         app:layout_constraintEnd_toEndOf="@+id/imgVisitaRapida"
         app:layout_constraintStart_toStartOf="@+id/imgVisitaRapida"
         app:layout_constraintTop_toBottomOf="@+id/imgVisitaRapida" />
 
     <ImageView
-        android:id="@+id/imgViewOperaciones"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imgOperacionesRegional"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginStart="16dp"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="@+id/imgVisitaRapida"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imgVisitaRapida"
         app:layout_constraintTop_toTopOf="@+id/imgVisitaRapida"
-        app:srcCompat="@drawable/ic_abeja_bicolor" />
+        app:srcCompat="@drawable/ic_abeja_naranja" />
 
     <TextView
         android:id="@+id/txv_operaciones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Visita Auditoria\n Operaciones"
-       android:gravity="center"
-        android:maxLines="2"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
         android:lines="2"
-        app:layout_constraintEnd_toEndOf="@+id/imgViewOperaciones"
-        app:layout_constraintStart_toStartOf="@+id/imgViewOperaciones"
-        app:layout_constraintTop_toBottomOf="@+id/imgViewOperaciones" />
+        android:maxLines="2"
+        android:text="Visita Auditoria\n Operaciones"
+        app:layout_constraintEnd_toEndOf="@+id/imgOperacionesRegional"
+        app:layout_constraintStart_toStartOf="@+id/imgOperacionesRegional"
+        app:layout_constraintTop_toBottomOf="@+id/imgOperacionesRegional" />
 
     <ImageView
-        android:id="@+id/imgViewRegional"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imgRegional"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginTop="60dp"
-        app:layout_constraintEnd_toEndOf="@+id/imgViewOperaciones"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="@+id/imgOperacionesRegional"
         app:layout_constraintStart_toStartOf="@+id/imgVisitaRapida"
         app:layout_constraintTop_toBottomOf="@+id/txv_rapida"
-        app:srcCompat="@drawable/ic_abeja_bicolor" />
+        app:srcCompat="@drawable/ic_abeja_naranja" />
 
     <TextView
         android:id="@+id/txv_regional"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Visita Auditoria \n Regional"
-        android:inputType="textMultiLine"
+        android:layout_marginTop="8dp"
         android:gravity="center"
-        app:layout_constraintEnd_toEndOf="@+id/imgViewRegional"
-        app:layout_constraintStart_toStartOf="@+id/imgViewRegional"
-        app:layout_constraintTop_toBottomOf="@+id/imgViewRegional" />
+        android:inputType="textMultiLine"
+        android:text="Visita Auditoria \n Regional"
+        app:layout_constraintEnd_toEndOf="@+id/imgRegional"
+        app:layout_constraintStart_toStartOf="@+id/imgRegional"
+        app:layout_constraintTop_toBottomOf="@+id/imgRegional"
+        tools:ignore="TextViewEdits" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

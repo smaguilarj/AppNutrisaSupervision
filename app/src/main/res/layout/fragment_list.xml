@@ -45,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/FloatingActionButtonInicio" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/FloatingActionButton2"
+        android:id="@+id/floatingActionButtonCaja"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -61,7 +61,7 @@
         app:fabSize="normal"
         app:layout_constraintEnd_toEndOf="@+id/topUpRowFloatingActionButtonBrandFachada"
         app:layout_constraintStart_toStartOf="@+id/topUpRowFloatingActionButtonBrandFachada"
-        app:layout_constraintTop_toTopOf="@+id/floatingActionButton"
+        app:layout_constraintTop_toTopOf="@+id/floatingActionButtonBarra"
         app:maxImageSize="30dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -100,7 +100,7 @@
         app:layout_constraintTop_toBottomOf="@+id/topUpRowFloatingActionButtonBrandFachada" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/floatingActionButtonBarra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -127,9 +127,9 @@
         android:textColor="@color/primaryTextColor"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/floatingActionButton"
-        app:layout_constraintStart_toStartOf="@+id/floatingActionButton"
-        app:layout_constraintTop_toBottomOf="@+id/floatingActionButton" />
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionButtonBarra"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButtonBarra"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButtonBarra" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingButtonPiso"
@@ -169,9 +169,9 @@
         android:text="Caja"
         android:textColor="#100F0F"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/FloatingActionButton2"
-        app:layout_constraintStart_toStartOf="@+id/FloatingActionButton2"
-        app:layout_constraintTop_toBottomOf="@+id/FloatingActionButton2" />
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionButtonCaja"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButtonCaja"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButtonCaja" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/imageButton7"
@@ -185,9 +185,9 @@
         android:backgroundTint="@color/colorAccent"
         android:src="@drawable/ic_ice_gota"
         app:layout_constraintBottom_toTopOf="@+id/textView10"
-        app:layout_constraintEnd_toEndOf="@+id/floatingActionButton"
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionButtonBarra"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/floatingActionButton"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButtonBarra"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:maxImageSize="30dp"
         app:srcCompat="@drawable/ic_abeja_naranja" />
@@ -202,9 +202,9 @@
         android:clickable="true"
         android:backgroundTint="@color/colorAccent"
         android:src="@drawable/ic_ice_gota"
-        app:layout_constraintEnd_toEndOf="@+id/FloatingActionButton2"
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionButtonCaja"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/FloatingActionButton2"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButtonCaja"
         app:layout_constraintTop_toTopOf="@+id/imageButton7"
         app:maxImageSize="30dp"
         app:srcCompat="@drawable/ic_abeja_naranja" />
@@ -219,14 +219,14 @@
         android:clickable="true"
         android:backgroundTint="@color/colorAccent"
         android:src="@drawable/ic_ice_gota"
-        app:layout_constraintEnd_toEndOf="@+id/floatingActionButton3"
-        app:layout_constraintStart_toStartOf="@+id/floatingActionButton3"
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionButtonBodega"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButtonBodega"
         app:layout_constraintTop_toTopOf="@+id/imageButton8"
         app:maxImageSize="30dp"
         app:srcCompat="@drawable/ic_abeja_naranja" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton3"
+        android:id="@+id/floatingActionButtonBodega"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
@@ -235,10 +235,10 @@
         app:fabSize="normal"
         android:backgroundTint="@color/colorAccent"
         android:src="@drawable/ic_ice_gota"
-        app:layout_constraintBottom_toBottomOf="@+id/FloatingActionButton2"
+        app:layout_constraintBottom_toBottomOf="@+id/floatingActionButtonCaja"
         app:layout_constraintEnd_toEndOf="@+id/floatingButtonPiso"
         app:layout_constraintStart_toStartOf="@+id/floatingButtonPiso"
-        app:layout_constraintTop_toTopOf="@+id/FloatingActionButton2"
+        app:layout_constraintTop_toTopOf="@+id/floatingActionButtonCaja"
         app:maxImageSize="30dp"
         app:srcCompat="@drawable/ic_abeja_naranja" />
 
@@ -251,9 +251,9 @@
         android:text="Bodega/Pizarra"
         android:textColor="#151414"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/floatingActionButton3"
-        app:layout_constraintStart_toStartOf="@+id/floatingActionButton3"
-        app:layout_constraintTop_toBottomOf="@+id/floatingActionButton3" />
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionButtonBodega"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButtonBodega"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButtonBodega" />
 
     <TextView
         android:id="@+id/textView10"
