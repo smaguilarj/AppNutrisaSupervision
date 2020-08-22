@@ -174,7 +174,7 @@
         app:layout_constraintTop_toBottomOf="@+id/floatingActionButtonCaja" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/floatingButtonPlan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="55dp"
@@ -205,7 +205,7 @@
         app:layout_constraintEnd_toEndOf="@+id/floatingActionButtonCaja"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/floatingActionButtonCaja"
-        app:layout_constraintTop_toTopOf="@+id/imageButton7"
+        app:layout_constraintTop_toTopOf="@+id/floatingButtonPlan"
         app:maxImageSize="30dp"
         app:srcCompat="@drawable/ic_abeja_naranja" />
 
@@ -264,9 +264,9 @@
         android:text="Plan de Trabajo"
         android:textColor="#0B0A0A"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton7"
-        app:layout_constraintStart_toStartOf="@+id/imageButton7"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton7" />
+        app:layout_constraintEnd_toEndOf="@+id/floatingButtonPlan"
+        app:layout_constraintStart_toStartOf="@+id/floatingButtonPlan"
+        app:layout_constraintTop_toBottomOf="@+id/floatingButtonPlan" />
 
     <TextView
         android:id="@+id/textView11"

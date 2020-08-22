@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.nutrisaapplication.R
+import com.example.nutrisaapplication.ui.main.plan_trabajo.TableLayoutActivity
 import com.github.dhaval2404.imagepicker.ImagePicker
 import kotlinx.android.synthetic.main.fragment_bodega_pizarra.*
 import java.io.File
@@ -44,12 +45,14 @@ class BodegaPizarraFragment : Fragment() {
         imb_no18.setOnClickListener { tomaFoto(3) }
         imb_no19.setOnClickListener { tomaFoto(4) }
         imb_yes20.setOnClickListener { tomaFoto(5) }
-        imb_no20.setOnClickListener {tomaFoto(8)}
+        imb_no20.setOnClickListener {tomaFoto(6)}
         imb_na18.setOnClickListener { pregunta=18; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
         imb_na19.setOnClickListener { pregunta=19; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
         img_na20.setOnClickListener { pregunta=20; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
 
-        buttonEnviar.setOnClickListener { navigation.navigate(R.id.action_bodegaPizarraFragment_to_planTrabajoFragment) }
+        buttonEnviar.setOnClickListener {navigation.navigate(R.id.action_bodegaPizarraFragment_to_planDialogFragment) }
+
+        //startActivity(Intent(requireContext(),TableLayoutActivity::class.java))
     }
 
     private fun tomaFoto(code: Int) {
@@ -71,19 +74,19 @@ class BodegaPizarraFragment : Fragment() {
             val fileUri = data?.data
             when (requestCode) {
                 1 -> {
-                    img_question18.setImageURI(fileUri);respuesta="SI";pregunta=11
+                    img_question18.setImageURI(fileUri);respuesta="SI";pregunta=18
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
                 }
                 2 -> {
-                    img_question19.setImageURI(fileUri);respuesta="SI";pregunta=12
+                    img_question19.setImageURI(fileUri);respuesta="SI";pregunta=19
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
                 }
                 3 -> {
-                    img_question18.setImageURI(fileUri);respuesta="NO";pregunta=11
+                    img_question18.setImageURI(fileUri);respuesta="NO";pregunta=18
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
                 }
                 4-> {
-                    img_question19.setImageURI(fileUri);respuesta="NO";pregunta=12
+                    img_question19.setImageURI(fileUri);respuesta="NO";pregunta=19
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
                 }
                 5 -> {
@@ -91,7 +94,7 @@ class BodegaPizarraFragment : Fragment() {
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
                 }
 
-                7 -> {
+                6 -> {
                     img_question20.setImageURI(fileUri);respuesta="NO";pregunta=20
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
                 }

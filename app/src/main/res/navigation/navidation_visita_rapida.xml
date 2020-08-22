@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_menuFragment_to_bodegaPizarraFragment"
             app:destination="@id/bodegaPizarraFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_planDialogFragment"
+            app:destination="@id/planDialogFragment" />
     </fragment>
     <activity
         android:id="@+id/visitaRapidaActivity"
@@ -93,6 +96,9 @@
         <action
             android:id="@+id/action_bodegaPizarraFragment_to_planTrabajoFragment"
             app:destination="@id/planTrabajoFragment" />
+        <action
+            android:id="@+id/action_bodegaPizarraFragment_to_planDialogFragment"
+            app:destination="@id/planDialogFragment" />
     </fragment>
     <fragment
         android:id="@+id/planTrabajoFragment"
@@ -102,5 +108,14 @@
         <action
             android:id="@+id/action_planTrabajoFragment_to_menuFragment"
             app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/planDialogFragment"
+        android:name="com.example.nutrisaapplication.ui.main.plan_trabajo.PlanDialogFragment"
+        android:label="PlanDialogFragment"
+        tools:layout="@layout/fragment_plan_dialog">
+        <action
+            android:id="@+id/action_planDialogFragment_to_planTrabajoFragment"
+            app:destination="@id/planTrabajoFragment" />
     </fragment>
 </navigation>

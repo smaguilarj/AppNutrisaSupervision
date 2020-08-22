@@ -28,6 +28,9 @@ class MenuActivity : AppCompatActivity() {
         else if(navigation.currentDestination?.id==R.id.cajaFragment){
             navigation.navigate(R.id.action_cajaFragment_to_menuFragment)
         }
+        else if(navigation.currentDestination?.id==R.id.barraFragment){
+            navigation.navigate(R.id.action_barraFragment_to_menuFragment)
+        }
         else{
             finish()
         }

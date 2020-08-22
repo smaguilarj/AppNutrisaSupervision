@@ -10,13 +10,16 @@ android {
     defaultConfig {
         applicationId "com.example.nutrisaapplication"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -51,5 +54,8 @@ dependencies {
     //navigationFragment
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    //liberia tableLayout
+    implementation 'com.evrencoskun.library:tableview:0.8.9.2'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
 }

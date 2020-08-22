@@ -17,9 +17,11 @@
         android:screenOrientation="userPortrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.main.home_regional.view.HomeRegionalActivity"
+        <activity android:name=".ui.main.plan_trabajo.TableLayoutActivity"></activity>
+        <activity
+            android:name=".ui.main.home_regional.view.HomeRegionalActivity"
             android:screenOrientation="userPortrait"
-            android:theme="@style/AppTheme2"></activity>
+            android:theme="@style/AppTheme2" />
         <activity
             android:name=".ui.main.piso.view.PisoActivity"
             android:screenOrientation="userPortrait"
