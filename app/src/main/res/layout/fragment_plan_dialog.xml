@@ -212,7 +212,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Estado plan de trabajo"
+        android:text="Estado de tienda"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="italic"
@@ -282,7 +282,7 @@
             android:id="@+id/radioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sin evaluar" />
+            android:text="" />
 
         <ImageView
             android:id="@+id/imageViewAmarillo"
@@ -296,7 +296,7 @@
             android:id="@+id/radioButton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Progreso" />
+            android:text="" />
 
         <ImageView
             android:id="@+id/imageViewVerde"
@@ -310,7 +310,7 @@
             android:id="@+id/radioButton3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Terminado" />
+            android:text="" />
     </RadioGroup>
 
 

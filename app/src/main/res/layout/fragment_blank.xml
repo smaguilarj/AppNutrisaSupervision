@@ -58,7 +58,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout2"
+            android:id="@+id/linearLayoutBasicos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -75,12 +75,13 @@
                 android:src="@drawable/ic_abeja_naranja" />
 
             <TextView
+                android:id="@+id/btnBasico"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="15dp"
                 android:gravity="center"
-                android:text="Enfoque en ventas"
+                android:text="BASICOS (EXTERIOR)"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="15sp"
                 android:textStyle="bold" />
@@ -97,7 +98,7 @@
             android:translationZ="2dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutBasicos">
 
             <ImageView
                 android:layout_width="wrap_content"
