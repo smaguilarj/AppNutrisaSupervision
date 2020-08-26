@@ -118,4 +118,5 @@
     <string name="title_piso">Supervisión piso de venta</string>
     <string name="title_barra">Supervisión de barra</string>
     <string name="title_bodega">Supervisión de bodega/pizarra</string>
+    <string name="basico_exterior">Basico (Exterior)</string>
 </resources>

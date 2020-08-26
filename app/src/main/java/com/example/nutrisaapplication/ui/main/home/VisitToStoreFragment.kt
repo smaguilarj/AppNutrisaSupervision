@@ -9,6 +9,7 @@ import com.example.nutrisaapplication.R
 import com.example.nutrisaapplication.ui.base.BaseActivity
 import com.example.nutrisaapplication.ui.main.home_regional.view.HomeRegionalActivity
 import com.example.nutrisaapplication.ui.main.view.VisitaRapidaActivity
+import com.example.nutrisaapplication.ui.main.visitaOperaciones.BasicoExteriorActivity
 import kotlinx.android.synthetic.main.activity_supervision.*
 import kotlinx.android.synthetic.main.fragment_blank.*
 
@@ -34,6 +35,14 @@ class VisitToStoreFragment : Fragment() {
         imgInicio.setOnClickListener {
             (activity as BaseActivity).changeActivity(VisitaRapidaActivity::class.java)
         }
+
+        btnBasico.setOnClickListener {
+            (activity as BaseActivity).changeActivity(BasicoExteriorActivity::class.java)
+        }
+        linearLayoutBasicos.setOnClickListener {
+            (activity as BaseActivity).changeActivity(BasicoExteriorActivity::class.java)
+        }
+
 
     }
 
