@@ -17,10 +17,11 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_gravity="center"
         android:src="@drawable/ic_abeja_naranja"
+        app:layout_constraintBottom_toTopOf="@+id/txt_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
@@ -29,11 +30,12 @@
         android:id="@+id/txt_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:padding="5dp"
         android:text="NUTRISA"
         android:textColor="@color/cardview_light_background"
         android:textSize="25dp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ll_main_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
@@ -56,10 +58,11 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:layout_marginTop="8dp"
             android:text="Login"
             android:textColor="@color/primaryTextColor"
             android:textSize="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/layoutEmail"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -68,7 +71,7 @@
             android:id="@+id/layoutEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:textColorHint="#818181"
             android:visibility="visible"
             app:counterEnabled="true"
@@ -128,8 +131,7 @@
             android:id="@+id/btn_submit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/btn_radius"
             android:text="Entrar"
             android:textAllCaps="false"
@@ -144,12 +146,13 @@
             android:id="@+id/btn_reset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/btn_radius"
             android:padding="10dp"
             android:text="Olvide mi contraseña"
             android:textAllCaps="false"
             android:textColor="@color/primaryTextColor"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_submit" />
@@ -162,6 +165,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.06" />
+        app:layout_constraintGuide_percent="0.05" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

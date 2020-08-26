@@ -39,7 +39,7 @@ class PlanDialogFragment : Fragment() {
         newFragment.show(requireActivity().supportFragmentManager, "datePicker")*/
         val newFragment = DatePickerFragment.newInstance(DatePickerDialog.OnDateSetListener { _, year, month, day ->
             // +1 because January is zero
-            val selectedDate = day.toString() + " / " + (month + 1) + " / " + year
+            val selectedDate = day.toString() + "/" + (month + 1) + "/" + year
             edtFechaCumplimiento.setText(selectedDate)
         })
         newFragment.show(requireActivity().supportFragmentManager, "datePicker")
