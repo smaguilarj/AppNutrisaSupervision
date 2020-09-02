@@ -193,7 +193,7 @@
         app:srcCompat="@drawable/ic_abeja_naranja" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/floatingActionStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="38dp"
@@ -210,7 +210,7 @@
         app:srcCompat="@drawable/ic_abeja_naranja" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/floatingActionButtonSalida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="38dp"
@@ -221,7 +221,7 @@
         android:src="@drawable/ic_ice_gota"
         app:layout_constraintEnd_toEndOf="@+id/floatingActionButtonBodega"
         app:layout_constraintStart_toStartOf="@+id/floatingActionButtonBodega"
-        app:layout_constraintTop_toTopOf="@+id/imageButton8"
+        app:layout_constraintTop_toTopOf="@+id/floatingActionStatus"
         app:maxImageSize="30dp"
         app:srcCompat="@drawable/ic_abeja_naranja" />
 
@@ -277,9 +277,9 @@
         android:text="Status Visita"
         android:textColor="#0E0D0D"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton8"
-        app:layout_constraintStart_toStartOf="@+id/imageButton8"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton8" />
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionStatus"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionStatus"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionStatus" />
 
     <TextView
         android:id="@+id/textView12"
@@ -290,9 +290,9 @@
         android:text="Salida Visita"
         android:textColor="#1E1C1C"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton9"
-        app:layout_constraintStart_toStartOf="@+id/imageButton9"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton9" />
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionButtonSalida"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButtonSalida"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButtonSalida" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"

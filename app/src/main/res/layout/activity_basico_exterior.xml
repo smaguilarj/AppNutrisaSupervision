@@ -30,14 +30,15 @@
                 android:id="@+id/tv_question18"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="60dp"
                 android:layout_marginBottom="32dp"
-                android:text="1.-¡La Fachada se encuentra limpia y en buen estado?"
+                android:text="1.- Fachada"
                 android:textColor="@color/primaryTextColor"
                 app:layout_constraintBottom_toTopOf="@+id/imb_na18"
                 app:layout_constraintEnd_toStartOf="@+id/guideline8"
                 app:layout_constraintStart_toStartOf="@+id/guideline7"
-                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
                 android:id="@+id/imb_na18"
@@ -45,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:src="@drawable/ic_block_50"
-                app:layout_constraintEnd_toEndOf="@+id/tv_question18"
+                app:layout_constraintEnd_toStartOf="@+id/guideline8"
                 app:layout_constraintStart_toEndOf="@+id/imb_no18"
                 app:layout_constraintTop_toTopOf="@+id/imb_no18" />
 
@@ -53,7 +54,7 @@
                 android:id="@+id/imb_no18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:background="@android:color/transparent"
                 app:layout_constraintEnd_toStartOf="@+id/imb_na18"
                 app:layout_constraintStart_toEndOf="@+id/imb_yes18"
@@ -64,7 +65,7 @@
                 android:id="@+id/imb_yes18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="16dp"
                 android:background="@android:color/transparent"
                 app:layout_constraintEnd_toStartOf="@+id/imb_no18"
                 app:layout_constraintStart_toStartOf="@+id/tv_question18"
@@ -146,8 +147,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="60dp"
                 android:layout_marginBottom="32dp"
-                android:text="2.-¿El material POP se encuentra colocado de acuerdo al MAPA?"
+                android:text="2.-Material POP"
                 android:textAlignment="textStart"
                 android:textColor="@color/primaryTextColor"
                 app:layout_constraintBottom_toTopOf="@+id/imb_na19"
@@ -162,7 +164,7 @@
                 android:background="@android:color/transparent"
                 android:src="@drawable/ic_block_50"
                 app:layout_constraintBottom_toBottomOf="@+id/imb_no19"
-                app:layout_constraintEnd_toEndOf="@+id/tv_question19"
+                app:layout_constraintEnd_toStartOf="@+id/guideline8"
                 app:layout_constraintStart_toEndOf="@+id/imb_no19"
                 app:layout_constraintTop_toTopOf="@+id/imb_no19" />
 
@@ -181,7 +183,7 @@
                 android:id="@+id/imb_yes19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="16dp"
                 android:background="@android:color/transparent"
                 app:layout_constraintEnd_toStartOf="@+id/imb_no19"
                 app:layout_constraintStart_toStartOf="@+id/tv_question19"
@@ -289,9 +291,12 @@
                 android:id="@+id/imageButton"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                app:layout_constraintStart_toStartOf="@+id/tv_question18"
-                app:layout_constraintTop_toBottomOf="@+id/tv_question18"
-                app:srcCompat="@android:drawable/ic_menu_help" />
+                android:background="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_question18"
+                app:layout_constraintStart_toEndOf="@+id/tv_question18"
+                app:layout_constraintTop_toTopOf="@+id/tv_question18"
+                android:tint="@color/design_default_color_primary_dark"
+                app:srcCompat="@drawable/ic_informacion_mano" />
 
             <TextView
                 android:id="@+id/tv_imgbutton"
@@ -310,9 +315,12 @@
                 android:id="@+id/imageButton2"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                app:layout_constraintStart_toStartOf="@+id/tv_question19"
-                app:layout_constraintTop_toBottomOf="@+id/tv_question19"
-                app:srcCompat="@android:drawable/ic_menu_help" />
+                android:background="@color/colorWhite"
+                android:tint="@color/design_default_color_primary_dark"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_question19"
+                app:layout_constraintStart_toEndOf="@+id/tv_question19"
+                app:layout_constraintTop_toBottomOf="@+id/img_question18"
+                app:srcCompat="@drawable/ic_informacion_mano" />
 
             <TextView
                 android:id="@+id/tv_imgbutton2"

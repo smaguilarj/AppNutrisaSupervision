@@ -168,7 +168,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/textViewFecha"
+        android:id="@+id/textViewEvaluador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -208,7 +208,7 @@
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewFecha" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewEvaluador" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageButton
@@ -219,8 +219,8 @@
         android:layout_marginTop="10dp"
         android:backgroundTint="@android:color/transparent"
         android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="@+id/textViewFecha"
-        app:layout_constraintTop_toBottomOf="@+id/textViewFecha"
+        app:layout_constraintStart_toStartOf="@+id/textViewEvaluador"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEvaluador"
         app:srcCompat="@drawable/ic_calendario" />
 
     <TextView
@@ -232,7 +232,7 @@
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="italic"
-        app:layout_constraintStart_toStartOf="@+id/textViewFecha"
+        app:layout_constraintStart_toStartOf="@+id/textViewEvaluador"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"/>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edt_status"

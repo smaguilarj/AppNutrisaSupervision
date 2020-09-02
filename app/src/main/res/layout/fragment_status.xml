@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.Estatus.view.StatusFragment">
+
+
+    <TextView
+        android:id="@+id/textViewActividades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Actividades"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTitle"
+        app:layout_constraintHorizontal_bias="0.409"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTienda" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Estatus de la visita rapida"
+        android:textColor="@color/primaryTextColor"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewFachada"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_heck_circle_25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInf" />
+
+    <ImageView
+        android:id="@+id/imageViewPiso"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_cancel_no"
+        app:layout_constraintStart_toStartOf="@+id/imageViewFachada"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFachada" />
+
+    <ImageView
+        android:id="@+id/imageViewBarra"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_heck_circle_25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPiso" />
+
+    <ImageView
+        android:id="@+id/imageViewCaja"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_cancel_no"
+        app:layout_constraintStart_toStartOf="@+id/imageViewBarra"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBarra" />
+
+    <ImageView
+        android:id="@+id/imageViewBodega"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_heck_circle_25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCaja" />
+
+    <ImageView
+        android:id="@+id/imageViewPlanTrabajo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_cancel_no"
+        app:layout_constraintStart_toStartOf="@+id/imageViewBodega"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBodega" />
+
+    <TextView
+        android:id="@+id/textViewTienda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="4 PRUEBAS IT-NAUCALPAN-NORTE GOLFO-ANTONIO"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTitle"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+    <TextView
+        android:id="@+id/textViewFachada_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Fachada"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewFachada"
+        app:layout_constraintStart_toEndOf="@+id/imageViewFachada"
+        app:layout_constraintTop_toTopOf="@+id/imageViewFachada" />
+
+    <TextView
+        android:id="@+id/textViewPisoVenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Piso de venta"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewPiso"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPiso"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPiso" />
+
+    <TextView
+        android:id="@+id/textViewPiso_obl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="Obligatorio"
+        android:textStyle="bold"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewPisoVenta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewPisoVenta" />
+
+    <TextView
+        android:id="@+id/textViewFachada_obl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="Obligatorio"
+        android:textStyle="bold"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewFachada_sub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewFachada_sub" />
+
+    <TextView
+        android:id="@+id/textViewcaja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Caja"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewCaja"
+        app:layout_constraintStart_toEndOf="@+id/imageViewCaja"
+        app:layout_constraintTop_toTopOf="@+id/imageViewCaja" />
+
+    <TextView
+        android:id="@+id/textViewCaja_obl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="Obligatorio"
+        android:textStyle="bold"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewcaja"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewcaja" />
+
+    <TextView
+        android:id="@+id/textViewBarra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Barra"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewBarra"
+        app:layout_constraintStart_toEndOf="@+id/imageViewBarra"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBarra" />
+
+    <TextView
+        android:id="@+id/textViewBarra_obl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="Obligatorio"
+        android:textStyle="bold"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewBarra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewBarra" />
+
+    <TextView
+        android:id="@+id/textViewBodega"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Bodega/Pizarra"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewBodega"
+        app:layout_constraintStart_toEndOf="@+id/imageViewBodega"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBodega" />
+    <TextView
+        android:id="@+id/textViewBodega_obl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="Obligatorio"
+        android:textStyle="bold"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewBodega"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewBodega" />
+    <TextView
+        android:id="@+id/textViewPlan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Plan de Trabajo"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewPlanTrabajo"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPlanTrabajo"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPlanTrabajo" />
+    <TextView
+        android:id="@+id/textViewPlan_obl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="Obligatorio"
+        android:textStyle="bold"
+        android:textColor="@color/primaryTextColor"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewPlan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewPlan" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/common_google_signin_btn_text_dark_focused"
+        app:layout_constraintEnd_toEndOf="@+id/textViewFachada_obl"
+        app:layout_constraintStart_toStartOf="@+id/imageViewFachada"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFachada_sub" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/common_google_signin_btn_text_dark_focused"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPiso_obl"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPiso"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPisoVenta" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/common_google_signin_btn_text_dark_focused"
+        app:layout_constraintEnd_toEndOf="@+id/textViewBarra_obl"
+        app:layout_constraintStart_toStartOf="@+id/imageViewBarra"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBarra" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/common_google_signin_btn_text_dark_focused"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCaja_obl"
+        app:layout_constraintStart_toStartOf="@+id/imageViewCaja"
+        app:layout_constraintTop_toBottomOf="@+id/textViewcaja" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="14dp"
+        android:background="@color/common_google_signin_btn_text_dark_focused"
+        app:layout_constraintEnd_toEndOf="@+id/textViewBodega_obl"
+        app:layout_constraintStart_toStartOf="@+id/imageViewBodega"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBodega" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/common_google_signin_btn_text_dark_focused"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPlan_obl"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPlanTrabajo"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPlan" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:text="Siguiente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/view3" />
+
+    <ImageButton
+        android:id="@+id/imageButtonInf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:src="@drawable/ic_informacion_mano"
+        android:tint="@color/design_default_color_primary_dark"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewActividades"
+        app:layout_constraintStart_toStartOf="@+id/textViewTienda"
+        app:layout_constraintTop_toTopOf="@+id/textViewActividades" />
+
+    <TextView
+        android:id="@+id/textViewInf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Paloma: terminado, X: por hacer"
+        android:visibility="invisible"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTienda"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonInf"
+        app:layout_constraintTop_toBottomOf="@+id/textViewActividades" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

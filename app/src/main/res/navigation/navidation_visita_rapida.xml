@@ -31,6 +31,12 @@
         <action
             android:id="@+id/action_menuFragment_to_planDialogFragment"
             app:destination="@id/planDialogFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_salidaVisitaRapidaFragment"
+            app:destination="@id/salidaVisitaRapidaFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_statusFragment"
+            app:destination="@id/statusFragment" />
     </fragment>
     <activity
         android:id="@+id/visitaRapidaActivity"
@@ -118,4 +124,14 @@
             android:id="@+id/action_planDialogFragment_to_planTrabajoFragment"
             app:destination="@id/planTrabajoFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/salidaVisitaRapidaFragment"
+        tools:layout="@layout/fragment_salida_visita_rapida"
+        android:name="com.example.nutrisaapplication.ui.main.salidaVisita.view.SalidaVisitaRapidaFragment"
+        android:label="SalidaVisitaRapidaFragment" />
+    <fragment
+        android:id="@+id/statusFragment"
+        android:name="com.example.nutrisaapplication.ui.main.Estatus.view.StatusFragment"
+        android:label="fragment_status"
+        tools:layout="@layout/fragment_status" />
 </navigation>

@@ -30,6 +30,9 @@ class MenuFragment : Fragment() {
         floatingActionButtonBarra.setOnClickListener { navigation.navigate(R.id.action_menuFragment_to_barraFragment);floatingActionButtonBarra.isEnabled=false}
         floatingActionButtonCaja.setOnClickListener { navigation.navigate(R.id.action_menuFragment_to_cajaFragment);floatingActionButtonCaja.isEnabled=false }
         floatingActionButtonBodega.setOnClickListener { navigation.navigate(R.id.action_menuFragment_to_bodegaPizarraFragment);floatingActionButtonBodega.isEnabled=false }
-        floatingButtonPlan.setOnClickListener { navigation.navigate(R.id.action_menuFragment_to_planDialogFragment);floatingButtonPlan.isEnabled=false }    }
+        floatingButtonPlan.setOnClickListener { navigation.navigate(R.id.action_menuFragment_to_planDialogFragment);floatingButtonPlan.isEnabled=false }
+        floatingActionButtonSalida.setOnClickListener { navigation.navigate(R.id.action_menuFragment_to_salidaVisitaRapidaFragment);floatingActionButtonSalida.isEnabled=false }
+        floatingActionStatus.setOnClickListener { navigation.navigate(R.id.action_menuFragment_to_statusFragment) }
+    }
 
 }

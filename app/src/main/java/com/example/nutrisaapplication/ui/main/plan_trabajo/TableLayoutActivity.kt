@@ -206,7 +206,6 @@ class TableLayoutActivity : AppCompatActivity() {
         createdata1(data1, position)
         createdata2(data2)
     }
-
 }
 
 data class Asset(

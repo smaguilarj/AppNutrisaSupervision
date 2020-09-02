@@ -15,6 +15,7 @@ class BasicoExteriorActivity : AppCompatActivity() {
 
     private fun checkOption() {
         var status="VISIBLE"
+        var status2="VISIBLE"
         imageButton.setOnClickListener {
             if(status=="VISIBLE"){
                 tv_imgbutton.visibility= View.VISIBLE
@@ -25,12 +26,12 @@ class BasicoExteriorActivity : AppCompatActivity() {
             }
         }
         imageButton2.setOnClickListener {
-            if(status=="VISIBLE"){
+            if(status2=="VISIBLE"){
                 tv_imgbutton2.visibility= View.VISIBLE
-                status=""
+                status2=""
             }else{
                 tv_imgbutton2.visibility= View.INVISIBLE
-                status="VISIBLE"
+                status2="VISIBLE"
             }
         }
     }
