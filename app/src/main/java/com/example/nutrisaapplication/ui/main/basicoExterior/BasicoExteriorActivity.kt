@@ -1,4 +1,4 @@
-package com.example.nutrisaapplication.ui.main.visitaOperaciones
+package com.example.nutrisaapplication.ui.main.basicoExterior
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,21 +16,21 @@ class BasicoExteriorActivity : AppCompatActivity() {
     private fun checkOption() {
         var status="VISIBLE"
         var status2="VISIBLE"
-        imageButton.setOnClickListener {
+        imageButton3.setOnClickListener {
             if(status=="VISIBLE"){
-                tv_imgbutton.visibility= View.VISIBLE
+                tv_imgbutton3.visibility= View.VISIBLE
                 status=""
             }else{
-                tv_imgbutton.visibility= View.INVISIBLE
+                tv_imgbutton3.visibility= View.INVISIBLE
                 status="VISIBLE"
             }
         }
-        imageButton2.setOnClickListener {
+        imageButton4.setOnClickListener {
             if(status2=="VISIBLE"){
-                tv_imgbutton2.visibility= View.VISIBLE
+                tv_imgbutton4.visibility= View.VISIBLE
                 status2=""
             }else{
-                tv_imgbutton2.visibility= View.INVISIBLE
+                tv_imgbutton4.visibility= View.INVISIBLE
                 status2="VISIBLE"
             }
         }

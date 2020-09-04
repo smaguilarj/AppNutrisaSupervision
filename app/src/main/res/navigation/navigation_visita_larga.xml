@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_visita_larga"
+    app:startDestination="@id/visitToStoreFragment">
+
+    <fragment
+        android:id="@+id/visitToStoreFragment"
+        android:name="com.example.nutrisaapplication.ui.main.home.VisitToStoreFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" >
+        <action
+            android:id="@+id/action_visitToStoreFragment_to_visitaLargaFragment"
+            app:destination="@id/visitaLargaFragment" />
+        <action
+            android:id="@+id/action_visitToStoreFragment_to_fachadaFragment2"
+            app:destination="@id/fachadaFragment2" />
+        <action
+            android:id="@+id/action_visitToStoreFragment_to_basicoInteriorFragment"
+            app:destination="@id/basicoInteriorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/visitaLargaFragment"
+        android:name="com.example.nutrisaapplication.ui.main.visitaLarga.VisitaLargaFragment"
+        android:label="VisitaLargaFragment"
+        tools:layout="@layout/fragment_visita_larga">
+        <action
+            android:id="@+id/action_visitaLargaFragment_to_fachadaFragment2"
+            app:destination="@id/fachadaFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fachadaFragment2"
+        android:name="com.example.nutrisaapplication.ui.main.fachada.FachadaFragment"
+        android:label="fragment_basico_exterior"
+        tools:layout="@layout/fragment_basico_exterior" >
+        <action
+            android:id="@+id/action_fachadaFragment2_to_basicoInteriorFragment"
+            app:destination="@id/basicoInteriorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicoInteriorFragment"
+        android:name="com.example.nutrisaapplication.ui.main.basicoInterior.view.BasicoInteriorFragment"
+        android:label="BasicoInteriorFragment"
+        tools:layout="@layout/fragment_basico_interior"/>
+</navigation>

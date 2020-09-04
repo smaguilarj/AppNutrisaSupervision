@@ -40,7 +40,7 @@
     </fragment>
     <activity
         android:id="@+id/visitaRapidaActivity"
-        android:name="com.example.nutrisaapplication.ui.main.view.VisitaRapidaActivity"
+        android:name="com.example.nutrisaapplication.ui.main.visitaLarga.VisitaLargaActivity"
         android:label="activity_list_questions"
         tools:layout="@layout/activity_list_questions" />
     <fragment

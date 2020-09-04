@@ -16,9 +16,11 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:screenOrientation="userPortrait"
         android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.main.basicoInterior.view.MainBasicosActivity"></activity>
         <activity
-            android:name=".ui.main.visitaOperaciones.BasicoExteriorActivity"
+            android:name=".ui.main.basicoExterior.BasicoExteriorActivity"
             android:screenOrientation="userPortrait"
             android:theme="@style/AppTheme2" />
         <activity android:name=".ui.main.plan_trabajo.TableLayoutActivity" />
@@ -26,9 +28,8 @@
             android:name=".ui.main.home_regional.view.HomeRegionalActivity"
             android:screenOrientation="userPortrait"
             android:theme="@style/AppTheme2" />
-
         <activity
-            android:name=".ui.main.view.VisitaRapidaActivity"
+            android:name=".ui.main.visitaLarga.VisitaLargaActivity"
             android:screenOrientation="userPortrait"
             android:theme="@style/AppTheme2" />
         <activity

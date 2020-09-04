@@ -15,6 +15,9 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
+import com.example.nutrisaapplication.R
 import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream
@@ -92,16 +95,14 @@ open class BaseActivity : AppCompatActivity() {
     fun onRequestChangeFragment(
         fragment: Fragment,
         containerView: Int,
-        saveInStack: Boolean,
         tag: String?
     ) {
         val ft = supportFragmentManager.beginTransaction()
         ft.add(containerView, fragment, tag)
-
-        if (saveInStack) {
-            ft.addToBackStack(tag)
-        }
         ft.commit()
+       /* val fragmentManager: FragmentManager = supportFragmentManager
+        val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(containerView, fragment).commit()*/
     }
 
   /*  fun showGenericError(

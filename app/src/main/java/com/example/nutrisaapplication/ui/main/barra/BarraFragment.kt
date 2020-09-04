@@ -35,15 +35,15 @@ class BarraFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         imb_yes11.setOnClickListener { tomaFoto(1) }
-        imb_yes19.setOnClickListener { tomaFoto(2) }
+        imb_yes4.setOnClickListener { tomaFoto(2) }
         imb_no11.setOnClickListener { tomaFoto(3) }
-        imb_no19.setOnClickListener { tomaFoto(4) }
+        imb_no4.setOnClickListener { tomaFoto(4) }
         imb_yes20.setOnClickListener { tomaFoto(5) }
         imb_yes14.setOnClickListener { tomaFoto(6) }
         imb_no20.setOnClickListener { tomaFoto(7) }
         imb_no14.setOnClickListener { tomaFoto(8) }
         imb_na11.setOnClickListener { pregunta=7; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
-        imb_na19.setOnClickListener { pregunta=8; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
+        imb_na4.setOnClickListener { pregunta=8; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
         img_na20.setOnClickListener { pregunta=9; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
         img_na14.setOnClickListener { pregunta=10; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
 
@@ -68,19 +68,19 @@ class BarraFragment : Fragment() {
             val fileUri = data?.data
             when (requestCode) {
                 1 -> {
-                    img_question18.setImageURI(fileUri);respuesta="SI";pregunta=7
+                    img_question3.setImageURI(fileUri);respuesta="SI";pregunta=7
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
                 }
                 2 -> {
-                    img_question19.setImageURI(fileUri);respuesta="SI";pregunta=8
+                    img_question4.setImageURI(fileUri);respuesta="SI";pregunta=8
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
                 }
                 3 -> {
-                    img_question18.setImageURI(fileUri);respuesta="NO";pregunta=7
+                    img_question3.setImageURI(fileUri);respuesta="NO";pregunta=7
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
                 }
                 4-> {
-                    img_question19.setImageURI(fileUri);respuesta="NO";pregunta=8
+                    img_question4.setImageURI(fileUri);respuesta="NO";pregunta=8
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
                 }
                 5 -> {
