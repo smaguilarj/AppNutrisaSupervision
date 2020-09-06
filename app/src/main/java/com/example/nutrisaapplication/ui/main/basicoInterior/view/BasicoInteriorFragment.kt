@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.nutrisaapplication.R
+import kotlinx.android.synthetic.main.activity_basico_exterior.*
 
 class BasicoInteriorFragment : Fragment() {
 
@@ -17,4 +18,31 @@ class BasicoInteriorFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_basico_interior, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        checkOption()
+    }
+
+    private fun checkOption() {
+        var status = "VISIBLE"
+        var status2 = "VISIBLE"
+        imageButton3.setOnClickListener {
+            if (status == "VISIBLE") {
+                tv_imgbutton3.visibility = View.VISIBLE
+                status = ""
+            } else {
+                tv_imgbutton3.visibility = View.INVISIBLE
+                status = "VISIBLE"
+            }
+        }
+        imageButton4.setOnClickListener {
+            if (status2 == "VISIBLE") {
+                tv_imgbutton4.visibility = View.VISIBLE
+                status2 = ""
+            } else {
+                tv_imgbutton4.visibility = View.INVISIBLE
+                status2 = "VISIBLE"
+            }
+        }
+    }
 }

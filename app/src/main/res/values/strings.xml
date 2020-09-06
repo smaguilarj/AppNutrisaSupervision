@@ -31,4 +31,5 @@
     <string name="title_bodega">Supervisión de bodega/pizarra</string>
     <string name="basico_exterior">Basico (Exterior)</string>
     <string name="obligatorio">"  *"</string>
+    <string name="estandar3">El piso se encuentra limpio, sin chicles o manchas visibles. Mesas y sillas ordenadas y limpias</string>
 </resources>
