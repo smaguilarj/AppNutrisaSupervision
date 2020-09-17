@@ -32,7 +32,7 @@ class MenuActivity : AppCompatActivity() {
             navigation.navigate(R.id.action_barraFragment_to_menuFragment)
         }
         else{
-            finish()
+            super.onBackPressed()
         }
     }
 }

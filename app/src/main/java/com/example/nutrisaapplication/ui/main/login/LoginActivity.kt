@@ -8,6 +8,7 @@ import android.text.TextWatcher
 import android.view.WindowManager
 import android.widget.Toast
 import com.example.nutrisaapplication.R
+import com.example.nutrisaapplication.ui.main.login.recuperar_contraseña.RecuperarPasswordActivity
 import com.example.nutrisaapplication.ui.main.supervision.SupervisionActivity
 import com.example.nutrisaapplication.utils.Validations
 import com.google.firebase.auth.FirebaseAuth
@@ -19,9 +20,14 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        btn_submit.setOnClickListener { login() }
+        btn_submit.setOnClickListener {
+            btn_submit.isEnabled= false
+            login() }
         validation()
-        this .getWindow().setSoftInputMode(WindowManager.LayoutParams. SOFT_INPUT_STATE_ALWAYS_HIDDEN );
+        this .getWindow().setSoftInputMode(WindowManager.LayoutParams. SOFT_INPUT_STATE_ALWAYS_HIDDEN )
+        btn_reset.setOnClickListener {
+            this.startActivity( Intent(this, RecuperarPasswordActivity::class.java))
+        }
     }
 
     private fun validation() {
@@ -102,9 +108,11 @@ class LoginActivity : AppCompatActivity() {
                     }else{
                         Toast.makeText(this, "error de datos verifica tu email o contraseña", Toast.LENGTH_SHORT).show()
                     }
+                    btn_submit.isEnabled=true
                 }
         }else{
             Toast.makeText(this, "Ingresa datos campos vacios", Toast.LENGTH_SHORT).show()
+            btn_submit.isEnabled=true
         }
     }
 }

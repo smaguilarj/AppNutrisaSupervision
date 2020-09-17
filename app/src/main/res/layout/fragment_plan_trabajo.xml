@@ -41,12 +41,13 @@
         android:id="@+id/buttonAgregarPlan"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
+        android:layout_marginBottom="50dp"
         android:text="Agregar Plan de trabajo"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEnviar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nested_scroll_view" />
+        tools:visibility="visible" />
 
     <Button
         android:id="@+id/buttonEliminarPlan"
@@ -55,6 +56,7 @@
         android:layout_marginTop="16dp"
         android:text="Terminar Plan de trabajo"
         android:textAllCaps="false"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/buttonAgregarPlan"
         app:layout_constraintStart_toStartOf="@+id/buttonAgregarPlan"
         app:layout_constraintTop_toBottomOf="@+id/buttonSeguimientoPlan" />
@@ -66,6 +68,7 @@
         android:layout_marginTop="16dp"
         android:text="Seguimiento Plan de Trabajo"
         android:textAllCaps="false"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/buttonAgregarPlan"
         app:layout_constraintStart_toStartOf="@+id/buttonAgregarPlan"
         app:layout_constraintTop_toBottomOf="@+id/buttonAgregarPlan" />

@@ -188,7 +188,7 @@
         app:layout_constraintTop_toTopOf="@+id/textViewResponsable"
         />
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/edtResponsable"
+        android:id="@+id/btnResponsable"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginTop="8dp"
@@ -211,7 +211,7 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/imageView4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtResponsable" />
+        app:layout_constraintTop_toBottomOf="@+id/btnResponsable" />
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
@@ -232,8 +232,8 @@
         android:backgroundTint="@color/common_google_signin_btn_text_dark_pressed"
         android:text="Firmar"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
-        app:layout_constraintEnd_toEndOf="@+id/edtResponsable"
-        app:layout_constraintStart_toStartOf="@+id/edtResponsable"
+        app:layout_constraintEnd_toEndOf="@+id/btnResponsable"
+        app:layout_constraintStart_toStartOf="@+id/btnResponsable"
         app:layout_constraintTop_toBottomOf="@+id/textViewEvaluador" />
 
 

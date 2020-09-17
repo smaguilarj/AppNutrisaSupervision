@@ -128,10 +128,19 @@
         android:id="@+id/salidaVisitaRapidaFragment"
         tools:layout="@layout/fragment_salida_visita_rapida"
         android:name="com.example.nutrisaapplication.ui.main.salidaVisita.view.SalidaVisitaRapidaFragment"
-        android:label="SalidaVisitaRapidaFragment" />
+        android:label="SalidaVisitaRapidaFragment" >
+        <action
+            android:id="@+id/action_salidaVisitaRapidaFragment_to_signatureFragment"
+            app:destination="@id/signatureFragment" />
+    </fragment>
     <fragment
         android:id="@+id/statusFragment"
         android:name="com.example.nutrisaapplication.ui.main.Estatus.view.StatusFragment"
         android:label="fragment_status"
         tools:layout="@layout/fragment_status" />
+    <fragment
+        android:id="@+id/signatureFragment"
+        android:name="com.example.nutrisaapplication.ui.main.salidaVisita.view.SignatureFragment"
+        android:label="fragment_signature"
+        tools:layout="@layout/fragment_signature" />
 </navigation>
