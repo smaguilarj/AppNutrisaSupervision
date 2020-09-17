@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.nutrisaapplication.R
 import com.example.nutrisaapplication.ui.base.BaseActivity
-import com.example.nutrisaapplication.ui.main.basicoInterior.view.BasicoInteriorFragment
 import com.example.nutrisaapplication.ui.main.visitaLarga.VisitaLargaActivity
 import com.example.nutrisaapplication.ui.main.basicoExterior.BasicoExteriorActivity
 import kotlinx.android.synthetic.main.fragment_blank.*
@@ -52,6 +51,15 @@ class VisitToStoreFragment : Fragment() {
         }
         tv_basico_interior.setOnClickListener {
             navigation.navigate(R.id.action_visitToStoreFragment_to_basicoInteriorFragment)
+        }
+        /*tv_basicoBarra.setOnLongClickListener {
+
+        }*/
+        linearLayout5.setOnClickListener {
+            navigation.navigate(R.id.action_visitToStoreFragment_to_basicoBarraFragment)
+        }
+        img_basicoBarra.setOnClickListener {
+            navigation.navigate(R.id.action_visitToStoreFragment_to_basicoBarraFragment)
         }
     }
 

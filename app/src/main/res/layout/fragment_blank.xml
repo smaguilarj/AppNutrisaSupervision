@@ -181,11 +181,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
                 <ImageView
+                    android:id="@+id/img_basicoBarra"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_abeja_naranja" />
 
                 <TextView
+                    android:id="@+id/tv_basicoBarra"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

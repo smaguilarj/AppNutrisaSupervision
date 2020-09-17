@@ -1,4 +1,4 @@
-package com.example.nutrisaapplication.ui.main.basicoInterior.view
+package com.example.nutrisaapplication.ui.main.basicoBarra.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -13,14 +13,11 @@ import kotlinx.android.synthetic.main.activity_basico_exterior.tv_imgbutton3
 import kotlinx.android.synthetic.main.activity_basico_exterior.tv_imgbutton4
 import kotlinx.android.synthetic.main.fragment_basico_interior.*
 
-class BasicoInteriorFragment : Fragment() {
+class BasicoBarraFragment : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_basico_interior, container, false)
+        return inflater.inflate(R.layout.fragment_basico_barra, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -60,4 +57,5 @@ class BasicoInteriorFragment : Fragment() {
             }
         }
     }
+
 }

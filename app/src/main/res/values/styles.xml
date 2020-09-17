@@ -13,12 +13,41 @@
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">#03A9F4</item>
     </style>
+    <style name="MaterialComponent" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="colorPrimary">@color/nutrisaColor</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="textAppearanceButton">@style/ButtonTextAppearance</item>
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColorPrimary">@color/primaryTextColor</item>
+    </style>
     <style name="ActionBarTitleTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textColor">@color/primaryTextColor</item>
     </style>
     <style name="NoActionBar" parent="Theme.AppCompat.NoActionBar">
         <item name="android:textColor">@color/primaryTextColor</item>
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorAccent">#03A9F4</item>
+        <item name="colorAccent">#F67599</item>
+    </style>
+    <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ButtonTextAppearance" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="styleButtonText">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="MaterialComponent.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 </resources>

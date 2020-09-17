@@ -1,0 +1,1768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
+
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contenedor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_question3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="32dp"
+            android:text="14.-Barra"
+            android:textColor="@color/primaryTextColor"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@color/colorWhite"
+            android:tint="@color/design_default_color_primary_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_question3"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toEndOf="@+id/tv_question3"
+            app:layout_constraintTop_toTopOf="@+id/tv_question3"
+            app:srcCompat="@drawable/ic_informacion_mano" />
+
+        <TextView
+            android:id="@+id/tv_imgbutton3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/question_barra"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="11sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/tv_question3"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ll_question3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton3">
+
+            <ImageButton
+                android:id="@+id/imb_yes3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toStartOf="@+id/imb_no3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_done_50" />
+
+            <TextView
+                android:id="@+id/tv_yes3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SI"
+                android:textColor="@color/primaryTextColor"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imb_yes3"
+                app:layout_constraintStart_toStartOf="@+id/imb_yes3"
+                app:layout_constraintTop_toBottomOf="@+id/imb_yes3" />
+
+            <ImageButton
+                android:id="@+id/imb_no3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toStartOf="@+id/imb_na3"
+                app:layout_constraintStart_toEndOf="@+id/imb_yes3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/ic_cancel" />
+
+            <TextView
+                android:id="@+id/tv_not3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NO"
+                android:textColor="@color/primaryTextColor"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imb_no3"
+                app:layout_constraintStart_toStartOf="@+id/imb_no3"
+                app:layout_constraintTop_toBottomOf="@+id/imb_no3" />
+
+            <ImageButton
+                android:id="@+id/imb_na3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_block_50"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.93"
+                app:layout_constraintStart_toEndOf="@+id/imb_no3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_na3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textColor="@color/primaryTextColor"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imb_na3"
+                app:layout_constraintStart_toStartOf="@+id/imb_na3"
+                app:layout_constraintTop_toBottomOf="@+id/imb_na3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_3"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:maxLines="2"
+            app:counterEnabled="true"
+            app:counterMaxLength="40"
+            app:errorEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/primaryTextColor"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/ll_question3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Escribe aqui tu comentario "
+                android:imeOptions="actionNext"
+                android:inputType="textAutoComplete"
+                android:maxLines="2" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/img_question3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/edt_3"
+            app:layout_constraintStart_toStartOf="@+id/edt_3"
+            app:layout_constraintTop_toBottomOf="@+id/edt_3"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contenedor_pregunta4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/img_question3">
+
+            <TextView
+                android:id="@+id/tv_question4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="15.-Barra montaje"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/colorWhite"
+                android:tint="@color/design_default_color_primary_dark"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_question4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_question4"
+                app:layout_constraintTop_toTopOf="@+id/tv_question4"
+                app:srcCompat="@drawable/ic_informacion_mano" />
+
+            <TextView
+                android:id="@+id/tv_imgbutton4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/quetion_barra_montaje"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="11sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_question4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton4">
+
+                <ImageButton
+                    android:id="@+id/imb_yes4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_no4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_done_50" />
+
+                <TextView
+                    android:id="@+id/tv_yes4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SI"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_yes4"
+                    app:layout_constraintStart_toStartOf="@+id/imb_yes4"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_yes4" />
+
+                <ImageButton
+                    android:id="@+id/imb_no4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_na4"
+                    app:layout_constraintStart_toEndOf="@+id/imb_yes4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/ic_cancel" />
+
+                <TextView
+                    android:id="@+id/tv_not4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NO"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_no4"
+                    app:layout_constraintStart_toStartOf="@+id/imb_no4"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_no4" />
+
+                <ImageButton
+                    android:id="@+id/imb_na4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_block_50"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imb_no4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_na4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_na4"
+                    app:layout_constraintStart_toStartOf="@+id/imb_na4"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_na4" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_4"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                app:counterEnabled="true"
+                app:counterMaxLength="40"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/primaryTextColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_question4">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Escribe aqui tu comentario "
+                    android:imeOptions="actionNext"
+                    android:inputType="textAutoComplete"
+                    android:maxLines="2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/img_question4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="@+id/edt_4"
+                app:layout_constraintStart_toStartOf="@+id/edt_4"
+                app:layout_constraintTop_toBottomOf="@+id/edt_4"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contenedor_pregunta5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/contenedor_pregunta4">
+
+            <TextView
+                android:id="@+id/tv_question5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="16.-Botes Topping "
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/colorWhite"
+                android:tint="@color/design_default_color_primary_dark"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_question5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_question5"
+                app:layout_constraintTop_toTopOf="@+id/tv_question5"
+                app:srcCompat="@drawable/ic_informacion_mano" />
+
+            <TextView
+                android:id="@+id/tv_imgbutton5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/question_botes"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="11sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton5"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_question5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton5">
+
+                <ImageButton
+                    android:id="@+id/imb_yes5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_no5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_done_50" />
+
+                <TextView
+                    android:id="@+id/tv_yes5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SI"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_yes5"
+                    app:layout_constraintStart_toStartOf="@+id/imb_yes5"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_yes5" />
+
+                <ImageButton
+                    android:id="@+id/imb_no5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_na5"
+                    app:layout_constraintStart_toEndOf="@+id/imb_yes5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/ic_cancel" />
+
+                <TextView
+                    android:id="@+id/tv_not5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NO"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_no5"
+                    app:layout_constraintStart_toStartOf="@+id/imb_no5"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_no5" />
+
+                <ImageButton
+                    android:id="@+id/imb_na5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_block_50"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imb_no5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_na5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_na5"
+                    app:layout_constraintStart_toStartOf="@+id/imb_na5"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_na5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_5"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                app:counterEnabled="true"
+                app:counterMaxLength="40"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/primaryTextColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_question5">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Escribe aqui tu comentario "
+                    android:imeOptions="actionNext"
+                    android:inputType="textAutoComplete"
+                    android:maxLines="2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/img_question5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="@+id/edt_5"
+                app:layout_constraintStart_toStartOf="@+id/edt_5"
+                app:layout_constraintTop_toBottomOf="@+id/edt_5"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contenedor_pregunta6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/contenedor_pregunta5">
+
+            <TextView
+                android:id="@+id/tv_question6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="17.-Congeladores"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/colorWhite"
+                android:tint="@color/design_default_color_primary_dark"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_question6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_question6"
+                app:layout_constraintTop_toTopOf="@+id/tv_question6"
+                app:srcCompat="@drawable/ic_informacion_mano" />
+
+            <TextView
+                android:id="@+id/tv_imgbutton6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="11sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_question6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton6">
+
+                <ImageButton
+                    android:id="@+id/imb_yes6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_no6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_done_50" />
+
+                <TextView
+                    android:id="@+id/tv_yes6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SI"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_yes6"
+                    app:layout_constraintStart_toStartOf="@+id/imb_yes6"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_yes6" />
+
+                <ImageButton
+                    android:id="@+id/imb_no6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_na6"
+                    app:layout_constraintStart_toEndOf="@+id/imb_yes6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/ic_cancel" />
+
+                <TextView
+                    android:id="@+id/tv_not6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NO"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_no6"
+                    app:layout_constraintStart_toStartOf="@+id/imb_no6"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_no6" />
+
+                <ImageButton
+                    android:id="@+id/imb_na6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_block_50"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imb_no6"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_na6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_na6"
+                    app:layout_constraintStart_toStartOf="@+id/imb_na6"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_na6" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_6"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                app:counterEnabled="true"
+                app:counterMaxLength="40"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/primaryTextColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_question6">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Escribe aqui tu comentario"
+                    android:imeOptions="actionNext"
+                    android:inputType="textAutoComplete"
+                    android:maxLines="2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/img_question6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="@+id/edt_6"
+                app:layout_constraintStart_toStartOf="@+id/edt_6"
+                app:layout_constraintTop_toBottomOf="@+id/edt_6"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contenedor_pregunta7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/contenedor_pregunta6">
+
+            <TextView
+                android:id="@+id/tv_question7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="18.-Planogramas vigente de congelado"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/colorWhite"
+                android:tint="@color/design_default_color_primary_dark"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_question7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_question7"
+                app:layout_constraintTop_toTopOf="@+id/tv_question7"
+                app:srcCompat="@drawable/ic_informacion_mano" />
+
+            <TextView
+                android:id="@+id/tv_imgbutton7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="11sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton7" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_question7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton7">
+
+                <ImageButton
+                    android:id="@+id/imb_yes7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_no7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_done_50" />
+
+                <TextView
+                    android:id="@+id/tv_yes7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SI"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_yes7"
+                    app:layout_constraintStart_toStartOf="@+id/imb_yes7"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_yes7" />
+
+                <ImageButton
+                    android:id="@+id/imb_no7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_na7"
+                    app:layout_constraintStart_toEndOf="@+id/imb_yes7"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/ic_cancel" />
+
+                <TextView
+                    android:id="@+id/tv_not7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NO"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_no7"
+                    app:layout_constraintStart_toStartOf="@+id/imb_no7"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_no7" />
+
+                <ImageButton
+                    android:id="@+id/imb_na7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_block_50"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imb_no7"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_na7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_na7"
+                    app:layout_constraintStart_toStartOf="@+id/imb_na7"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_na7" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_7"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                app:counterEnabled="true"
+                app:counterMaxLength="40"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/primaryTextColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_question7">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Escribe aqui tu comentario"
+                    android:imeOptions="actionNext"
+                    android:inputType="textAutoComplete"
+                    android:maxLines="2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/img_question7"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="@+id/edt_7"
+                app:layout_constraintStart_toStartOf="@+id/edt_7"
+                app:layout_constraintTop_toBottomOf="@+id/edt_7"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contenedor_pregunta8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/contenedor_pregunta7">
+
+            <TextView
+                android:id="@+id/tv_question8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="19.- Maquina de helados"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/colorWhite"
+                android:tint="@color/design_default_color_primary_dark"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_question8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_question8"
+                app:layout_constraintTop_toTopOf="@+id/tv_question8"
+                app:srcCompat="@drawable/ic_informacion_mano" />
+
+            <TextView
+                android:id="@+id/tv_imgbutton8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="11sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton8" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_question8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton8">
+
+                <ImageButton
+                    android:id="@+id/imb_yes8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_no8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_done_50" />
+
+                <TextView
+                    android:id="@+id/tv_yes8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SI"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_yes8"
+                    app:layout_constraintStart_toStartOf="@+id/imb_yes8"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_yes8" />
+
+                <ImageButton
+                    android:id="@+id/imb_no8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_na8"
+                    app:layout_constraintStart_toEndOf="@+id/imb_yes8"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/ic_cancel" />
+
+                <TextView
+                    android:id="@+id/tv_not8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NO"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_no8"
+                    app:layout_constraintStart_toStartOf="@+id/imb_no8"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_no8" />
+
+                <ImageButton
+                    android:id="@+id/imb_na8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_block_50"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imb_no8"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_na8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_na8"
+                    app:layout_constraintStart_toStartOf="@+id/imb_na8"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_na8" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_8"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                app:counterEnabled="true"
+                app:counterMaxLength="40"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/primaryTextColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_question8">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Escribe aqui tu comentario"
+                    android:imeOptions="actionNext"
+                    android:inputType="textAutoComplete"
+                    android:maxLines="2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/img_question8"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="@+id/edt_8"
+                app:layout_constraintStart_toStartOf="@+id/edt_8"
+                app:layout_constraintTop_toBottomOf="@+id/edt_8"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contenedor_pregunta9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/contenedor_pregunta8">
+
+            <TextView
+                android:id="@+id/tv_question9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="20.- Prueba de helado"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/colorWhite"
+                android:tint="@color/design_default_color_primary_dark"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_question9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_question9"
+                app:layout_constraintTop_toTopOf="@+id/tv_question9"
+                app:srcCompat="@drawable/ic_informacion_mano" />
+
+            <TextView
+                android:id="@+id/tv_imgbutton9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="11sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton9" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_question9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton9">
+
+                <ImageButton
+                    android:id="@+id/imb_yes9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_no9"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_done_50" />
+
+                <TextView
+                    android:id="@+id/tv_yes9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SI"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_yes9"
+                    app:layout_constraintStart_toStartOf="@+id/imb_yes9"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_yes9" />
+
+                <ImageButton
+                    android:id="@+id/imb_no9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_na9"
+                    app:layout_constraintStart_toEndOf="@+id/imb_yes9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/ic_cancel" />
+
+                <TextView
+                    android:id="@+id/tv_not9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NO"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_no9"
+                    app:layout_constraintStart_toStartOf="@+id/imb_no9"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_no9" />
+
+                <ImageButton
+                    android:id="@+id/imb_na9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_block_50"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imb_no9"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_na9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_na9"
+                    app:layout_constraintStart_toStartOf="@+id/imb_na9"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_na9" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_9"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                app:counterEnabled="true"
+                app:counterMaxLength="40"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/primaryTextColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_question9">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Escribe aqui tu comentario"
+                    android:imeOptions="actionNext"
+                    android:inputType="textAutoComplete"
+                    android:maxLines="2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/img_question9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="@+id/edt_9"
+                app:layout_constraintStart_toStartOf="@+id/edt_9"
+                app:layout_constraintTop_toBottomOf="@+id/edt_9"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contenedor_pregunta10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/contenedor_pregunta9">
+
+            <TextView
+                android:id="@+id/tv_questio10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="21.- Topping"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imageButton10"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/colorWhite"
+                android:tint="@color/design_default_color_primary_dark"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_question10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_question10"
+                app:layout_constraintTop_toTopOf="@+id/tv_question10"
+                app:srcCompat="@drawable/ic_informacion_mano" />
+
+            <TextView
+                android:id="@+id/tv_imgbutton10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="11sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton10" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_question10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton10">
+
+                <ImageButton
+                    android:id="@+id/imb_yes10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_no10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_done_50" />
+
+                <TextView
+                    android:id="@+id/tv_yes10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SI"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_yes10"
+                    app:layout_constraintStart_toStartOf="@+id/imb_yes10"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_yes10" />
+
+                <ImageButton
+                    android:id="@+id/imb_no10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_na10"
+                    app:layout_constraintStart_toEndOf="@+id/imb_yes10"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/ic_cancel" />
+
+                <TextView
+                    android:id="@+id/tv_not10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NO"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_no10"
+                    app:layout_constraintStart_toStartOf="@+id/imb_no10"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_no10" />
+
+                <ImageButton
+                    android:id="@+id/imb_na10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_block_50"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imb_no10"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_na10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_na10"
+                    app:layout_constraintStart_toStartOf="@+id/imb_na10"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_na10" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_10"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                app:counterEnabled="true"
+                app:counterMaxLength="40"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/primaryTextColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_question10">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Escribe aqui tu comentario"
+                    android:imeOptions="actionNext"
+                    android:inputType="textAutoComplete"
+                    android:maxLines="2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/img_question10"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="@+id/edt_10"
+                app:layout_constraintStart_toStartOf="@+id/edt_10"
+                app:layout_constraintTop_toBottomOf="@+id/edt_10"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contenedor_pregunta11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/contenedor_pregunta10">
+
+            <TextView
+                android:id="@+id/tv_questio11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="22.-Refrigeradores barra"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imageButton11"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/colorWhite"
+                android:tint="@color/design_default_color_primary_dark"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_question11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_question11"
+                app:layout_constraintTop_toTopOf="@+id/tv_question11"
+                app:srcCompat="@drawable/ic_informacion_mano" />
+
+            <TextView
+                android:id="@+id/tv_imgbutton11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="11sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton11" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_question11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton11">
+
+                <ImageButton
+                    android:id="@+id/imb_yes11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_no11"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_done_50" />
+
+                <TextView
+                    android:id="@+id/tv_yes11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SI"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_yes11"
+                    app:layout_constraintStart_toStartOf="@+id/imb_yes11"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_yes11" />
+
+                <ImageButton
+                    android:id="@+id/imb_no11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_na11"
+                    app:layout_constraintStart_toEndOf="@+id/imb_yes11"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/ic_cancel" />
+
+                <TextView
+                    android:id="@+id/tv_not11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NO"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_no11"
+                    app:layout_constraintStart_toStartOf="@+id/imb_no11"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_no11" />
+
+                <ImageButton
+                    android:id="@+id/imb_na11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_block_50"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imb_no11"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_na11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_na11"
+                    app:layout_constraintStart_toStartOf="@+id/imb_na11"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_na11" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_11"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                app:counterEnabled="true"
+                app:counterMaxLength="40"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/primaryTextColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_question11">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Escribe aqui tu comentario"
+                    android:imeOptions="actionNext"
+                    android:inputType="textAutoComplete"
+                    android:maxLines="2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/img_question11"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="@+id/edt_11"
+                app:layout_constraintStart_toStartOf="@+id/edt_11"
+                app:layout_constraintTop_toBottomOf="@+id/edt_11"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contenedor_pregunta12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/contenedor_pregunta11">
+
+            <TextView
+                android:id="@+id/tv_question12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="23.-Insumos congelados"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imageButton12"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/colorWhite"
+                android:tint="@color/design_default_color_primary_dark"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_question12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_question12"
+                app:layout_constraintTop_toTopOf="@+id/tv_question12"
+                app:srcCompat="@drawable/ic_informacion_mano" />
+
+            <TextView
+                android:id="@+id/tv_imgbutton12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="11sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton12" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_question12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton12">
+
+                <ImageButton
+                    android:id="@+id/imb_yes12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_no12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_done_50" />
+
+                <TextView
+                    android:id="@+id/tv_yes12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SI"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_yes12"
+                    app:layout_constraintStart_toStartOf="@+id/imb_yes12"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_yes12" />
+
+                <ImageButton
+                    android:id="@+id/imb_no12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_na12"
+                    app:layout_constraintStart_toEndOf="@+id/imb_yes12"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/ic_cancel" />
+
+                <TextView
+                    android:id="@+id/tv_not12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NO"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_no12"
+                    app:layout_constraintStart_toStartOf="@+id/imb_no12"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_no12" />
+
+                <ImageButton
+                    android:id="@+id/imb_na12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_block_50"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imb_no12"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_na12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_na12"
+                    app:layout_constraintStart_toStartOf="@+id/imb_na12"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_na12" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_12"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                app:counterEnabled="true"
+                app:counterMaxLength="40"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/primaryTextColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_question12">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Escribe aqui tu comentario"
+                    android:imeOptions="actionNext"
+                    android:inputType="textAutoComplete"
+                    android:maxLines="2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/img_question12"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="@+id/edt_12"
+                app:layout_constraintStart_toStartOf="@+id/edt_12"
+                app:layout_constraintTop_toBottomOf="@+id/edt_12"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contenedor_pregunta13"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/contenedor_pregunta12">
+
+            <TextView
+                android:id="@+id/tv_question13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="24.-Contenedores para sanitizar"
+                android:textAlignment="textStart"
+                android:textColor="@color/primaryTextColor"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imageButton13"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/colorWhite"
+                android:tint="@color/design_default_color_primary_dark"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_question13"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_question13"
+                app:layout_constraintTop_toTopOf="@+id/tv_question13"
+                app:srcCompat="@drawable/ic_informacion_mano" />
+
+            <TextView
+                android:id="@+id/tv_imgbutton13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="11sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton13" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_question13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton13">
+
+                <ImageButton
+                    android:id="@+id/imb_yes13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_no13"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_done_50" />
+
+                <TextView
+                    android:id="@+id/tv_yes13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SI"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_yes13"
+                    app:layout_constraintStart_toStartOf="@+id/imb_yes13"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_yes13" />
+
+                <ImageButton
+                    android:id="@+id/imb_no13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_na13"
+                    app:layout_constraintStart_toEndOf="@+id/imb_yes13"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/ic_cancel" />
+
+                <TextView
+                    android:id="@+id/tv_not13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NO"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_no13"
+                    app:layout_constraintStart_toStartOf="@+id/imb_no13"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_no13" />
+
+                <ImageButton
+                    android:id="@+id/imb_na13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_block_50"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imb_no13"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_na13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imb_na13"
+                    app:layout_constraintStart_toStartOf="@+id/imb_na13"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_na13" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edt_13"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="2"
+                app:counterEnabled="true"
+                app:counterMaxLength="40"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/primaryTextColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_question13">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Escribe aqui tu comentario"
+                    android:imeOptions="actionNext"
+                    android:inputType="textAutoComplete"
+                    android:maxLines="2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/img_question13"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="@+id/edt_13"
+                app:layout_constraintStart_toStartOf="@+id/edt_13"
+                app:layout_constraintTop_toBottomOf="@+id/edt_13"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/buttonEnviar"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="750dp"
+            android:text="Enviar datos"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline8"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/contenedor_pregunta10" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

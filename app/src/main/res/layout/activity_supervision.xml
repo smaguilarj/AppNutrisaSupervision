@@ -70,6 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/imgViewOperaciones"
         app:layout_constraintStart_toStartOf="@+id/imgVisitaRapida"
         app:layout_constraintTop_toBottomOf="@+id/txv_rapida"
@@ -82,6 +83,7 @@
         android:text="Visita Auditoria \n Regional"
         android:inputType="textMultiLine"
         android:gravity="center"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/imgViewRegional"
         app:layout_constraintStart_toStartOf="@+id/imgViewRegional"
         app:layout_constraintTop_toBottomOf="@+id/imgViewRegional" />

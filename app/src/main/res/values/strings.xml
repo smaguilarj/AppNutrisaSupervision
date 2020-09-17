@@ -32,4 +32,9 @@
     <string name="basico_exterior">Basico (Exterior)</string>
     <string name="obligatorio">"  *"</string>
     <string name="estandar3">El piso se encuentra limpio, sin chicles o manchas visibles. Mesas y sillas ordenadas y limpias</string>
+    <string name="question_4">Anaqueles limpios, sin pegamento, abastecidos, Planogramas vigente y POP de acuerdo al mapa y precios actualizados ( revisar 10 productos al azar)</string>
+    <string name="question_5">Se tiene el producto \"Próximo a caducar\" señalado con etiquetas 50% mercadeado en la zona de liquidación  y se tiene el precio correcto.</string>
+    <string name="question_barra">El área de la barra se encuentra limpia (debajo, en las orillas, vidrios). Cristal antiestornudo limpio</string>
+    <string name="quetion_barra_montaje">La barra montada de acuerdo al planograma correspondente a visitas por día, Toppings sin fermentación, contaminación cruzada. Indicadores completos</string>
+    <string name="question_botes">Los botes de topping se encuentran con caducidad vigente, estan limpios e identificados</string>
 </resources>

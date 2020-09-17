@@ -17,8 +17,8 @@
         android:screenOrientation="userPortrait"
         android:supportsRtl="true"
         android:requestLegacyExternalStorage="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".ui.main.basicoInterior.view.MainBasicosActivity"></activity>
+        android:theme="@style/MaterialComponent">
+
         <activity
             android:name=".ui.main.basicoExterior.BasicoExteriorActivity"
             android:screenOrientation="userPortrait"
@@ -58,7 +58,7 @@
         <activity
             android:name=".ui.main.home.HomeActivity"
             android:screenOrientation="userPortrait"
-            android:theme="@style/AppTheme2" />
+            android:theme="@style/MaterialComponent.NoActionBar" />
     </application>
 
 </manifest>

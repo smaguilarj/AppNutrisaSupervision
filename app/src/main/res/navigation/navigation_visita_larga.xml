@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_visitToStoreFragment_to_basicoInteriorFragment"
             app:destination="@id/basicoInteriorFragment" />
+        <action
+            android:id="@+id/action_visitToStoreFragment_to_basicoBarraFragment"
+            app:destination="@id/basicoBarraFragment" />
     </fragment>
     <fragment
         android:id="@+id/visitaLargaFragment"
@@ -43,4 +46,10 @@
         android:name="com.example.nutrisaapplication.ui.main.basicoInterior.view.BasicoInteriorFragment"
         android:label="BasicoInteriorFragment"
         tools:layout="@layout/fragment_basico_interior"/>
+
+    <fragment
+        android:id="@+id/basicoBarraFragment"
+        android:name="com.example.nutrisaapplication.ui.main.basicoBarra.view.BasicoBarraFragment"
+        android:label="fragment_basico_barra"
+        tools:layout="@layout/fragment_basico_barra" />
 </navigation>

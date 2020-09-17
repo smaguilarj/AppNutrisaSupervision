@@ -3,10 +3,187 @@
     <color name="colorPrimary">#c0df16</color>
     <color name="colorprimaryLight">#f6ff58</color>
     <color name="colorPrimaryDark">#c0df16</color>
-    <color name="colorAccent">#b9d9eb</color>
+    <color name="colorAccent">#94C7F2</color>
     <color name="secondaryLightColor">#F0EC74</color>
     <color name="primaryTextColor">#000000</color>
     <color name="secondaryTextColor">#e3e935</color>
     <color name="secundaryText">#818181</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="nutrisaColor">#FCBF45</color>
+
+    <color name="nurisaSecondary">#F67599</color>
+    <color name="pagoFonColorSecondaryFiftyAlpha">#80009688</color>
+    <color name="colorGrayLite">#D2D2D2</color>
+    <color name="colorGrayLittleLight">#6D6D6D</color>
+    <color name="colorBlackWithFiftyAlpha">#80000000</color>
+    <color name="colorIndianred">#CD5C5C</color>
+    <color name="colorGrayStandard">#8190A5</color>
+    <color name="colorBlackText">#343F4B</color>
+    <color name="transparent">#80FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="TotalTransparent">#00ff0000</color>
+    <color name="shadowImage">#D0D3D4</color>
+
+    <!-- Color pocket -->
+    <color name="colorLockedPocket">#90a4ae</color>
+    <color name="colorUnLockedPocket">@color/colorWhite</color>
+    <!-- Color slider -->
+    <color name="colorFirstSlideImg">@color/nutrisaColor</color>
+    <color name="colorSecondSlideIng">@color/colorWhite</color>
+    <color name="colorThirdSlideImg">@color/colorWhite</color>
+    <color name="colorFourthSlideImg">@color/nurisaSecondary</color>
+
+    <color name="colorFirstSlideBackground">@color/colorWhite</color>
+    <color name="colorSecondSlideBackground">@color/nurisaSecondary</color>
+    <color name="colorThirdSlideBackground">@color/nutrisaColor</color>
+    <color name="colorFourthSlideBackground">@color/colorWhite</color>
+
+    <color name="colorFirstSlideBackgroundButton">@color/nurisaSecondary</color>
+    <color name="colorSecondSlideBackgroundButton">@color/colorWhite</color>
+    <color name="colorThirdSlideBackgroundButton">@color/colorWhite</color>
+    <color name="colorFourthSlideBackgroundButton">@color/nutrisaColor</color>
+
+    <color name="colorFirstSlideButtonText">@color/colorWhite</color>
+    <color name="colorSecondSlideButtonText">@color/nurisaSecondary</color>
+    <color name="colorThirdSlideButtonText">@color/nutrisaColor</color>
+    <color name="colorFourthSlideButtonText">@color/colorWhite</color>
+
+    <color name="colorActiveDot">#FF6F00</color>
+    <color name="colorInactiveDot">@color/colorBlackWithFiftyAlpha</color>
+
+    <color name="colorGeneralBackground">#FAFAFA</color>
+    <color name="colorGeneralText">#47525E</color>
+
+    <!-- Toolbar Background-->
+    <color name="colorToolbarWhite">@color/colorWhite</color>
+    <color name="colorToolbarPink">@color/nutrisaColor</color>
+    <color name="colorToolbarGreen">@color/nurisaSecondary</color>
+
+    <!-- Toolbar image tint-->
+    <color name="colorWhiteToolbarImage">@color/colorWhite</color>
+
+    <!-- Color text -->
+    <color name="colorBalanceLater">@color/nutrisaColor</color>
+    <color name="colorTotalBold">@color/colorBlack</color>
+
+
+    <!-- Color container activity -->
+    <color name="colorActivityContainerBackgroundBottomNavigation">@color/colorWhite</color>
+    <color name="colorActivityContainerBackgroundTopUpMobile">@color/nutrisaColor</color>
+
+    <!-- Color bottom navigation -->
+    <color name="colorBottomNavigationBackground">@color/nutrisaColor</color>
+    <color name="colorBottomNavigationSelectedButton">@color/colorWhite</color>
+    <color name="colorBottomNavigationNoSelectedButton">#99FFFFFF</color>
+    <color name="colorBottomNavigationQRButton">#FF009688</color>
+
+    <!-- Color home fragment -->
+    <color name="colorHomeFloatingActionButton">#FF009688</color>
+    <color name="colorHomeFloatingActionButtonPressed">@color/nutrisaColor</color>
+    <color name="colorHomeFloatingActionButtonText">@color/colorGeneralText</color>
+
+    <color name="colorHomeCardViewBlackText">@color/colorBlackText</color>
+    <color name="colorHomeCardViewLineDivider">@color/colorBlackText</color>
+    <color name="colorHomeCardViewLineEye">@color/nutrisaColor</color>
+    <color name="colorHomeCardViewMoneyText">@color/nutrisaColor</color>
+
+    <!-- Color buy fragment-->
+    <color name="colorBuyHintTextViewSearchBar">#80000000</color>
+    <color name="colorBuyBorderBackground">#C0CCDA</color>
+    <color name="colorBuyFloatingActionButtonPressed">@color/colorWhite</color>
+    <color name="colorBuyFloatingActionButtonText">@color/colorWhite</color>
+    <color name="colorBuyFloatingActionButtonTint">@color/nurisaSecondary</color>
+
+    <!-- Color Ticked -->
+    <color name="colorSetProductToContactLineEditText">@color/colorGrayLite</color>
+
+    <!-- Color Success Confirmation-->
+    <color name="colorSuccessConfirmationBackgroundTop">#4CAF50</color>
+    <color name="colorSuccessConfirmationBackgroundCheck">#4CAF50</color>
+    <color name="colorErrorConfirmationBackgroundTop">#F3282B</color>
+    <color name="colorErrorConfirmationBackgroundCheck">#F3282B</color>
+    <color name="colorErrorConfirmationBackgroundText">#F3282B</color>
+    <color name="colorSuccessConfirmationBackgroundBottom">@color/colorGeneralBackground</color>
+    <color name="colorSuccessConfirmationIcon">@color/colorWhite</color>
+    <color name="colorSuccessConfirmationBackgroundCardView">@color/colorWhite</color>
+    <color name="colorSuccessConfirmationLineEditText">@color/colorGrayLite</color>
+
+    <!-- ways to deposit money -->
+    <color name="colorWaysToDepositMoneyPagofonAgent">@color/nurisaSecondary</color>
+    <color name="colorWaysToDepositMoneyBank">@color/nurisaSecondary</color>
+    <color name="colorWaysToDepositMoneyBBVA">#084484</color>
+
+    <color name="colorWaysToDepositMoneyWayBackgroundCardView">@color/colorWhite</color>
+    <color name="colorWaysToDepositMoneyWayBackgroundBottom">@color/colorGeneralBackground</color>
+
+    <!-- Color pagafon agent -->
+    <color name="colorPagafonAgentFloatingActionButton">@color/nutrisaColor</color>
+    <color name="colorPagafonAgentFloatingActionButtonPressed">@color/nutrisaColor</color>
+
+    <!-- pocket bottom sheet -->
+    <color name="colorPocketBottomSheetIcon">@color/colorBlackWithFiftyAlpha</color>
+    <color name="colorPocketBottomSheetText">@color/colorGrayStandard</color>
+
+    <!-- create pocket -->
+    <color name="colorCreatePocket">@color/nutrisaColor</color>
+    <color name="colorCreatePocketHintText">@color/colorBlackText</color>
+
+    <!-- pay send money -->
+    <color name="colorPaySendMoneyBackgroundProvider">@color/nutrisaColor</color>
+    <color name="colorPaySendMoneyBackgroundUser">@color/colorWhite</color>
+
+    <!-- qr screen -->
+    <color name="colorPaySendMoneyButtonClose">@color/colorWhite</color>
+    <color name="colorPaySendMoneyBackgroundTop">@color/nurisaSecondary</color>
+    <color name="colorPaySendMoneyBackgroundBottom">@color/colorGeneralBackground</color>
+    <color name="colorPaySendMoneyBackgroundBottomSheet">@color/nutrisaColor</color>
+    <color name="colorPaySendMoneyBackgroundButtonPayCellNumber">@color/nurisaSecondary
+    </color>
+    <color name="colorPaySendMoneyBottomSheetQRBackgroundTop">@color/nutrisaColor</color>
+    <color name="colorPaySendMoneyBottomSheetQRText">@color/colorGeneralText</color>
+
+    <!-- Pay Send Money QR User -->
+    <color name="colorPaySendMoneyQRUserHintText">@color/colorBlackText</color>
+    <color name="colorPaySendMoneyQRUser">@color/colorGeneralText</color>
+    <color name="colorPaySendMoneyQRUserBackgroundTop">@color/nutrisaColor</color>
+    <color name="colorPaySendMoneyQRUserBackgroundBottom">@color/colorGeneralBackground</color>
+
+    <!-- Pay Send Money QR Commerce -->
+    <color name="colorPaySendMoneyQRCommerceHintText">@color/colorBlackText</color>
+    <color name="colorPaySendMoneyQRCommerce">@color/colorGeneralText</color>
+    <color name="colorPaySendMoneyQRCommerceBackgroundTop">@color/nurisaSecondary</color>
+    <color name="colorPaySendMoneyQRCommerceBackgroundBottom">@color/colorGeneralBackground</color>
+
+    <!-- Take money out -->
+    <color name="colorTakeMoneyOutSuccess">@color/nurisaSecondary</color>
+    <color name="colorTakeMoneyOutBackgroundTop">@color/colorToolbarPink</color>
+    <color name="colorTakeMoneyOutBackgroundBottom">@color/colorGeneralBackground</color>
+
+    <!-- Activate -->
+    <color name="colorActivateCellPhoneHintText">@color/colorBlackText</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="blue_new_benefit">#01579B</color>
+    <color name="background_gray">#4D000000</color>
+    <color name="orange_edit_benefit">#FF6F00</color>
+
+    <!-- Progres Bar Edit Beneficiaries -->
+    <color name="progresColorEditBeneficiaries" >@color/nurisaSecondary</color>
+
+    <!-- Send Money no User -->
+    <color name="colorSendMoneyNoUserBackgroundTop">@color/nutrisaColor</color>
+    <color name="colorSendMoneyNoUserBackgroundImage">#4CAF50</color>
+
+    <!-- Color Nivel-->
+    <color name="colorLevelSilverProfile">#969FAA</color>
+    <color name="colorLevelGoldProfile">#FFBA5C</color>
+    <color name="colorLevelPlatinumProfile">#343F4B</color>
+    <color name="colorTickLevelProfile">#77D353</color>
+    <color name="colorUpdateLevelProfile">#000000</color>
+    <color name="pinkSettingsProfile">#E5067D</color>
+    <color name="grayBackgroundProfile">#FFFAFAFA</color>
+    <color name="textEnvioUsuario">#3F9043</color>
+    <color name="textMovimentsRed">#F44336</color>
+
+
 </resources>
