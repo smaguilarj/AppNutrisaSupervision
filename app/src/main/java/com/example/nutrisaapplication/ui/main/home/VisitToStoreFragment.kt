@@ -52,14 +52,17 @@ class VisitToStoreFragment : Fragment() {
         tv_basico_interior.setOnClickListener {
             navigation.navigate(R.id.action_visitToStoreFragment_to_basicoInteriorFragment)
         }
-        /*tv_basicoBarra.setOnLongClickListener {
-
-        }*/
         linearLayout5.setOnClickListener {
             navigation.navigate(R.id.action_visitToStoreFragment_to_basicoBarraFragment)
         }
         img_basicoBarra.setOnClickListener {
             navigation.navigate(R.id.action_visitToStoreFragment_to_basicoBarraFragment)
+        }
+        tv_bodega_bano.setOnClickListener {
+            navigation.navigate(R.id.action_visitToStoreFragment_to_basicoBanoFragment)
+        }
+        linearLayout6.setOnClickListener {
+            navigation.navigate(R.id.action_visitToStoreFragment_to_basicoBanoFragment)
         }
     }
 

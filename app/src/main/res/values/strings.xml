@@ -37,4 +37,16 @@
     <string name="question_barra">El área de la barra se encuentra limpia (debajo, en las orillas, vidrios). Cristal antiestornudo limpio</string>
     <string name="quetion_barra_montaje">La barra montada de acuerdo al planograma correspondente a visitas por día, Toppings sin fermentación, contaminación cruzada. Indicadores completos</string>
     <string name="question_botes">Los botes de topping se encuentran con caducidad vigente, estan limpios e identificados</string>
+    <string name="bitacora">Se cuenta con la bitácora de limpieza con iniciales de quien realiza actividad y con la firma del gerente que supervisa la actividad.</string>
+    <string name="basico_bano">El baño se encuentra limpio, sin sarro, con despachadores en buen estado.</string>
+    <string name="lockers">Lockers sin comida, sin uniformes y solo se utilizan por el personal en turno.</string>
+    <string name="castilla">No exceso de canastillas, se regresan semanalmente a CEDIS.</string>
+    <string name="estructura">Las paredes, esquinas y zoclos se encuentran limpios, sin residuos o manchas.</string>
+    <string name="horno">El Horno de microondas limpio, sin alimentos.</string>
+    <string name="refrigerador">Los refrigeradores limpios en la parte exterior, interior, empaques y en buen estado.</string>
+    <string name="bodega">Las bases y Topping se encuentran con etiqueta peps, caducidad vigente y canastillas limpias.</string>
+    <string name="xunan">La comida y bebidas de los colaboradores están en un recipiente cerrado e identificado.</string>
+    <string name="producto_limpieza">Se cuenta con todos los insumos de limpieza autorizados y no se tienen escurrimientos en los botes o trampa de grasa.</string>
+    <string name="tarja">La tarja esta limpia, ordenada, sin sarro y sin pendientes por lavar. Se respetan estándares PCN.</string>
+    <string name="trampa_grasa">La trampa de grasa esta en buenas condiciones , no despide mal olor  y se cuenta con el ultimo respaldo del mantenimiento.</string>
 </resources>
