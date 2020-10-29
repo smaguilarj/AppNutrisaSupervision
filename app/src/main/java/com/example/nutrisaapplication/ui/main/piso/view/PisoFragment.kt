@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.nutrisaapplication.R
+import com.example.nutrisaapplication.data.SharedApp
 import com.github.dhaval2404.imagepicker.ImagePicker
 import kotlinx.android.synthetic.main.fragment_piso.*
 import java.io.File
@@ -46,7 +47,7 @@ class PisoFragment : Fragment() {
         imb_na4.setOnClickListener { pregunta=4; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
         img_na20.setOnClickListener { pregunta=5; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
         img_na14.setOnClickListener { pregunta=6; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
-        buttonEnviar.setOnClickListener {navigation.navigate(R.id.action_pisoFragment_to_barraFragment) }
+        buttonEnviar.setOnClickListener {navigation.navigate(R.id.action_pisoFragment_to_barraFragment);SharedApp.prefs.piso=true }
     }
     //onRequestChangeFragment(BarraFragment(), R.id.nav_host_fragment, false, "")
     private fun tomaFoto(code: Int) {

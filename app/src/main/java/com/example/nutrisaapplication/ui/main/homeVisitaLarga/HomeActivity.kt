@@ -1,4 +1,4 @@
-package com.example.nutrisaapplication.ui.main.home
+package com.example.nutrisaapplication.ui.main.homeVisitaLarga
 
 import android.os.Bundle
 import android.view.MenuItem

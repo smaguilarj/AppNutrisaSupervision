@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:backgroundTint="@color/common_google_signin_btn_text_dark_pressed"
     android:background="@color/common_google_signin_btn_text_dark_pressed"
-    tools:context=".ui.main.visitaLarga.VisitaLargaActivity">
+    tools:context=".ui.main.inicioVisitaLarga.VisitaLargaActivity">
 
     <TextView
         android:id="@+id/textView2"

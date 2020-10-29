@@ -94,13 +94,12 @@ open class BaseActivity : AppCompatActivity() {
 
     fun onRequestChangeFragment(
         fragment: Fragment,
-        containerView: Int,
-        tag: String?
+        containerView: Int
     ) {
         val ft = supportFragmentManager.beginTransaction()
-        ft.add(containerView, fragment, tag)
+        ft.add(containerView, fragment)
         ft.commit()
-       /* val fragmentManager: FragmentManager = supportFragmentManager
+      /*  val fragmentManager: FragmentManager = supportFragmentManager
         val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(containerView, fragment).commit()*/
     }

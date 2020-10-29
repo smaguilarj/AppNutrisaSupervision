@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.nutrisaapplication.R
+import com.example.nutrisaapplication.data.SharedApp
 import com.github.dhaval2404.imagepicker.ImagePicker
 import kotlinx.android.synthetic.main.fragment_caja.*
 import java.io.File
@@ -50,7 +51,7 @@ class CajaFragment : Fragment() {
         imb_na15.setOnClickListener { pregunta=15; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
         imb_na16.setOnClickListener { pregunta=16; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
         imb_na17.setOnClickListener { pregunta=17; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
-        buttonEnviar.setOnClickListener {navigation.navigate(R.id.action_cajaFragment_to_bodegaPizarraFragment) }
+        buttonEnviar.setOnClickListener {navigation.navigate(R.id.action_cajaFragment_to_bodegaPizarraFragment); SharedApp.prefs.caja=true }
     }
 
     private fun tomaFoto(code: Int) {

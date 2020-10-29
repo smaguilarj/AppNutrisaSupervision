@@ -2,12 +2,11 @@ package com.example.nutrisaapplication.ui.main.supervision
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.navigation.Navigation.findNavController
 import com.example.nutrisaapplication.R
 import com.example.nutrisaapplication.ui.base.BaseActivity
-import com.example.nutrisaapplication.ui.main.home.HomeActivity
+import com.example.nutrisaapplication.ui.main.homeVisitaLarga.HomeActivity
 import com.example.nutrisaapplication.ui.main.home_regional.view.HomeRegionalActivity
-import com.example.nutrisaapplication.ui.main.menuVisita.MenuActivity
+import com.example.nutrisaapplication.ui.main.homeVisitaRapida.MenuActivity
 import kotlinx.android.synthetic.main.activity_supervision.*
 
 class SupervisionActivity : BaseActivity() {

@@ -65,28 +65,28 @@ class LoginActivity : AppCompatActivity() {
                }
             }
         })
-        et_password.addTextChangedListener(object : TextWatcher{
+        et_email.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(p0: Editable?) {
-                if (et_password.getText().toString().isEmpty()) {
-                    et_password.setError("campo obligatorio");
+                if (et_email.getText().toString().isEmpty()) {
+                    et_email.setError("campo obligatorio");
                 }else{
-                    et_password.error = null
+                    et_email.error = null
                 }
             }
 
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                if (et_password.getText().toString().isEmpty()) {
-                    et_password.setError("campo obligatorio");
+                if (et_email.getText().toString().isEmpty()) {
+                    et_email.setError("campo obligatorio");
                 }else{
-                    et_password.error = null
+                    et_email.error = null
                 }
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                if (et_password.getText().toString().isEmpty()) {
-                    et_password.setError("campo obligatorio");
+                if (et_email.getText().toString().isEmpty()) {
+                    et_email.setError("campo obligatorio");
                 }else{
-                    et_password.error = null
+                    et_email.error = null
                 }
             }
 
@@ -99,8 +99,8 @@ class LoginActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
     }
     fun login(){
-        if(!et_user_name.text.toString().isEmpty() && !et_password.text.toString().isEmpty() ){
-            auth.signInWithEmailAndPassword(et_user_name.text.toString(),et_password.text.toString())
+        if(!et_user_name.text.toString().isEmpty() && !et_email.text.toString().isEmpty() ){
+            auth.signInWithEmailAndPassword(et_user_name.text.toString(),et_email.text.toString())
                 .addOnCompleteListener(this) {task ->
                     if(task.isSuccessful){
                         Toast.makeText(this, "te conectaste correctamente", Toast.LENGTH_SHORT).show()

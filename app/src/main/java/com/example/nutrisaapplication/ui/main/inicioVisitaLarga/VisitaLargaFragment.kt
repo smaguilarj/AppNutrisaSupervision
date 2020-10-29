@@ -1,4 +1,4 @@
-package com.example.nutrisaapplication.ui.main.visitaLarga
+package com.example.nutrisaapplication.ui.main.inicioVisitaLarga
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

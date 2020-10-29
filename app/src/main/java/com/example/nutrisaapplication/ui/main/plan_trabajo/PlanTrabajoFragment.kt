@@ -2,25 +2,24 @@ package com.example.nutrisaapplication.ui.main.plan_trabajo
 
 import android.app.DatePickerDialog
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.DatePicker
-import android.widget.TableLayout
-import android.widget.TableRow
-import android.widget.TextView
+import android.widget.*
 import androidx.fragment.app.DialogFragment
 import com.example.nutrisaapplication.R
+import com.example.nutrisaapplication.data.SharedApp
+import com.example.nutrisaapplication.ui.base.BaseActivity
+import com.example.nutrisaapplication.ui.main.Estatus.view.StatusFragment
+import kotlinx.android.synthetic.main.fragment_plan_trabajo.*
 import java.util.*
 
 class PlanTrabajoFragment : Fragment() {
 
     private lateinit var table: TableLayout
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,8 +32,11 @@ class PlanTrabajoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         table = view.findViewById<View>(R.id.simpleTableLayout) as TableLayout
-
         CreateTable()
+        buttonEnviar.setOnClickListener {
+            SharedApp.prefs.plan=true
+            activity?.onBackPressed()
+        }
     }
     private fun CreateTable()
     {

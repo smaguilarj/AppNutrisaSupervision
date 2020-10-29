@@ -7,7 +7,7 @@
     app:startDestination="@id/menuFragment">
     <fragment
         android:id="@+id/menuFragment"
-        android:name="com.example.nutrisaapplication.ui.main.menuVisita.MenuFragment"
+        android:name="com.example.nutrisaapplication.ui.main.homeVisitaRapida.MenuFragment"
         android:label="MenuFragment"
         tools:layout="@layout/fragment_list">
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <activity
         android:id="@+id/visitaRapidaActivity"
-        android:name="com.example.nutrisaapplication.ui.main.visitaLarga.VisitaLargaActivity"
+        android:name="com.example.nutrisaapplication.ui.main.inicioVisitaLarga.VisitaLargaActivity"
         android:label="activity_list_questions"
         tools:layout="@layout/activity_list_questions" />
     <fragment

@@ -9,6 +9,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".data.SharedApp"
         android:allowBackup="true"
         android:configChanges="orientation|keyboardHidden"
         android:icon="@mipmap/ic_launcher"
@@ -18,28 +19,31 @@
         android:screenOrientation="userPortrait"
         android:supportsRtl="true"
         android:theme="@style/MaterialComponent">
+
         <activity android:name=".ui.main.login.recuperar_contraseña.RecuperarPasswordActivity"
             android:screenOrientation="userPortrait"
-            android:theme="@style/MaterialComponent.NoActionBar"></activity>
+            android:theme="@style/AppTheme2"/>
         <activity
             android:name=".ui.main.basicoExterior.BasicoExteriorActivity"
             android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme2">
+        </activity>
+        <activity android:name=".ui.main.plan_trabajo.TableLayoutActivity"
             android:theme="@style/AppTheme2" />
-        <activity android:name=".ui.main.plan_trabajo.TableLayoutActivity" />
         <activity
             android:name=".ui.main.home_regional.view.HomeRegionalActivity"
             android:screenOrientation="userPortrait"
-            android:theme="@style/AppTheme2" />
+            android:theme="@style/MaterialComponent.NoActionBar" />
         <activity
-            android:name=".ui.main.visitaLarga.VisitaLargaActivity"
+            android:name=".ui.main.inicioVisitaLarga.VisitaLargaActivity"
             android:screenOrientation="userPortrait"
             android:theme="@style/AppTheme2" />
         <activity
-            android:name=".ui.main.menuVisita.MenuActivity"
+            android:name=".ui.main.homeVisitaRapida.MenuActivity"
             android:screenOrientation="userPortrait"
             android:theme="@style/AppTheme2" />
         <activity
-            android:name=".ui.main.quickVisit.QuickVisitActivity"
+            android:name=".ui.main.inicioVisitaRapida.InicioVisitRapidaActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="userPortrait"
             android:theme="@style/AppTheme2" />
@@ -53,14 +57,13 @@
             android:theme="@style/NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.main.home.HomeActivity"
+            android:name=".ui.main.homeVisitaLarga.HomeActivity"
             android:screenOrientation="userPortrait"
-            android:theme="@style/MaterialComponent.NoActionBar" />
+            android:theme="@style/AppTheme2"/>
     </application>
 
 </manifest>

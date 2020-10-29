@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.nutrisaapplication.R
+import com.example.nutrisaapplication.data.SharedApp
 import com.github.dhaval2404.imagepicker.ImagePicker
 import kotlinx.android.synthetic.main.fragment_fachada.*
 import java.io.File
@@ -19,6 +20,10 @@ class FachadaFragment : Fragment() {
 
     private var respuesta:String=""
     private var pregunta=0
+    private var respuesta2:String=""
+    private var pregunta2=0
+    private var completo1=false
+    private var completo2=false
 
     private val navigation by lazy {
         findNavController()
@@ -34,14 +39,24 @@ class FachadaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         imb_yes3.setOnClickListener { tomaFoto(1);Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta") }
-        imb_yes4.setOnClickListener { tomaFoto(2);Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta") }
+        imb_yes4.setOnClickListener { tomaFoto(2);Log.d("respuesta","pregunta: $pregunta2 respuesta:$respuesta2") }
         imb_no3.setOnClickListener { tomaFoto(3);Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta") }
-        imb_no4.setOnClickListener { tomaFoto(4);Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta") }
-        imb_na3.setOnClickListener { pregunta=1; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
-        imb_na4.setOnClickListener { pregunta=2; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
+        imb_no4.setOnClickListener { tomaFoto(4);Log.d("respuesta","pregunta: $pregunta2 respuesta:$respuesta2") }
+        imb_na3.setOnClickListener { pregunta=1; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta");completo1=true; habilitarBtn() }
+        imb_na4.setOnClickListener { pregunta=2; respuesta="NA";Log.d("respuesta","pregunta: $pregunta2 respuesta:$respuesta2");completo2=true; habilitarBtn() }
+        buttonFachada.isEnabled=false
         buttonFachada.setOnClickListener {
+            SharedApp.prefs.fachada= true
             navigation.navigate(R.id.action_fachadaFragment_to_pisoFragment)
         }
+    }
+
+    private fun habilitarBtn() {
+       if(completo1 && completo2) {
+           buttonFachada.isEnabled=true
+       }else{
+           buttonFachada.isEnabled=false
+       }
     }
     // startActivity(Intent(this,PisoActivity::class.java))
 
@@ -66,18 +81,22 @@ class FachadaFragment : Fragment() {
                 1 -> {
                     img_question3.setImageURI(fileUri);respuesta="SI";pregunta=1
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
+                    completo1=true
                 }
                 2 -> {
                     img_question4.setImageURI(fileUri);respuesta="SI";pregunta=2
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
+                    completo2=true
                 }
                 3 -> {
                     img_question3.setImageURI(fileUri);respuesta="NO";pregunta=1
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
+                    completo1=true
                 }
                 4-> {
                     img_question4.setImageURI(fileUri);respuesta="NO";pregunta=2
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
+                    completo2=true
                 }
             }
             //You can get File object from intent
@@ -87,9 +106,14 @@ class FachadaFragment : Fragment() {
             val filePath: String? = ImagePicker.getFilePath(data)
             Log.i("Tag", "resultado = $filePath")
         } else if (resultCode == ImagePicker.RESULT_ERROR) {
-            Toast.makeText(requireActivity(), ImagePicker.getError(data), Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireActivity(), ImagePicker.getError(data), Toast.LENGTH_SHORT).show();completo1=false;completo2=false
+            respuesta=""
+            respuesta2=""
+            pregunta=0
+            pregunta2=0
         } else {
-            Toast.makeText(requireContext(), "Task Cancelled", Toast.LENGTH_SHORT).show()
+            completo1=false;completo2=false
         }
+        habilitarBtn()
     }
 }

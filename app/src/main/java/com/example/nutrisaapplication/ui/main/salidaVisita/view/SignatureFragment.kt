@@ -7,6 +7,7 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -14,6 +15,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.nutrisaapplication.R
+import com.example.nutrisaapplication.data.SharedApp
 import com.github.dhaval2404.imagepicker.ImagePicker
 import kotlinx.android.synthetic.main.fragment_signature.*
 import java.io.File
@@ -46,12 +48,12 @@ class SignatureFragment : Fragment() {
         saveButton.setOnClickListener {
             val signature = signature_pad.signatureBitmap
             val savedPath = bitmapToFile(signature)
-           /* val base64Signature= savedPath.imageEncodeBase64(savedPath)
+        /*    val base64Signature= savedPath.imageEncodeBase64(savedPath)
             //Toast.makeText(requireContext(), "Firma en base64: $base64Signature", Toast.LENGTH_LONG).show()
             Log.i("firma","respuesta: $base64Signature")
             SharedApp.prefs.signature = base64Signature
-            activity?.setResult(Activity.RESULT_OK)
-            SIGNATURE_COMPLETE= true*/
+            activity?.setResult(Activity.RESULT_OK)*/
+            //SIGNATURE_COMPLETE= true
             activity?.onBackPressed()
         }
     }

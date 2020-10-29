@@ -1,9 +1,8 @@
-package com.example.nutrisaapplication.ui.main.menuVisita
+package com.example.nutrisaapplication.ui.main.homeVisitaRapida
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 import com.example.nutrisaapplication.R
 
 class MenuActivity : AppCompatActivity() {

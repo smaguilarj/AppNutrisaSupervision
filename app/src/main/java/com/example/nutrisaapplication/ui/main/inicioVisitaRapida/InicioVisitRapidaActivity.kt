@@ -1,24 +1,28 @@
-package com.example.nutrisaapplication.ui.main.quickVisit
+package com.example.nutrisaapplication.ui.main.inicioVisitaRapida
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import com.example.nutrisaapplication.R
+import com.example.nutrisaapplication.data.SharedApp
+import com.example.nutrisaapplication.data.model.DatosRegion
+import com.example.nutrisaapplication.data.model.TiendaMod
 import com.example.nutrisaapplication.ui.base.BaseActivity
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_list_questions.*
 
-class QuickVisitActivity : BaseActivity(), AdapterView.OnItemSelectedListener {
-    private lateinit var data:DatabaseReference
+class InicioVisitRapidaActivity : BaseActivity(), AdapterView.OnItemSelectedListener {
+    private lateinit var baseDatos:DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_questions)
-        data= FirebaseDatabase.getInstance().getReference()
-        data.child("Regiones").setValue("Centro")
-        buttonVisitaRapida.setOnClickListener { onBackPressed() }
+        baseDatos= FirebaseDatabase.getInstance().getReference()
+        obtenerTienda()
+        buttonVisitaRapida.setOnClickListener { onBackPressed()
+            SharedApp.prefs.visitaRapida= true}
         obtenerDatos()
     }
 
@@ -50,5 +54,34 @@ class QuickVisitActivity : BaseActivity(), AdapterView.OnItemSelectedListener {
 
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
        //cuando seleccionen algun item
+    }
+
+    fun obtenerTienda(){
+   // var ciudades= arrayListOf<Regiones>()
+        val tienda = baseDatos.child("Tienda Nutrisa").orderByChild("datos_distrito")
+        //Log.i("tienda",respuesta"$tienda")
+        val tiendas = baseDatos.child("Tienda Nutrisa").addListenerForSingleValueEvent(object :ValueEventListener {
+            override fun onCancelled(error: DatabaseError) {
+                Log.e("firebase", error.message)
+            }
+
+            override fun onDataChange(snapshot: DataSnapshot) {
+        if (snapshot.exists()){
+            var algo = snapshot.children
+            val children = snapshot.children
+            for(ds in children){
+                //og.d("spinner brand",searchable_spinner_country.selectedItem.toString())
+                val region = ds.child("datos_region").getValue(Any::class.java)
+                val pruebaRegion= region?.equals("datos_region")
+                val  continentselected = region.toString()
+                Log.d("tienda","datos_region: "+continentselected)
+                Log.d("tienda","datos_region: "+ pruebaRegion)
+            }
+            // This returns the correct child count...
+            Log.i("tienda", "respuesta: " + children.toString())
+        }
+            }
+        })
+        Log.i("tienda","respuesta: $tiendas")
     }
 }

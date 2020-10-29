@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.findNavController
 import com.example.nutrisaapplication.R
+import com.example.nutrisaapplication.data.SharedApp
 import kotlinx.android.synthetic.main.fragment_plan_dialog.*
 import kotlinx.android.synthetic.main.fragment_plan_dialog.buttonEnviar
 import java.util.*
@@ -32,7 +33,7 @@ class PlanDialogFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         edtFechaCumplimiento.setOnClickListener { showDatePickerDialog() }
-        buttonEnviar.setOnClickListener {navigation.navigate(R.id.action_planDialogFragment_to_planTrabajoFragment) }
+        buttonEnviar.setOnClickListener {navigation.navigate(R.id.action_planDialogFragment_to_planTrabajoFragment);SharedApp.prefs.plan=true }
     }
     private fun showDatePickerDialog() {
        /* val newFragment = DatePickerFragment()

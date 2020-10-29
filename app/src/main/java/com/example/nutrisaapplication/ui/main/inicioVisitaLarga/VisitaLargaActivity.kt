@@ -1,4 +1,4 @@
-package com.example.nutrisaapplication.ui.main.visitaLarga
+package com.example.nutrisaapplication.ui.main.inicioVisitaLarga
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

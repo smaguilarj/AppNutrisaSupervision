@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.nutrisaapplication.R
+import com.example.nutrisaapplication.data.SharedApp
 import com.github.dhaval2404.imagepicker.ImagePicker
 import kotlinx.android.synthetic.main.fragment_bodega_pizarra.*
 import java.io.File
@@ -49,8 +50,7 @@ class BodegaPizarraFragment : Fragment() {
         imb_na4.setOnClickListener { pregunta=19; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
         img_na20.setOnClickListener { pregunta=20; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
 
-        buttonEnviar.setOnClickListener {navigation.navigate(R.id.action_bodegaPizarraFragment_to_planDialogFragment) }
-
+        buttonEnviar.setOnClickListener {navigation.navigate(R.id.action_bodegaPizarraFragment_to_planDialogFragment); SharedApp.prefs.bodega=true }
         //startActivity(Intent(requireContext(),TableLayoutActivity::class.java))
     }
 

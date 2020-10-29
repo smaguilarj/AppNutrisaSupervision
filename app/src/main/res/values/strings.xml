@@ -49,4 +49,23 @@
     <string name="producto_limpieza">Se cuenta con todos los insumos de limpieza autorizados y no se tienen escurrimientos en los botes o trampa de grasa.</string>
     <string name="tarja">La tarja esta limpia, ordenada, sin sarro y sin pendientes por lavar. Se respetan estándares PCN.</string>
     <string name="trampa_grasa">La trampa de grasa esta en buenas condiciones , no despide mal olor  y se cuenta con el ultimo respaldo del mantenimiento.</string>
+    <string name="title_visita_larga">Auditoria de operaciones completa</string>
+    <string name="gente1">Se encuentra la carpeta de capacitación actualizada  y en buen estado.</string>
+    <string name="gente2">Gerente de tienda le da  seguimiento a plan de vuelo y lo conocen los  Xunan Cabs en turno? (Seguimiento formatos de inducción, conocimiento de empleados cursos básicos.</string>
+    <string name="gente3">El equipo de tienda cuenta con todos los cursos de la plataforma realizados de acuerdo al puesto y al tiempo predeterminado (revisar en la plataforma digital con el gerente).</string>
+    <string name="gente4">Los candidatos a crecimiento para otro puesto cuentan con los cursos cargados y se realizan.</string>
+    <string name="gente5">La plantilla de la tienda esta conforme a los establecido por RR.HH. y operaciones.</string>
+    <string name="gente6">Se encuentra el horario actual  y se publica el viernes anterior.</string>
+    <string name="gente7">Se realiza una  guía de observación de preparación de helado.</string>
+    <string name="gente8">Se ejecuta y se tiene conocimiento del proceso de 40/60.</string>
+    <string name="curso_covid">Los Xunan Kabs conocen los lineamientos del curso de servicio en la NUEVA NORMALIDAD.</string>
+    <string name="pizarra_productividad">La pizarra cuenta con los  8 formatos actuales, se llenan de manera adecuada y se da seguimiento.</string>
+    <string name="horario">Se realiza el horarios conforme a visitas y no se tiene un excedente de plantilla en turno</string>
+    <string name="posicionamiento">Se tiene el posicionamiento conforme al turno actual y se realiza conforme a las visitas por hora.</string>
+    <string name="arrastre">Se realiza el arrastre diario con los resultados conforme a los colores establecidos.</string>
+    <string name="ventas_semanal">Se tienen actualizado el control de ventas al día corriente.</string>
+    <string name="planograma_barra">Se cuenta con el planograma por visitas de armado de barra y esta legible.</string>
+    <string name="voz_cliente">Se da seguimiento diario y semanal al formato asignado para los resultados de voz cliente y se revisa que los cupones estén completos.</string>
+    <string name="pcn">Se realiza por turno el check list de PCN.</string>
+    <string name="plan_accion">Plan de acción actualizado con el mes en curso, con seguimiento dos veces en el mismo mes.</string>
 </resources>

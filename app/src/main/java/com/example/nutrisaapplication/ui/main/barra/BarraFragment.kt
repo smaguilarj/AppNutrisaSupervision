@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.nutrisaapplication.R
+import com.example.nutrisaapplication.data.SharedApp
 import com.github.dhaval2404.imagepicker.ImagePicker
 import kotlinx.android.synthetic.main.fragment_barra.*
 import java.io.File
@@ -47,8 +48,17 @@ class BarraFragment : Fragment() {
         img_na20.setOnClickListener { pregunta=9; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
         img_na14.setOnClickListener { pregunta=10; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
 
-        buttonEnviar.setOnClickListener { navigate.navigate(R.id.action_barraFragment_to_cajaFragment) }
+        habilitarBoton()
+        buttonEnviar.setOnClickListener {
+            SharedApp.prefs.barras= true
+            navigate.navigate(R.id.action_barraFragment_to_cajaFragment)
+        }
     }
+
+    private fun habilitarBoton() {
+
+    }
+
     private fun tomaFoto(code: Int) {
         ImagePicker.with(this)
             .cameraOnly()

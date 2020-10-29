@@ -1,4 +1,4 @@
-package com.example.nutrisaapplication.ui.main.home
+package com.example.nutrisaapplication.ui.main.homeVisitaLarga
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.nutrisaapplication.R
 import com.example.nutrisaapplication.ui.base.BaseActivity
-import com.example.nutrisaapplication.ui.main.visitaLarga.VisitaLargaActivity
+import com.example.nutrisaapplication.ui.main.inicioVisitaLarga.VisitaLargaActivity
 import com.example.nutrisaapplication.ui.main.basicoExterior.BasicoExteriorActivity
 import kotlinx.android.synthetic.main.fragment_blank.*
 
@@ -63,6 +63,12 @@ class VisitToStoreFragment : Fragment() {
         }
         linearLayout6.setOnClickListener {
             navigation.navigate(R.id.action_visitToStoreFragment_to_basicoBanoFragment)
+        }
+        linearLayoutGente.setOnClickListener {
+            navigation.navigate(R.id.action_visitToStoreFragment_to_basicoGenteFragment)
+        }
+        linearLayoutPizarra.setOnClickListener {
+            navigation.navigate(R.id.action_visitToStoreFragment_to_negocioPizarraFragment)
         }
     }
 
