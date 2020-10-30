@@ -27,7 +27,7 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/tv_question3"
+            android:id="@+id/tv_question14"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -40,19 +40,19 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/imageButton14"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@color/colorWhite"
             android:tint="@color/design_default_color_primary_dark"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_question3"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_question14"
             app:layout_constraintEnd_toStartOf="@+id/guideline8"
-            app:layout_constraintStart_toEndOf="@+id/tv_question3"
-            app:layout_constraintTop_toTopOf="@+id/tv_question3"
+            app:layout_constraintStart_toEndOf="@+id/tv_question14"
+            app:layout_constraintTop_toTopOf="@+id/tv_question14"
             app:srcCompat="@drawable/ic_informacion_mano" />
 
         <TextView
-            android:id="@+id/tv_imgbutton3"
+            android:id="@+id/tv_imgbutton14"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -61,87 +61,87 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
             android:textSize="11sp"
             android:visibility="invisible"
             app:layout_constraintEnd_toStartOf="@+id/guideline8"
-            app:layout_constraintStart_toStartOf="@+id/tv_question3"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+            app:layout_constraintStart_toStartOf="@+id/tv_question14"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton14" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/ll_question3"
+            android:id="@+id/ll_question14"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toStartOf="@+id/guideline8"
             app:layout_constraintStart_toStartOf="@+id/guideline7"
-            app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton3">
+            app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton14">
 
             <ImageButton
-                android:id="@+id/imb_yes3"
+                android:id="@+id/imb_yes14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                app:layout_constraintEnd_toStartOf="@+id/imb_no3"
+                app:layout_constraintEnd_toStartOf="@+id/imb_no14"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_done_50" />
 
             <TextView
-                android:id="@+id/tv_yes3"
+                android:id="@+id/tv_yes14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="SI"
                 android:textColor="@color/primaryTextColor"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/imb_yes3"
-                app:layout_constraintStart_toStartOf="@+id/imb_yes3"
-                app:layout_constraintTop_toBottomOf="@+id/imb_yes3" />
+                app:layout_constraintEnd_toEndOf="@+id/imb_yes14"
+                app:layout_constraintStart_toStartOf="@+id/imb_yes14"
+                app:layout_constraintTop_toBottomOf="@+id/imb_yes14" />
 
             <ImageButton
-                android:id="@+id/imb_no3"
+                android:id="@+id/imb_no14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                app:layout_constraintEnd_toStartOf="@+id/imb_na3"
-                app:layout_constraintStart_toEndOf="@+id/imb_yes3"
+                app:layout_constraintEnd_toStartOf="@+id/imb_na14"
+                app:layout_constraintStart_toEndOf="@+id/imb_yes14"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@mipmap/ic_cancel" />
 
             <TextView
-                android:id="@+id/tv_not3"
+                android:id="@+id/tv_not14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="NO"
                 android:textColor="@color/primaryTextColor"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/imb_no3"
-                app:layout_constraintStart_toStartOf="@+id/imb_no3"
-                app:layout_constraintTop_toBottomOf="@+id/imb_no3" />
+                app:layout_constraintEnd_toEndOf="@+id/imb_no14"
+                app:layout_constraintStart_toStartOf="@+id/imb_no14"
+                app:layout_constraintTop_toBottomOf="@+id/imb_no14" />
 
             <ImageButton
-                android:id="@+id/imb_na3"
+                android:id="@+id/imb_na14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:src="@drawable/ic_block_50"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.93"
-                app:layout_constraintStart_toEndOf="@+id/imb_no3"
+                app:layout_constraintStart_toEndOf="@+id/imb_no14"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tv_na3"
+                android:id="@+id/tv_na14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="N/A"
                 android:textColor="@color/primaryTextColor"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/imb_na3"
-                app:layout_constraintStart_toStartOf="@+id/imb_na3"
-                app:layout_constraintTop_toBottomOf="@+id/imb_na3" />
+                app:layout_constraintEnd_toEndOf="@+id/imb_na14"
+                app:layout_constraintStart_toStartOf="@+id/imb_na14"
+                app:layout_constraintTop_toBottomOf="@+id/imb_na14" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edt_3"
+            android:id="@+id/edt_14"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -154,10 +154,10 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
             app:hintTextColor="@color/primaryTextColor"
             app:layout_constraintEnd_toStartOf="@+id/guideline8"
             app:layout_constraintStart_toStartOf="@+id/guideline7"
-            app:layout_constraintTop_toBottomOf="@+id/ll_question3">
+            app:layout_constraintTop_toBottomOf="@+id/ll_question14">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt3"
+                android:id="@+id/edt14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Escribe aqui tu comentario "
@@ -167,12 +167,12 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
         </com.google.android.material.textfield.TextInputLayout>
 
         <ImageView
-            android:id="@+id/img_question3"
+            android:id="@+id/img_question14"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            app:layout_constraintEnd_toEndOf="@+id/edt_3"
-            app:layout_constraintStart_toStartOf="@+id/edt_3"
-            app:layout_constraintTop_toBottomOf="@+id/edt_3"
+            app:layout_constraintEnd_toEndOf="@+id/edt_14"
+            app:layout_constraintStart_toStartOf="@+id/edt_14"
+            app:layout_constraintTop_toBottomOf="@+id/edt_14"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -181,7 +181,7 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toStartOf="@+id/guideline8"
             app:layout_constraintStart_toStartOf="@+id/guideline7"
-            app:layout_constraintTop_toBottomOf="@+id/img_question3">
+            app:layout_constraintTop_toBottomOf="@+id/img_question14">
 
             <TextView
                 android:id="@+id/tv_question4"
@@ -197,7 +197,7 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/imageButton4"
+                android:id="@+id/imageButton15"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@color/colorWhite"
@@ -209,7 +209,7 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
                 app:srcCompat="@drawable/ic_informacion_mano" />
 
             <TextView
-                android:id="@+id/tv_imgbutton4"
+                android:id="@+id/tv_imgbutton15"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/quetion_barra_montaje"
@@ -218,7 +218,7 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
                 android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+                app:layout_constraintTop_toBottomOf="@+id/imageButton15" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/ll_question4"
@@ -226,7 +226,7 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton4">
+                app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton15">
 
                 <ImageButton
                     android:id="@+id/imb_yes4"
@@ -354,7 +354,7 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/imageButton5"
+                android:id="@+id/imageButton16"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@color/colorWhite"
@@ -375,7 +375,7 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
                 android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton5"/>
+                app:layout_constraintTop_toBottomOf="@+id/imageButton16"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/ll_question5"
@@ -510,7 +510,7 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/imageButton6"
+                android:id="@+id/imageButton17"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@color/colorWhite"
@@ -522,16 +522,16 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
                 app:srcCompat="@drawable/ic_informacion_mano" />
 
             <TextView
-                android:id="@+id/tv_imgbutton6"
+                android:id="@+id/tv_imgbutton17"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                android:text="@string/congelador_barra"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="11sp"
                 android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
+                app:layout_constraintTop_toBottomOf="@+id/imageButton17" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/ll_question6"
@@ -539,7 +539,7 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton6">
+                app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton17">
 
                 <ImageButton
                     android:id="@+id/imb_yes6"
@@ -681,7 +681,7 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
                 android:id="@+id/tv_imgbutton7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                android:text="@string/planograma_basico_barra"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="11sp"
                 android:visibility="invisible"
@@ -837,13 +837,13 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
                 android:id="@+id/tv_imgbutton8"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                android:text="@string/maquina_helado"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="11sp"
                 android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton8" />
+                app:layout_constraintTop_toBottomOf="@+id/imageButton8"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/ll_question8"
@@ -993,7 +993,7 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
                 android:id="@+id/tv_imgbutton9"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                android:text="@string/prueba_helado"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="11sp"
                 android:visibility="invisible"
@@ -1121,7 +1121,7 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
             app:layout_constraintTop_toBottomOf="@+id/contenedor_pregunta9">
 
             <TextView
-                android:id="@+id/tv_questio10"
+                android:id="@+id/tv_question10"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="21.- Topping"
@@ -1149,7 +1149,7 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
                 android:id="@+id/tv_imgbutton10"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                android:text="@string/tooping"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="11sp"
                 android:visibility="invisible"
@@ -1295,17 +1295,17 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
                 android:layout_height="30dp"
                 android:background="@color/colorWhite"
                 android:tint="@color/design_default_color_primary_dark"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_question11"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_questio11"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tv_question11"
-                app:layout_constraintTop_toTopOf="@+id/tv_question11"
+                app:layout_constraintStart_toEndOf="@+id/tv_questio11"
+                app:layout_constraintTop_toTopOf="@+id/tv_questio11"
                 app:srcCompat="@drawable/ic_informacion_mano" />
 
             <TextView
                 android:id="@+id/tv_imgbutton11"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                android:text="@string/refri_barra"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="11sp"
                 android:visibility="invisible"
@@ -1461,7 +1461,7 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
                 android:id="@+id/tv_imgbutton12"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                android:text="@string/insumos_congelado"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="11sp"
                 android:visibility="invisible"
@@ -1617,7 +1617,7 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
                 android:id="@+id/tv_imgbutton13"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                android:text="@string/contenedor_barra"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="11sp"
                 android:visibility="invisible"
@@ -1743,12 +1743,12 @@ tools:context=".ui.main.basicoBarra.view.BasicoBarraFragment">
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="16dp"
-            android:layout_marginTop="750dp"
             android:text="Enviar datos"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline8"
             app:layout_constraintStart_toStartOf="@+id/guideline7"
-            app:layout_constraintTop_toBottomOf="@+id/contenedor_pregunta10" />
+            app:layout_constraintTop_toBottomOf="@+id/contenedor_pregunta13"
+            tools:ignore="NotSibling" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline7"

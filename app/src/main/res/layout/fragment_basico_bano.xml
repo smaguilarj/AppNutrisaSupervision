@@ -29,7 +29,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/tv_question3"
+                android:id="@+id/tv_question28"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -42,108 +42,107 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/imageButton3"
+                android:id="@+id/imageButton28"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@color/colorWhite"
                 android:tint="@color/design_default_color_primary_dark"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_question3"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_question28"
                 app:layout_constraintEnd_toStartOf="@+id/guideline8"
-                app:layout_constraintStart_toEndOf="@+id/tv_question3"
-                app:layout_constraintTop_toTopOf="@+id/tv_question3"
+                app:layout_constraintStart_toEndOf="@+id/tv_question28"
+                app:layout_constraintTop_toTopOf="@+id/tv_question28"
                 app:srcCompat="@drawable/ic_informacion_mano" />
 
             <TextView
-                android:id="@+id/tv_imgbutton3"
+                android:id="@+id/tv_imgbutton28"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:text="@string/bitacora"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="11sp"
                 android:visibility="invisible"
                 app:layout_constraintEnd_toStartOf="@+id/guideline8"
-                app:layout_constraintStart_toStartOf="@+id/tv_question3"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+                app:layout_constraintStart_toStartOf="@+id/tv_question28"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton28" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/ll_question3"
+                android:id="@+id/ll_question28"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/guideline8"
                 app:layout_constraintStart_toStartOf="@+id/guideline7"
-                app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton3">
+                app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton28">
 
                 <ImageButton
-                    android:id="@+id/imb_yes3"
+                    android:id="@+id/imb_yes28"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    app:layout_constraintEnd_toStartOf="@+id/imb_no3"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_no28"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_done_50" />
 
                 <TextView
-                    android:id="@+id/tv_yes3"
+                    android:id="@+id/tv_yes28"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="SI"
                     android:textColor="@color/primaryTextColor"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/imb_yes3"
-                    app:layout_constraintStart_toStartOf="@+id/imb_yes3"
-                    app:layout_constraintTop_toBottomOf="@+id/imb_yes3" />
+                    app:layout_constraintEnd_toEndOf="@+id/imb_yes28"
+                    app:layout_constraintStart_toStartOf="@+id/imb_yes28"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_yes28" />
 
                 <ImageButton
-                    android:id="@+id/imb_no3"
+                    android:id="@+id/imb_no28"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    app:layout_constraintEnd_toStartOf="@+id/imb_na3"
-                    app:layout_constraintStart_toEndOf="@+id/imb_yes3"
+                    app:layout_constraintEnd_toStartOf="@+id/imb_na28"
+                    app:layout_constraintStart_toEndOf="@+id/imb_yes28"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@mipmap/ic_cancel" />
 
                 <TextView
-                    android:id="@+id/tv_not3"
+                    android:id="@+id/tv_not28"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="NO"
                     android:textColor="@color/primaryTextColor"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/imb_no3"
-                    app:layout_constraintStart_toStartOf="@+id/imb_no3"
-                    app:layout_constraintTop_toBottomOf="@+id/imb_no3" />
+                    app:layout_constraintEnd_toEndOf="@+id/imb_no28"
+                    app:layout_constraintStart_toStartOf="@+id/imb_no28"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_no28" />
 
                 <ImageButton
-                    android:id="@+id/imb_na3"
+                    android:id="@+id/imb_na28"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:src="@drawable/ic_block_50"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.93"
-                    app:layout_constraintStart_toEndOf="@+id/imb_no3"
+                    app:layout_constraintStart_toEndOf="@+id/imb_no28"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/tv_na3"
+                    android:id="@+id/tv_na28"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="N/A"
                     android:textColor="@color/primaryTextColor"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/imb_na3"
-                    app:layout_constraintStart_toStartOf="@+id/imb_na3"
-                    app:layout_constraintTop_toBottomOf="@+id/imb_na3" />
+                    app:layout_constraintEnd_toEndOf="@+id/imb_na28"
+                    app:layout_constraintStart_toStartOf="@+id/imb_na28"
+                    app:layout_constraintTop_toBottomOf="@+id/imb_na28" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edt_3"
+                android:id="@+id/edt_28"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -156,10 +155,10 @@
                 app:hintTextColor="@color/primaryTextColor"
                 app:layout_constraintEnd_toStartOf="@+id/guideline8"
                 app:layout_constraintStart_toStartOf="@+id/guideline7"
-                app:layout_constraintTop_toBottomOf="@+id/ll_question3">
+                app:layout_constraintTop_toBottomOf="@+id/ll_question28">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edt3"
+                    android:id="@+id/edt28"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Escribe aqui tu comentario "
@@ -169,12 +168,12 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <ImageView
-                android:id="@+id/img_question3"
+                android:id="@+id/img_question28"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                app:layout_constraintEnd_toEndOf="@+id/edt_3"
-                app:layout_constraintStart_toStartOf="@+id/edt_3"
-                app:layout_constraintTop_toBottomOf="@+id/edt_3"
+                app:layout_constraintEnd_toEndOf="@+id/edt_28"
+                app:layout_constraintStart_toStartOf="@+id/edt_28"
+                app:layout_constraintTop_toBottomOf="@+id/edt_28"
                 tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -183,7 +182,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/guideline8"
                 app:layout_constraintStart_toStartOf="@+id/guideline7"
-                app:layout_constraintTop_toBottomOf="@+id/img_question3">
+                app:layout_constraintTop_toBottomOf="@+id/img_question28">
 
                 <TextView
                     android:id="@+id/tv_question4"

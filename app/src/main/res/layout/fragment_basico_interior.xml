@@ -122,11 +122,10 @@
                     android:id="@+id/imb_na3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/transparent"
                     android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
                     android:src="@drawable/ic_block_50"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.93"
                     app:layout_constraintStart_toEndOf="@+id/imb_no3"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -530,7 +529,7 @@
                     android:id="@+id/tv_imgbutton6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                    android:text="@string/proximo_caducar"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="11sp"
                     android:visibility="invisible"
@@ -686,7 +685,7 @@
                     android:id="@+id/tv_imgbutton7"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                    android:text="@string/question7"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="11sp"
                     android:visibility="invisible"
@@ -842,7 +841,7 @@
                     android:id="@+id/tv_imgbutton8"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                    android:text="@string/aire_acondicionado"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="11sp"
                     android:visibility="invisible"
@@ -998,7 +997,7 @@
                     android:id="@+id/tv_imgbutton9"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                    android:text="@string/punto_venta"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="11sp"
                     android:visibility="invisible"
@@ -1129,7 +1128,7 @@
                     android:id="@+id/tv_questio10"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="10.-Botes de basura"
+                    android:text="10.-Speech de venta"
                     android:textAlignment="textStart"
                     android:textColor="@color/primaryTextColor"
                     android:layout_marginTop="16dp"
@@ -1154,7 +1153,7 @@
                     android:id="@+id/tv_imgbutton10"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                    android:text="@string/spetch_venta"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="11sp"
                     android:visibility="invisible"
@@ -1285,7 +1284,7 @@
                     android:id="@+id/tv_questio11"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="11.-Gel sanitizante"
+                    android:text="11.-Estrategia de venta"
                     android:textAlignment="textStart"
                     android:textColor="@color/primaryTextColor"
                     android:layout_marginTop="16dp"
@@ -1310,7 +1309,7 @@
                     android:id="@+id/tv_imgbutton11"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                    android:text="@string/strategia_venta"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="11sp"
                     android:visibility="invisible"
@@ -1441,7 +1440,7 @@
                     android:id="@+id/tv_question12"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="12.-Uniformes"
+                    android:text="12.-Botes de basura"
                     android:textAlignment="textStart"
                     android:textColor="@color/primaryTextColor"
                     android:layout_marginTop="16dp"
@@ -1466,7 +1465,7 @@
                     android:id="@+id/tv_imgbutton12"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                    android:text="@string/botes_basura"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="11sp"
                     android:visibility="invisible"
@@ -1597,7 +1596,7 @@
                     android:id="@+id/tv_question13"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="13.-Procesos de Covid"
+                    android:text="13.-Gel sanitizante"
                     android:textAlignment="textStart"
                     android:textColor="@color/primaryTextColor"
                     android:layout_marginTop="16dp"
@@ -1622,7 +1621,7 @@
                     android:id="@+id/tv_imgbutton13"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                    android:text="@string/gel_sanatizante"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="11sp"
                     android:visibility="invisible"
@@ -1741,19 +1740,175 @@
                     tools:srcCompat="@tools:sample/backgrounds/scenic" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/contenedor_pregunta14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/contenedor_pregunta13">
+
+                <TextView
+                    android:id="@+id/tv_question14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="14.-Procesos de Covid"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/primaryTextColor"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="60dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/imageButton14"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@color/colorWhite"
+                    android:tint="@color/design_default_color_primary_dark"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_question14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_question14"
+                    app:layout_constraintTop_toTopOf="@+id/tv_question14"
+                    app:srcCompat="@drawable/ic_informacion_mano" />
+
+                <TextView
+                    android:id="@+id/tv_imgbutton14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/proceso_covid"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="11sp"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageButton14" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ll_question14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton14">
+
+                    <ImageButton
+                        android:id="@+id/imb_yes14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        app:layout_constraintEnd_toStartOf="@+id/imb_no14"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_done_50" />
+
+                    <TextView
+                        android:id="@+id/tv_yes14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SI"
+                        android:textColor="@color/primaryTextColor"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/imb_yes14"
+                        app:layout_constraintStart_toStartOf="@+id/imb_yes14"
+                        app:layout_constraintTop_toBottomOf="@+id/imb_yes14" />
+
+                    <ImageButton
+                        android:id="@+id/imb_no14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        app:layout_constraintEnd_toStartOf="@+id/imb_na14"
+                        app:layout_constraintStart_toEndOf="@+id/imb_yes14"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/ic_cancel" />
+
+                    <TextView
+                        android:id="@+id/tv_not14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NO"
+                        android:textColor="@color/primaryTextColor"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/imb_no14"
+                        app:layout_constraintStart_toStartOf="@+id/imb_no14"
+                        app:layout_constraintTop_toBottomOf="@+id/imb_no14" />
+
+                    <ImageButton
+                        android:id="@+id/imb_na14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_block_50"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imb_no14"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_na14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:textColor="@color/primaryTextColor"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/imb_na14"
+                        app:layout_constraintStart_toStartOf="@+id/imb_na14"
+                        app:layout_constraintTop_toBottomOf="@+id/imb_na14" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edt_14"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="2"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="40"
+                    app:errorEnabled="true"
+                    app:hintAnimationEnabled="true"
+                    app:hintTextColor="@color/primaryTextColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_question14">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Escribe aqui tu comentario"
+                        android:imeOptions="actionNext"
+                        android:inputType="textAutoComplete"
+                        android:maxLines="2" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/img_question14"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintEnd_toEndOf="@+id/edt_14"
+                    app:layout_constraintStart_toStartOf="@+id/edt_14"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_14"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
             <Button
                 android:id="@+id/buttonEnviar"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="16dp"
-                android:layout_marginTop="750dp"
                 android:text="Enviar datos"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline8"
                 app:layout_constraintStart_toStartOf="@+id/guideline7"
-                app:layout_constraintTop_toBottomOf="@+id/contenedor_pregunta10" />
+                app:layout_constraintTop_toBottomOf="@+id/contenedor_pregunta14" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline7"

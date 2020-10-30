@@ -279,7 +279,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
                         android:src="@drawable/ic_block_50"
-                        app:layout_constraintEnd_toStartOf="@+id/imageButton52"
+                        app:layout_constraintEnd_toStartOf="@+id/imb_opcional41"
                         app:layout_constraintStart_toEndOf="@+id/imb_no41"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -296,7 +296,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/imb_na41" />
 
                     <ImageButton
-                        android:id="@+id/imageButton52"
+                        android:id="@+id/imb_opcional41"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="18dp"
@@ -315,9 +315,9 @@
                         android:textColor="@color/primaryTextColor"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/imageButton52"
-                        app:layout_constraintStart_toStartOf="@+id/imageButton52"
-                        app:layout_constraintTop_toBottomOf="@+id/imageButton52" />
+                        app:layout_constraintEnd_toEndOf="@+id/imb_opcional41"
+                        app:layout_constraintStart_toStartOf="@+id/imb_opcional41"
+                        app:layout_constraintTop_toBottomOf="@+id/imb_opcional41" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -461,7 +461,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
                         android:src="@drawable/ic_block_50"
-                        app:layout_constraintEnd_toStartOf="@+id/imageButton53"
+                        app:layout_constraintEnd_toStartOf="@+id/imb_opcional5"
                         app:layout_constraintStart_toEndOf="@+id/imb_no5"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -478,7 +478,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/imb_na5" />
 
                     <ImageButton
-                        android:id="@+id/imageButton53"
+                        android:id="@+id/imb_opcional5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="18dp"
@@ -497,9 +497,9 @@
                         android:textColor="@color/primaryTextColor"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/imageButton53"
-                        app:layout_constraintStart_toStartOf="@+id/imageButton53"
-                        app:layout_constraintTop_toBottomOf="@+id/imageButton53" />
+                        app:layout_constraintEnd_toEndOf="@+id/imb_opcional5"
+                        app:layout_constraintStart_toStartOf="@+id/imb_opcional5"
+                        app:layout_constraintTop_toBottomOf="@+id/imb_opcional5" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -642,7 +642,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
                         android:src="@drawable/ic_block_50"
-                        app:layout_constraintEnd_toStartOf="@+id/imageButton54"
+                        app:layout_constraintEnd_toStartOf="@+id/imb_opcional6"
                         app:layout_constraintStart_toEndOf="@+id/imb_no6"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -659,7 +659,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/imb_na6" />
 
                     <ImageButton
-                        android:id="@+id/imageButton54"
+                        android:id="@+id/imb_opcional6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="18dp"
@@ -678,9 +678,9 @@
                         android:textColor="@color/primaryTextColor"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/imageButton54"
-                        app:layout_constraintStart_toStartOf="@+id/imageButton54"
-                        app:layout_constraintTop_toBottomOf="@+id/imageButton54" />
+                        app:layout_constraintEnd_toEndOf="@+id/imb_opcional6"
+                        app:layout_constraintStart_toStartOf="@+id/imb_opcional6"
+                        app:layout_constraintTop_toBottomOf="@+id/imb_opcional6" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -823,7 +823,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
                         android:src="@drawable/ic_block_50"
-                        app:layout_constraintEnd_toStartOf="@+id/imageButton55"
+                        app:layout_constraintEnd_toStartOf="@+id/imb_opcional7"
                         app:layout_constraintStart_toEndOf="@+id/imb_no7"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -840,7 +840,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/imb_na7" />
 
                     <ImageButton
-                        android:id="@+id/imageButton55"
+                        android:id="@+id/imb_opcional7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="18dp"
@@ -859,9 +859,9 @@
                         android:textColor="@color/primaryTextColor"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/imageButton55"
-                        app:layout_constraintStart_toStartOf="@+id/imageButton55"
-                        app:layout_constraintTop_toBottomOf="@+id/imageButton55" />
+                        app:layout_constraintEnd_toEndOf="@+id/imb_opcional7"
+                        app:layout_constraintStart_toStartOf="@+id/imb_opcional7"
+                        app:layout_constraintTop_toBottomOf="@+id/imb_opcional7" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -1004,7 +1004,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
                         android:src="@drawable/ic_block_50"
-                        app:layout_constraintEnd_toStartOf="@+id/imageButton56"
+                        app:layout_constraintEnd_toStartOf="@+id/imb_opcional8"
                         app:layout_constraintStart_toEndOf="@+id/imb_no8"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -1021,7 +1021,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/imb_na8" />
 
                     <ImageButton
-                        android:id="@+id/imageButton56"
+                        android:id="@+id/imb_opcional8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="18dp"
@@ -1040,9 +1040,9 @@
                         android:textColor="@color/primaryTextColor"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/imageButton56"
-                        app:layout_constraintStart_toStartOf="@+id/imageButton56"
-                        app:layout_constraintTop_toBottomOf="@+id/imageButton56" />
+                        app:layout_constraintEnd_toEndOf="@+id/imb_opcional8"
+                        app:layout_constraintStart_toStartOf="@+id/imb_opcional8"
+                        app:layout_constraintTop_toBottomOf="@+id/imb_opcional8" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -1184,7 +1184,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
                         android:src="@drawable/ic_block_50"
-                        app:layout_constraintEnd_toStartOf="@+id/imageButton57"
+                        app:layout_constraintEnd_toStartOf="@+id/imb_opcional9"
                         app:layout_constraintStart_toEndOf="@+id/imb_no9"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -1200,7 +1200,7 @@
                         app:layout_constraintStart_toStartOf="@+id/imb_na9"
                         app:layout_constraintTop_toBottomOf="@+id/imb_na9" />
                     <ImageButton
-                        android:id="@+id/imageButton57"
+                        android:id="@+id/imb_opcional9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="18dp"
@@ -1219,9 +1219,9 @@
                         android:textColor="@color/primaryTextColor"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/imageButton57"
-                        app:layout_constraintStart_toStartOf="@+id/imageButton57"
-                        app:layout_constraintTop_toBottomOf="@+id/imageButton57" />
+                        app:layout_constraintEnd_toEndOf="@+id/imb_opcional9"
+                        app:layout_constraintStart_toStartOf="@+id/imb_opcional9"
+                        app:layout_constraintTop_toBottomOf="@+id/imb_opcional9" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -1365,7 +1365,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
                         android:src="@drawable/ic_block_50"
-                        app:layout_constraintEnd_toStartOf="@+id/imageButton58"
+                        app:layout_constraintEnd_toStartOf="@+id/imb_opcional10"
                         app:layout_constraintStart_toEndOf="@+id/imb_no10"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -1381,7 +1381,7 @@
                         app:layout_constraintStart_toStartOf="@+id/imb_na10"
                         app:layout_constraintTop_toBottomOf="@+id/imb_na10" />
                     <ImageButton
-                        android:id="@+id/imageButton58"
+                        android:id="@+id/imb_opcional10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="18dp"
@@ -1400,9 +1400,9 @@
                         android:textColor="@color/primaryTextColor"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/imageButton58"
-                        app:layout_constraintStart_toStartOf="@+id/imageButton58"
-                        app:layout_constraintTop_toBottomOf="@+id/imageButton58" />
+                        app:layout_constraintEnd_toEndOf="@+id/imb_opcional10"
+                        app:layout_constraintStart_toStartOf="@+id/imb_opcional10"
+                        app:layout_constraintTop_toBottomOf="@+id/imb_opcional10" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -1469,10 +1469,10 @@
                     android:layout_height="30dp"
                     android:background="@color/colorWhite"
                     android:tint="@color/design_default_color_primary_dark"
-                    app:layout_constraintBottom_toBottomOf="@+id/tv_question11"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_questio11"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/tv_question11"
-                    app:layout_constraintTop_toTopOf="@+id/tv_question11"
+                    app:layout_constraintStart_toEndOf="@+id/tv_questio11"
+                    app:layout_constraintTop_toTopOf="@+id/tv_questio11"
                     app:srcCompat="@drawable/ic_informacion_mano" />
 
                 <TextView
@@ -1545,7 +1545,7 @@
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"
                         android:src="@drawable/ic_block_50"
-                        app:layout_constraintEnd_toStartOf="@+id/imageButton59"
+                        app:layout_constraintEnd_toStartOf="@+id/imb_opcional11"
                         app:layout_constraintStart_toEndOf="@+id/imb_no11"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -1561,7 +1561,7 @@
                         app:layout_constraintStart_toStartOf="@+id/imb_na11"
                         app:layout_constraintTop_toBottomOf="@+id/imb_na11" />
                     <ImageButton
-                        android:id="@+id/imageButton59"
+                        android:id="@+id/imb_opcional11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="18dp"
@@ -1580,9 +1580,9 @@
                         android:textColor="@color/primaryTextColor"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/imageButton59"
-                        app:layout_constraintStart_toStartOf="@+id/imageButton59"
-                        app:layout_constraintTop_toBottomOf="@+id/imageButton59" />
+                        app:layout_constraintEnd_toEndOf="@+id/imb_opcional11"
+                        app:layout_constraintStart_toStartOf="@+id/imb_opcional11"
+                        app:layout_constraintTop_toBottomOf="@+id/imb_opcional11" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -1612,7 +1612,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <ImageView
-                    android:id="@+id/img_question59"
+                    android:id="@+id/img_question11"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     app:layout_constraintEnd_toEndOf="@+id/edt_11"

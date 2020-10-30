@@ -38,9 +38,9 @@ class FachadaFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        imb_yes3.setOnClickListener { tomaFoto(1);Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta") }
+        imb_yes1.setOnClickListener { tomaFoto(1);Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta") }
         imb_yes4.setOnClickListener { tomaFoto(2);Log.d("respuesta","pregunta: $pregunta2 respuesta:$respuesta2") }
-        imb_no3.setOnClickListener { tomaFoto(3);Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta") }
+        imb_no1.setOnClickListener { tomaFoto(3);Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta") }
         imb_no4.setOnClickListener { tomaFoto(4);Log.d("respuesta","pregunta: $pregunta2 respuesta:$respuesta2") }
         imb_na3.setOnClickListener { pregunta=1; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta");completo1=true; habilitarBtn() }
         imb_na4.setOnClickListener { pregunta=2; respuesta="NA";Log.d("respuesta","pregunta: $pregunta2 respuesta:$respuesta2");completo2=true; habilitarBtn() }

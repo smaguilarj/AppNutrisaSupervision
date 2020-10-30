@@ -68,4 +68,23 @@
     <string name="voz_cliente">Se da seguimiento diario y semanal al formato asignado para los resultados de voz cliente y se revisa que los cupones estén completos.</string>
     <string name="pcn">Se realiza por turno el check list de PCN.</string>
     <string name="plan_accion">Plan de acción actualizado con el mes en curso, con seguimiento dos veces en el mismo mes.</string>
+    <string name="proximo_caducar">Se tiene el producto en liquidación y fuera de Planogramas en la zona de liquidación con etiqueta del 50%  y precio correcto.</string>
+    <string name="question7">Refrigerador de bebidas limpio exterior e interior, abastecido, de acuerdo al Planogramas y POP vigente.</string>
+    <string name="aire_acondicionado">Se encuentra el aire acondicionado funcionando. Techo o plafón limpio, sin hilos colgando. Todas las luces encendidas.</string>
+    <string name="punto_venta">El área de la caja se encuentra con el pop y productos autorizados en comunicado. Libre de papeles.</string>
+    <string name="spetch_venta">En caja se menciona promoción vigente, Ofrece Topping extra, venta sugestiva del producto de impulso, App Nutrisa, Voz del cliente.</string>
+    <string name="proceso_covid">El personal utiliza kits de protección (Careta, Cubrebocas, mangas, tapete sanitizantes , sales cuaternarias, termometro, oximetro, validar lavado de manos cada 20 minutos, uso de gel antibacterial en cada helado, bote de basura para cubre bocas desechables, señalética Covid.</string>
+    <string name="gel_sanatizante">Se cuenta con gel sanitizante para los clientes en el bote establecido por la marca con no menos de 1/4.</string>
+    <string name="botes_basura">Los botes de basura con bolsa, limpios, sin exceso de basura y se conoce la capacidad máxima de los botes ( 3/4).</string>
+    <string name="strategia_venta">El cajero conoce sus objetivos de venta por turno y se plasman en el formato autorizado.</string>
+    <string name="plan_reconocimiento">Se cuenta con orgullo Nutrisa en tienda y se otorgan tarjetas destacando cuando algún colaborador ofrece una experiencia de servicio memorable.</string>
+    <string name="modeloCapa">El gerente de tienda conoce el modelo de capacitación Nutrisa? (70/20/10).</string>
+    <string name="congelador_barra">Congeladores limpios, libres de escarcha, termómetro funcionando correctamente y sus puertas están en buen estado.</string>
+    <string name="planograma_basico_barra">Las paletas y Hb acomodados de acuerdo al Planogramas. HB boleado con botes abastecidos y limpios.</string>
+    <string name="maquina_helado">La maquina de helados se encuentra limpia en su interior y exterior y funcionando correctamente.</string>
+    <string name="prueba_helado">El helado final cumple con la imagen y peso establecidas (realizar prueba con colaboradores).</string>
+    <string name="tooping">Se tienen inventario suficiente de los  Topping de alto desplazamiento ( de acuerdo al listado de planeación de la demanda).</string>
+    <string name="refri_barra">Los refrigeradores funcionan de manera adecuada y cuentan con termómetro (debe existir reporte a MDA).</string>
+    <string name="insumos_congelado">Se cuenta con vasos, servilletas, portavasos suficientes para la operación del turno.</string>
+    <string name="contenedor_barra">Se cuenta con los botes señalizados con sanitizante para boleadoras, vidrios , barra y trapos.</string>
 </resources>

@@ -55,7 +55,6 @@
                 android:id="@+id/tv_imgbutton40"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:text="@string/gente1"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="11sp"
@@ -173,8 +172,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/edt_40"
                 app:layout_constraintStart_toStartOf="@+id/edt_40"
                 app:layout_constraintTop_toBottomOf="@+id/edt_40"
-                tools:srcCompat="@tools:sample/backgrounds/scenic"
-                tools:visibility="gone" />
+                tools:srcCompat="@tools:sample/avatars" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/contenedor_pregunta41"
@@ -326,7 +324,6 @@
                     android:id="@+id/img_question41"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="@+id/edt_41"
                     app:layout_constraintStart_toStartOf="@+id/edt_41"
                     app:layout_constraintTop_toBottomOf="@+id/edt_41"
@@ -484,7 +481,6 @@
                     android:id="@+id/img_question5"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="@+id/edt_5"
                     app:layout_constraintStart_toStartOf="@+id/edt_5"
                     app:layout_constraintTop_toBottomOf="@+id/edt_5"
@@ -641,7 +637,6 @@
                     android:id="@+id/img_question6"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="@+id/edt_6"
                     app:layout_constraintStart_toStartOf="@+id/edt_6"
                     app:layout_constraintTop_toBottomOf="@+id/edt_6"
@@ -798,7 +793,6 @@
                     android:id="@+id/img_question7"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="@+id/edt_7"
                     app:layout_constraintStart_toStartOf="@+id/edt_7"
                     app:layout_constraintTop_toBottomOf="@+id/edt_7"
@@ -1144,7 +1138,7 @@
                     android:layout_height="30dp"
                     android:background="@color/colorWhite"
                     android:tint="@color/design_default_color_primary_dark"
-                    app:layout_constraintBottom_toBottomOf="@+id/tv_question10"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_questio10"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv_question10"
                     app:layout_constraintTop_toTopOf="@+id/tv_question10"
@@ -1267,7 +1261,6 @@
                     android:id="@+id/img_question10"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="@+id/edt_10"
                     app:layout_constraintStart_toStartOf="@+id/edt_10"
                     app:layout_constraintTop_toBottomOf="@+id/edt_10"
@@ -1301,7 +1294,7 @@
                     android:layout_height="30dp"
                     android:background="@color/colorWhite"
                     android:tint="@color/design_default_color_primary_dark"
-                    app:layout_constraintBottom_toBottomOf="@+id/tv_question11"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_questio11"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv_question11"
                     app:layout_constraintTop_toTopOf="@+id/tv_question11"
@@ -1311,7 +1304,7 @@
                     android:id="@+id/tv_imgbutton11"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                    android:text="@string/plan_reconocimiento"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="11sp"
                     android:visibility="invisible"
@@ -1580,7 +1573,6 @@
                     android:id="@+id/img_question12"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="@+id/edt_12"
                     app:layout_constraintStart_toStartOf="@+id/edt_12"
                     app:layout_constraintTop_toBottomOf="@+id/edt_12"
@@ -1624,7 +1616,7 @@
                     android:id="@+id/tv_imgbutton13"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
+                    android:text="@string/modeloCapa"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="11sp"
                     android:visibility="invisible"
@@ -1737,7 +1729,6 @@
                     android:id="@+id/img_question13"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="@+id/edt_13"
                     app:layout_constraintStart_toStartOf="@+id/edt_13"
                     app:layout_constraintTop_toBottomOf="@+id/edt_13"
@@ -1770,7 +1761,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.9" />
+                app:layout_constraintGuide_percent="0.9002433" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

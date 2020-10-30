@@ -23,6 +23,7 @@ class CajaFragment : Fragment() {
     }
     private var respuesta:String=""
     private var pregunta=0
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_caja, container, false)
     }

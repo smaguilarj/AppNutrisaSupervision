@@ -32,7 +32,7 @@ tools:context=".ui.main.inicioVisitaLarga.VisitaLargaActivity">
     app:layout_constraintTop_toTopOf="@+id/textView2"/>
 
 <Spinner
-    android:id="@+id/spinner"
+    android:id="@+id/spinnerL"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:visibility="visible"
@@ -52,7 +52,7 @@ tools:context=".ui.main.inicioVisitaLarga.VisitaLargaActivity">
     android:text="Selecciona tu destino"
     android:textColor="@color/primaryTextColor"
     app:layout_constraintStart_toStartOf="@+id/textView2"
-    app:layout_constraintTop_toBottomOf="@+id/spinner" />
+    app:layout_constraintTop_toBottomOf="@+id/spinnerL" />
 
 <TextView
     android:id="@+id/tv_distrito_com"
@@ -66,7 +66,7 @@ tools:context=".ui.main.inicioVisitaLarga.VisitaLargaActivity">
     app:layout_constraintTop_toTopOf="@+id/tv_distrito" />
 
 <Spinner
-    android:id="@+id/spinner_distrito"
+    android:id="@+id/spinner_distritoL"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -85,7 +85,7 @@ tools:context=".ui.main.inicioVisitaLarga.VisitaLargaActivity">
     android:text="Tienda en la que te encuentras"
     android:textColor="@color/primaryTextColor"
     app:layout_constraintStart_toStartOf="@+id/tv_distrito"
-    app:layout_constraintTop_toBottomOf="@+id/spinner_distrito" />
+    app:layout_constraintTop_toBottomOf="@+id/spinner_distritoL" />
 
 <TextView
     android:id="@+id/tv_tienda_com"
@@ -99,14 +99,14 @@ tools:context=".ui.main.inicioVisitaLarga.VisitaLargaActivity">
     app:layout_constraintTop_toTopOf="@+id/tv_tienda" />
 
 <Spinner
-    android:id="@+id/spinner_tienda"
+    android:id="@+id/spinner_tiendaL"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_marginTop="8dp"
     android:layout_marginBottom="8dp"
     app:layout_constraintBottom_toTopOf="@+id/layoutNombre"
-    app:layout_constraintEnd_toEndOf="@+id/spinner_distrito"
-    app:layout_constraintStart_toStartOf="@+id/spinner_distrito"
+    app:layout_constraintEnd_toEndOf="@+id/spinner_distritoL"
+    app:layout_constraintStart_toStartOf="@+id/spinner_distritoL"
     app:layout_constraintTop_toBottomOf="@+id/tv_tienda" />
 
 <ImageView
@@ -120,17 +120,17 @@ tools:context=".ui.main.inicioVisitaLarga.VisitaLargaActivity">
     app:layout_constraintTop_toTopOf="parent"
     app:srcCompat="@mipmap/ic_launcher" />
 
-<TextView
-    android:id="@+id/tvTitle"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/title_visita_larga"
-    android:textColor="@android:color/black"
-    android:textSize="18sp"
-    android:textStyle="italic"
-    app:layout_constraintEnd_toEndOf="@+id/imageView2"
-    app:layout_constraintStart_toStartOf="@+id/imageView2"
-    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_visita_larga"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 <com.google.android.material.textfield.TextInputLayout
     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
     android:id="@+id/layoutNombre"
@@ -145,9 +145,9 @@ tools:context=".ui.main.inicioVisitaLarga.VisitaLargaActivity">
     app:errorEnabled="true"
     app:hintTextColor="@color/primaryTextColor"
     app:layout_constraintBottom_toTopOf="@+id/layout_responsable"
-    app:layout_constraintEnd_toEndOf="@+id/spinner_tienda"
-    app:layout_constraintStart_toStartOf="@+id/spinner_tienda"
-    app:layout_constraintTop_toBottomOf="@+id/spinner_tienda">
+    app:layout_constraintEnd_toEndOf="@+id/spinner_tiendaL"
+    app:layout_constraintStart_toStartOf="@+id/spinner_tiendaL"
+    app:layout_constraintTop_toBottomOf="@+id/spinner_tiendaL">
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edittext_nombre"
@@ -177,9 +177,9 @@ tools:context=".ui.main.inicioVisitaLarga.VisitaLargaActivity">
     app:hintTextColor="@color/primaryTextColor"
     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
     app:layout_constraintBottom_toTopOf="@+id/layout_comentarios"
-    app:layout_constraintEnd_toEndOf="@+id/spinner_tienda"
+    app:layout_constraintEnd_toEndOf="@+id/spinner_tiendaL"
     app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toStartOf="@+id/spinner_tienda"
+    app:layout_constraintStart_toStartOf="@+id/spinner_tiendaL"
     app:layout_constraintTop_toBottomOf="@+id/layoutNombre">
 
     <com.google.android.material.textfield.TextInputEditText
@@ -210,8 +210,8 @@ tools:context=".ui.main.inicioVisitaLarga.VisitaLargaActivity">
     app:errorEnabled="true"
     app:hintTextColor="@color/primaryTextColor"
     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-    app:layout_constraintEnd_toEndOf="@+id/spinner_tienda"
-    app:layout_constraintStart_toStartOf="@+id/spinner_tienda"
+    app:layout_constraintEnd_toEndOf="@+id/spinner_tiendaL"
+    app:layout_constraintStart_toStartOf="@+id/spinner_tiendaL"
     app:layout_constraintTop_toBottomOf="@+id/layout_responsable">
 
     <com.google.android.material.textfield.TextInputEditText

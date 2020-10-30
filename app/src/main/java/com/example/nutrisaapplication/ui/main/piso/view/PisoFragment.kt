@@ -35,9 +35,9 @@ class PisoFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        imb_yes3.setOnClickListener { tomaFoto(1) }
+        imb_yes1.setOnClickListener { tomaFoto(1) }
         imb_yes4.setOnClickListener { tomaFoto(2) }
-        imb_no3.setOnClickListener { tomaFoto(3) }
+        imb_no1.setOnClickListener { tomaFoto(3) }
         imb_no4.setOnClickListener { tomaFoto(4) }
         imb_yes20.setOnClickListener { tomaFoto(5) }
         imb_yes14.setOnClickListener { tomaFoto(6) }

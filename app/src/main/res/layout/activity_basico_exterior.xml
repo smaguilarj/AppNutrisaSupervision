@@ -27,115 +27,116 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/tv_question3"
+                android:id="@+id/tv_question1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="60dp"
-                android:layout_marginBottom="32dp"
                 android:text="1.- Fachada"
                 android:textColor="@color/primaryTextColor"
-                app:layout_constraintBottom_toTopOf="@+id/imb_na3"
                 app:layout_constraintEnd_toStartOf="@+id/guideline8"
                 app:layout_constraintStart_toStartOf="@+id/guideline7"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/imageButton3"
+                android:id="@+id/imageButton1"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@color/colorWhite"
                 android:tint="@color/design_default_color_primary_dark"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_question3"
-                app:layout_constraintStart_toEndOf="@+id/tv_question3"
-                app:layout_constraintTop_toTopOf="@+id/tv_question3"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_question1"
+                app:layout_constraintStart_toEndOf="@+id/tv_question1"
+                app:layout_constraintTop_toTopOf="@+id/tv_question1"
                 app:srcCompat="@drawable/ic_informacion_mano" />
 
             <TextView
-                android:id="@+id/tv_imgbutton3"
+                android:id="@+id/tv_imgbutton1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
                 android:text="La fachada se encuentra limpia y en buen estado. Cristales, canceleria, sin manchas. Anuncio encendido"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="11sp"
                 android:visibility="invisible"
                 app:layout_constraintEnd_toStartOf="@+id/guideline8"
-                app:layout_constraintStart_toStartOf="@+id/tv_question3"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tv_question1"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton1" />
 
             <ImageButton
-                android:id="@+id/imb_na3"
+                android:id="@+id/imb_na1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:src="@drawable/ic_block_50"
+                app:layout_constraintBottom_toBottomOf="@+id/imb_no1"
                 app:layout_constraintEnd_toStartOf="@+id/guideline8"
-                app:layout_constraintStart_toEndOf="@+id/imb_no3"
-                app:layout_constraintTop_toTopOf="@+id/imb_no3" />
+                app:layout_constraintStart_toEndOf="@+id/imb_no1"
+                app:layout_constraintTop_toTopOf="@+id/imb_no1" />
 
             <ImageButton
-                android:id="@+id/imb_no3"
+                android:id="@+id/imb_no1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
                 android:background="@android:color/transparent"
-                app:layout_constraintEnd_toStartOf="@+id/imb_na3"
-                app:layout_constraintStart_toEndOf="@+id/imb_yes3"
-                app:layout_constraintTop_toBottomOf="@+id/tv_question3"
+                app:layout_constraintBottom_toBottomOf="@+id/imb_yes1"
+                app:layout_constraintEnd_toStartOf="@+id/imb_na1"
+                app:layout_constraintStart_toEndOf="@+id/imb_yes1"
+                app:layout_constraintTop_toTopOf="@+id/imb_yes1"
                 app:srcCompat="@mipmap/ic_cancel" />
 
             <ImageButton
-                android:id="@+id/imb_yes3"
+                android:id="@+id/imb_yes1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="8dp"
                 android:background="@android:color/transparent"
-                app:layout_constraintEnd_toStartOf="@+id/imb_no3"
-                app:layout_constraintStart_toStartOf="@+id/tv_question3"
-                app:layout_constraintTop_toBottomOf="@+id/tv_question3"
+                app:layout_constraintEnd_toStartOf="@+id/imb_no1"
+                app:layout_constraintStart_toStartOf="@+id/tv_question1"
+                app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton1"
                 app:srcCompat="@drawable/ic_done_50" />
 
             <TextView
-                android:id="@+id/tv_na3"
+                android:id="@+id/tv_na1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="N/A"
                 android:textColor="@color/primaryTextColor"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/imb_na3"
-                app:layout_constraintStart_toStartOf="@+id/imb_na3"
-                app:layout_constraintTop_toBottomOf="@+id/imb_na3" />
+                app:layout_constraintEnd_toEndOf="@+id/imb_na1"
+                app:layout_constraintStart_toStartOf="@+id/imb_na1"
+                app:layout_constraintTop_toBottomOf="@+id/imb_na1" />
 
             <TextView
-                android:id="@+id/tv_yes3"
+                android:id="@+id/tv_yes1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="SI"
                 android:textColor="@color/primaryTextColor"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/imb_yes3"
-                app:layout_constraintStart_toStartOf="@+id/imb_yes3"
-                app:layout_constraintTop_toBottomOf="@+id/imb_yes3" />
+                app:layout_constraintEnd_toEndOf="@+id/imb_yes1"
+                app:layout_constraintStart_toStartOf="@+id/imb_yes1"
+                app:layout_constraintTop_toBottomOf="@+id/imb_yes1" />
 
             <TextView
-                android:id="@+id/tv_not3"
+                android:id="@+id/tv_not1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="NO"
                 android:textColor="@color/primaryTextColor"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/imb_no3"
-                app:layout_constraintStart_toStartOf="@+id/imb_no3"
-                app:layout_constraintTop_toBottomOf="@+id/imb_no3" />
+                app:layout_constraintEnd_toEndOf="@+id/imb_no1"
+                app:layout_constraintStart_toStartOf="@+id/imb_no1"
+                app:layout_constraintTop_toBottomOf="@+id/imb_no1" />
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edt_3"
+                android:id="@+id/edt_1"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="8dp"
                 android:maxLines="2"
                 app:counterEnabled="true"
                 app:counterMaxLength="40"
@@ -144,10 +145,10 @@
                 app:hintTextColor="@color/primaryTextColor"
                 app:layout_constraintEnd_toStartOf="@+id/guideline8"
                 app:layout_constraintStart_toStartOf="@+id/guideline7"
-                app:layout_constraintTop_toBottomOf="@+id/tv_not3">
+                app:layout_constraintTop_toBottomOf="@+id/tv_not1">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edt3"
+                    android:id="@+id/edt1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Escribe aqui tu comentario "
@@ -158,16 +159,16 @@
 
 
             <ImageView
-                android:id="@+id/img_question3"
+                android:id="@+id/img_question1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                app:layout_constraintEnd_toEndOf="@+id/tv_na3"
-                app:layout_constraintStart_toStartOf="@+id/imb_yes3"
-                app:layout_constraintTop_toBottomOf="@+id/edt_3"
+                app:layout_constraintEnd_toEndOf="@+id/tv_na1"
+                app:layout_constraintStart_toStartOf="@+id/imb_yes1"
+                app:layout_constraintTop_toBottomOf="@+id/edt_1"
                 tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
             <TextView
-                android:id="@+id/tv_question4"
+                android:id="@+id/tv_question2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -176,106 +177,106 @@
                 android:text="2.-Material POP"
                 android:textAlignment="textStart"
                 android:textColor="@color/primaryTextColor"
-                app:layout_constraintBottom_toTopOf="@+id/imb_na4"
+                app:layout_constraintBottom_toTopOf="@+id/imb_na2"
                 app:layout_constraintEnd_toStartOf="@+id/guideline8"
                 app:layout_constraintStart_toStartOf="@+id/guideline7"
-                app:layout_constraintTop_toBottomOf="@+id/img_question3" />
+                app:layout_constraintTop_toBottomOf="@+id/img_question1" />
 
             <ImageButton
-                android:id="@+id/imageButton4"
+                android:id="@+id/imageButton2"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@color/colorWhite"
                 android:tint="@color/design_default_color_primary_dark"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_question4"
-                app:layout_constraintStart_toEndOf="@+id/tv_question4"
-                app:layout_constraintTop_toBottomOf="@+id/img_question3"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_question2"
+                app:layout_constraintStart_toEndOf="@+id/tv_question2"
+                app:layout_constraintTop_toBottomOf="@+id/img_question1"
                 app:srcCompat="@drawable/ic_informacion_mano" />
 
             <TextView
-                android:id="@+id/tv_imgbutton4"
+                android:id="@+id/tv_imgbutton2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:text="El material POP se encuentra colocado de acuerdo al comunicado del día (Tótem)"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="11sp"
                 android:visibility="invisible"
                 app:layout_constraintEnd_toStartOf="@+id/guideline8"
                 app:layout_constraintStart_toStartOf="@+id/guideline7"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+                app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 
             <ImageButton
-                android:id="@+id/imb_na4"
+                android:id="@+id/imb_na2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:src="@drawable/ic_block_50"
-                app:layout_constraintBottom_toBottomOf="@+id/imb_no4"
+                app:layout_constraintBottom_toBottomOf="@+id/imb_no2"
                 app:layout_constraintEnd_toStartOf="@+id/guideline8"
-                app:layout_constraintStart_toEndOf="@+id/imb_no4"
-                app:layout_constraintTop_toTopOf="@+id/imb_no4" />
+                app:layout_constraintStart_toEndOf="@+id/imb_no2"
+                app:layout_constraintTop_toTopOf="@+id/imb_no2" />
 
             <ImageButton
-                android:id="@+id/imb_no4"
+                android:id="@+id/imb_no2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                app:layout_constraintBottom_toBottomOf="@+id/imb_yes4"
-                app:layout_constraintEnd_toStartOf="@+id/imb_na4"
-                app:layout_constraintStart_toEndOf="@+id/imb_yes4"
-                app:layout_constraintTop_toTopOf="@+id/imb_yes4"
+                app:layout_constraintBottom_toBottomOf="@+id/imb_yes2"
+                app:layout_constraintEnd_toStartOf="@+id/imb_na2"
+                app:layout_constraintStart_toEndOf="@+id/imb_yes2"
                 app:srcCompat="@mipmap/ic_cancel" />
 
             <ImageButton
-                android:id="@+id/imb_yes4"
+                android:id="@+id/imb_yes2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="8dp"
                 android:background="@android:color/transparent"
-                app:layout_constraintEnd_toStartOf="@+id/imb_no4"
-                app:layout_constraintStart_toStartOf="@+id/tv_question4"
-                app:layout_constraintTop_toBottomOf="@+id/tv_question4"
+                app:layout_constraintEnd_toStartOf="@+id/imb_no2"
+                app:layout_constraintStart_toStartOf="@+id/tv_question2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_imgbutton2"
                 app:srcCompat="@drawable/ic_done_50" />
 
             <TextView
-                android:id="@+id/tv_yes4"
+                android:id="@+id/tv_yes2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="SI"
                 android:textColor="@color/primaryTextColor"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/imb_yes4"
-                app:layout_constraintStart_toStartOf="@+id/imb_yes4"
-                app:layout_constraintTop_toBottomOf="@+id/imb_yes4" />
+                app:layout_constraintEnd_toEndOf="@+id/imb_yes2"
+                app:layout_constraintStart_toStartOf="@+id/imb_yes2"
+                app:layout_constraintTop_toBottomOf="@+id/imb_yes2" />
 
             <TextView
-                android:id="@+id/tv_not4"
+                android:id="@+id/tv_not2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="NO"
                 android:textColor="@color/primaryTextColor"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/imb_no4"
-                app:layout_constraintStart_toStartOf="@+id/imb_no4"
-                app:layout_constraintTop_toBottomOf="@+id/imb_no4" />
+                app:layout_constraintEnd_toEndOf="@+id/imb_no2"
+                app:layout_constraintStart_toStartOf="@+id/imb_no2"
+                app:layout_constraintTop_toBottomOf="@+id/imb_no2" />
 
             <TextView
-                android:id="@+id/tv_na4"
+                android:id="@+id/tv_na2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="N/A"
                 android:textColor="@color/primaryTextColor"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/imb_na4"
-                app:layout_constraintStart_toStartOf="@+id/imb_na4"
-                app:layout_constraintTop_toBottomOf="@+id/imb_na4" />
+                app:layout_constraintEnd_toEndOf="@+id/imb_na2"
+                app:layout_constraintStart_toStartOf="@+id/imb_na2"
+                app:layout_constraintTop_toBottomOf="@+id/imb_na2" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edt_4"
+                android:id="@+id/edt_2"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="8dp"
                 android:maxLines="2"
                 app:counterEnabled="true"
                 app:counterMaxLength="40"
@@ -284,7 +285,7 @@
                 app:hintTextColor="@color/primaryTextColor"
                 app:layout_constraintEnd_toStartOf="@+id/guideline8"
                 app:layout_constraintStart_toStartOf="@+id/guideline7"
-                app:layout_constraintTop_toBottomOf="@+id/tv_not4">
+                app:layout_constraintTop_toBottomOf="@+id/tv_not2">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edt2"
@@ -297,12 +298,12 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <ImageView
-                android:id="@+id/img_question4"
+                android:id="@+id/img_question2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                app:layout_constraintEnd_toEndOf="@+id/imb_na4"
-                app:layout_constraintStart_toStartOf="@+id/imb_yes4"
-                app:layout_constraintTop_toBottomOf="@+id/edt_4"
+                app:layout_constraintEnd_toEndOf="@+id/imb_na2"
+                app:layout_constraintStart_toStartOf="@+id/imb_yes2"
+                app:layout_constraintTop_toBottomOf="@+id/edt_2"
                 tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
             <Button
@@ -317,7 +318,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline8"
                 app:layout_constraintStart_toStartOf="@+id/guideline7"
-                app:layout_constraintTop_toBottomOf="@+id/img_question4" />
+                app:layout_constraintTop_toBottomOf="@+id/img_question2" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline7"
