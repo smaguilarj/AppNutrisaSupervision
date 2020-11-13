@@ -42,7 +42,7 @@ class FachadaFragment : Fragment() {
         imb_yes4.setOnClickListener { tomaFoto(2);Log.d("respuesta","pregunta: $pregunta2 respuesta:$respuesta2") }
         imb_no1.setOnClickListener { tomaFoto(3);Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta") }
         imb_no4.setOnClickListener { tomaFoto(4);Log.d("respuesta","pregunta: $pregunta2 respuesta:$respuesta2") }
-        imb_na3.setOnClickListener { pregunta=1; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta");completo1=true; habilitarBtn() }
+        imb_na1.setOnClickListener { pregunta=1; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta");completo1=true; habilitarBtn() }
         imb_na4.setOnClickListener { pregunta=2; respuesta="NA";Log.d("respuesta","pregunta: $pregunta2 respuesta:$respuesta2");completo2=true; habilitarBtn() }
         buttonFachada.isEnabled=false
         buttonFachada.setOnClickListener {

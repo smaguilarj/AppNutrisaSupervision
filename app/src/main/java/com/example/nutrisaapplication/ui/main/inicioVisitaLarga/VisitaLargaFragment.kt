@@ -24,6 +24,11 @@ class VisitaLargaFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        buttonVisitaRapida.setOnClickListener {
+            Toast.makeText(requireActivity(), "es una prueba", Toast.LENGTH_SHORT).show()
+            activity?.onBackPressed()
+        }
     }
 
     private fun obtenerDatos() {

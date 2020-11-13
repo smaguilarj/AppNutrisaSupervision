@@ -32,6 +32,9 @@ class BasicoBanoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         checkCamara()
         checkOption()
+        buttonEnviar_bodega_bano.setOnClickListener {
+            activity?.onBackPressed()
+        }
     }
 
     private fun checkCamara() {

@@ -52,7 +52,7 @@ class CajaFragment : Fragment() {
         imb_na15.setOnClickListener { pregunta=15; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
         imb_na16.setOnClickListener { pregunta=16; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
         imb_na17.setOnClickListener { pregunta=17; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
-        buttonEnviar.setOnClickListener {navigation.navigate(R.id.action_cajaFragment_to_bodegaPizarraFragment); SharedApp.prefs.caja=true }
+        buttonEnviarPlan.setOnClickListener {navigation.navigate(R.id.action_cajaFragment_to_bodegaPizarraFragment); SharedApp.prefs.caja=true }
     }
 
     private fun tomaFoto(code: Int) {

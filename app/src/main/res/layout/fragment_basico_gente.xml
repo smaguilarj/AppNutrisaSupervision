@@ -1736,7 +1736,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
-                android:id="@+id/buttonEnviar"
+                android:id="@+id/buttonEnviar_gente"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="8dp"

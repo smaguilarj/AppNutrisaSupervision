@@ -13,9 +13,13 @@ class Preference(context: Context) {
     val BODEGA = "bodega"
     val PLAN = "plan"
     val VISITA_RAPIDA = "visitaRapida"
+    val PLAN_TRABAJO = "plan_trabajo"
 
     val prefs: SharedPreferences = context.getSharedPreferences(PREFS_NAME, 0)
 
+    var borrarLista: Boolean
+        get() = prefs.getBoolean(PLAN_TRABAJO, false)
+        set(value) = prefs.edit().putBoolean(PLAN_TRABAJO, value).apply()
     var visitaRapida: Boolean
         get() = prefs.getBoolean(VISITA_RAPIDA, false)
         set(value) = prefs.edit().putBoolean(VISITA_RAPIDA, value).apply()

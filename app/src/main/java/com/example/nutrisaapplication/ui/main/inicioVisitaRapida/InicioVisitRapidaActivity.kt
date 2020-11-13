@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import com.example.nutrisaapplication.R
 import com.example.nutrisaapplication.data.SharedApp
 import com.example.nutrisaapplication.ui.base.BaseActivity
@@ -19,9 +20,11 @@ class InicioVisitRapidaActivity : BaseActivity(), AdapterView.OnItemSelectedList
         setContentView(R.layout.activity_list_questions)
         baseDatos= FirebaseDatabase.getInstance().getReference()
         obtenerTienda()
-        buttonVisitaRapida.setOnClickListener { onBackPressed()
+        buttonVisitaRapida.setOnClickListener {
+            onBackPressed()
             SharedApp.prefs.visitaRapida= true}
-        obtenerDatos()
+             obtenerDatos()
+
     }
 
     private fun obtenerDatos() {

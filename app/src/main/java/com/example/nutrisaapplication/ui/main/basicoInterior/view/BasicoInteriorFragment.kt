@@ -31,6 +31,9 @@ class BasicoInteriorFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         checkOption()
         checkCamara()
+        buttonEnviarPlan.setOnClickListener {
+            activity?.onBackPressed()
+        }
     }
 
     private fun checkCamara() {

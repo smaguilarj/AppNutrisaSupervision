@@ -49,7 +49,7 @@ class BarraFragment : Fragment() {
         img_na14.setOnClickListener { pregunta=10; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
 
         habilitarBoton()
-        buttonEnviar.setOnClickListener {
+        buttonEnviarPlan.setOnClickListener {
             SharedApp.prefs.barras= true
             navigate.navigate(R.id.action_barraFragment_to_cajaFragment)
         }

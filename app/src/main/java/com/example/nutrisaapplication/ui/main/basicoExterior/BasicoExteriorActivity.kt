@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.activity_basico_exterior.imageButton1
 import kotlinx.android.synthetic.main.activity_basico_exterior.imageButton2
 import kotlinx.android.synthetic.main.activity_basico_exterior.tv_imgbutton1
 import kotlinx.android.synthetic.main.activity_basico_exterior.tv_imgbutton2
+import kotlinx.android.synthetic.main.activity_list_questions.*
 import kotlinx.android.synthetic.main.fragment_basico_exterior.*
 import kotlinx.android.synthetic.main.fragment_basico_exterior.imb_na1
 import kotlinx.android.synthetic.main.fragment_basico_exterior.imb_na2
@@ -40,6 +41,9 @@ class BasicoExteriorActivity : AppCompatActivity() {
         imb_no2.setOnClickListener { tomaFoto(4) }
         imb_na1.setOnClickListener { pregunta=1; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
         imb_na2.setOnClickListener { pregunta=2; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
+        buttonEnviar_exterior.setOnClickListener {
+            onBackPressed()
+        }
     }
 
     private fun tomaFoto(code: Int) {

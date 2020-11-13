@@ -87,6 +87,9 @@ class BasicoGenteFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         checkCamara()
         checkOption()
+        buttonEnviar_gente.setOnClickListener {
+            activity?.onBackPressed()
+        }
     }
 
     private fun checkCamara() {

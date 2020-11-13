@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navidation_visita_rapida"
+    android:id="@+id/navigation_visita_rapida"
     app:startDestination="@id/menuFragment">
     <fragment
         android:id="@+id/menuFragment"
@@ -114,6 +114,12 @@
         <action
             android:id="@+id/action_planTrabajoFragment_to_menuFragment"
             app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_planTrabajoFragment_to_statusFragment"
+            app:destination="@id/statusFragment" />
+        <action
+            android:id="@+id/action_planTrabajoFragment_to_planDialogFragment"
+            app:destination="@id/planDialogFragment" />
     </fragment>
     <fragment
         android:id="@+id/planDialogFragment"
@@ -132,12 +138,22 @@
         <action
             android:id="@+id/action_salidaVisitaRapidaFragment_to_signatureFragment"
             app:destination="@id/signatureFragment" />
+        <action
+            android:id="@+id/action_salidaVisitaRapidaFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
     </fragment>
     <fragment
         android:id="@+id/statusFragment"
         android:name="com.example.nutrisaapplication.ui.main.Estatus.view.StatusFragment"
         android:label="fragment_status"
-        tools:layout="@layout/fragment_status" />
+        tools:layout="@layout/fragment_status" >
+        <action
+            android:id="@+id/action_statusFragment_to_salidaVisitaRapidaFragment"
+            app:destination="@id/salidaVisitaRapidaFragment" />
+        <action
+            android:id="@+id/action_statusFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
     <fragment
         android:id="@+id/signatureFragment"
         android:name="com.example.nutrisaapplication.ui.main.salidaVisita.view.SignatureFragment"

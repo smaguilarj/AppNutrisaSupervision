@@ -11,7 +11,50 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.example.nutrisaapplication.R
 import com.github.dhaval2404.imagepicker.ImagePicker
+import kotlinx.android.synthetic.main.fragment_basico_bano.*
 import kotlinx.android.synthetic.main.fragment_negocio_pizarra.*
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imageButton10
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imageButton11
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imageButton5
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imageButton6
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imageButton7
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imageButton8
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imageButton9
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_na10
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_na11
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_na5
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_na6
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_na7
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_na8
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_na9
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_no10
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_no11
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_no5
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_no6
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_no7
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_no8
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_no9
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_yes10
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_yes11
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_yes5
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_yes6
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_yes7
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_yes8
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.imb_yes9
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.img_question10
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.img_question11
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.img_question5
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.img_question6
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.img_question7
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.img_question8
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.img_question9
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.tv_imgbutton10
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.tv_imgbutton11
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.tv_imgbutton5
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.tv_imgbutton6
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.tv_imgbutton7
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.tv_imgbutton8
+import kotlinx.android.synthetic.main.fragment_negocio_pizarra.tv_imgbutton9
 import java.io.File
 
 
@@ -32,6 +75,9 @@ class NegocioPizarraFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         checkCamara()
         checkOption()
+        buttonEnviar_negocio.setOnClickListener {
+            activity?.onBackPressed()
+        }
     }
 
     private fun checkCamara() {

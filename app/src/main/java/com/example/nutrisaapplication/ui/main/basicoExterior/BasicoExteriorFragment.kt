@@ -42,7 +42,7 @@ class BasicoExteriorFragment : Fragment() {
         imb_no2.setOnClickListener { tomaFoto(4) }
         imb_na1.setOnClickListener { pregunta=1; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
         imb_na2.setOnClickListener { pregunta=2; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
-        buttonEnviar.setOnClickListener {navigation.navigate(R.id.action_cajaFragment_to_bodegaPizarraFragment)}
+        buttonEnviarPlan.setOnClickListener {navigation.navigate(R.id.action_cajaFragment_to_bodegaPizarraFragment)}
     }
 
 

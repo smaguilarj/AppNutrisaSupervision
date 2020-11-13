@@ -1,6 +1,5 @@
 package com.example.nutrisaapplication.ui.main.salidaVisita.view
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -31,7 +30,7 @@ class SalidaVisitaRapidaFragment : Fragment() {
             navigation.navigate(R.id.action_salidaVisitaRapidaFragment_to_signatureFragment)
             //startActivity(Intent(requireContext(),SignatureFragment::class.java))
         }
-        btnResponsable.setOnClickListener {
+        edtResponsable.setOnClickListener {
             navigation.navigate(R.id.action_salidaVisitaRapidaFragment_to_signatureFragment)
             //startActivity(Intent(requireContext(),SignatureFragment::class.java))
         }
@@ -43,6 +42,7 @@ class SalidaVisitaRapidaFragment : Fragment() {
             SharedApp.prefs.caja=false
             SharedApp.prefs.bodega=false
             SharedApp.prefs.plan=false
+            SharedApp.prefs.borrarLista=false
             activity?.onBackPressed()
         }
     }

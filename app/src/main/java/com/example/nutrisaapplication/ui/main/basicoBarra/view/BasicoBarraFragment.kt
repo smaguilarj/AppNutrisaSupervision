@@ -73,8 +73,6 @@ import kotlinx.android.synthetic.main.fragment_basico_barra.tv_imgbutton5
 import kotlinx.android.synthetic.main.fragment_basico_barra.tv_imgbutton7
 import kotlinx.android.synthetic.main.fragment_basico_barra.tv_imgbutton8
 import kotlinx.android.synthetic.main.fragment_basico_barra.tv_imgbutton9
-import kotlinx.android.synthetic.main.fragment_basico_interior.*
-import kotlinx.android.synthetic.main.fragment_caja.*
 import java.io.File
 
 class BasicoBarraFragment : Fragment() {
@@ -91,6 +89,9 @@ class BasicoBarraFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         checkOption()
         checkCamara()
+        buttonEnviar_barra.setOnClickListener {
+            activity?.onBackPressed()
+        }
     }
 
     private fun checkCamara() {

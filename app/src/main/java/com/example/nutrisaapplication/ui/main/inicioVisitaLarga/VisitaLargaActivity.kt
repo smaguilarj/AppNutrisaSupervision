@@ -12,11 +12,15 @@ import com.example.nutrisaapplication.R
 import kotlinx.android.synthetic.main.activity_list_questions.*
 
 class VisitaLargaActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_visita_rapida)
-
         obtenerDatos()
+        buttonVisitaRapida.setOnClickListener {
+           // Toast.makeText(this, "es una prueba", Toast.LENGTH_SHORT).show()
+            onBackPressed()
+        }
     }
 
     private fun obtenerDatos() {

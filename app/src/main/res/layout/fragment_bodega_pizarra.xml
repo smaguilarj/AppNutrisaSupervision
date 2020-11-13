@@ -49,7 +49,7 @@
                 app:layout_constraintTop_toTopOf="@+id/imb_no3" />
 
             <ImageButton
-                android:id="@+id/imb_no1"
+                android:id="@+id/imb_no3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -396,7 +396,7 @@
                 app:layout_constraintStart_toStartOf="@+id/guideline7"
                 app:layout_constraintTop_toTopOf="parent" />
             <Button
-                android:id="@+id/buttonEnviar"
+                android:id="@+id/buttonEnviarPlan"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="8dp"

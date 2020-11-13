@@ -14,28 +14,27 @@
         android:layout_marginBottom="9dp"
         android:text="@string/pregunta1"
         android:textColor="@color/primaryTextColor"
-        app:layout_constraintBottom_toTopOf="@+id/imb_na3"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
     <ImageButton
-        android:id="@+id/imb_na3"
+        android:id="@+id/imb_na1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_block_50"
         android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="@+id/imb_no3"
+        app:layout_constraintBottom_toBottomOf="@+id/imb_no1"
         app:layout_constraintEnd_toEndOf="@+id/textView6"
-        app:layout_constraintStart_toEndOf="@+id/imb_no3"
-        app:layout_constraintTop_toTopOf="@+id/imb_no3" />
+        app:layout_constraintStart_toEndOf="@+id/imb_no1"
+        app:layout_constraintTop_toTopOf="@+id/imb_no1" />
 
     <ImageButton
         android:id="@+id/imb_no1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/imb_yes1"
-        app:layout_constraintEnd_toStartOf="@+id/imb_na3"
+        app:layout_constraintEnd_toStartOf="@+id/imb_na1"
         app:layout_constraintStart_toEndOf="@+id/imb_yes1"
         app:layout_constraintTop_toTopOf="@+id/imb_yes1"
         android:background="@android:color/transparent"
@@ -47,24 +46,24 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
-        app:layout_constraintEnd_toStartOf="@+id/imb_no3"
+        app:layout_constraintEnd_toStartOf="@+id/imb_no1"
         app:layout_constraintStart_toStartOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         app:srcCompat="@drawable/ic_done_50" />
 
     <TextView
-        android:id="@+id/tv_na3"
+        android:id="@+id/tv_na1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="N/A"
         android:textColor="@color/primaryTextColor"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imb_na3"
-        app:layout_constraintStart_toStartOf="@+id/imb_na3"
-        app:layout_constraintTop_toBottomOf="@+id/imb_na3" />
+        app:layout_constraintEnd_toEndOf="@+id/imb_na1"
+        app:layout_constraintStart_toStartOf="@+id/imb_na1"
+        app:layout_constraintTop_toBottomOf="@+id/imb_na1" />
 
     <TextView
-        android:id="@+id/tv_yes3"
+        android:id="@+id/tv_yes1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SI"
@@ -81,9 +80,9 @@
         android:text="NO"
         android:textColor="@color/primaryTextColor"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imb_no3"
-        app:layout_constraintStart_toStartOf="@+id/imb_no3"
-        app:layout_constraintTop_toBottomOf="@+id/imb_no3"/>
+        app:layout_constraintEnd_toEndOf="@+id/imb_no1"
+        app:layout_constraintStart_toStartOf="@+id/imb_no1"
+        app:layout_constraintTop_toBottomOf="@+id/imb_no1"/>
 
 
     <TextView
@@ -148,7 +147,7 @@
         android:id="@+id/img_question3"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="@+id/tv_na3"
+        app:layout_constraintEnd_toEndOf="@+id/tv_na1"
         app:layout_constraintStart_toStartOf="@+id/imb_yes1"
         app:layout_constraintTop_toBottomOf="@+id/edt_1"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />

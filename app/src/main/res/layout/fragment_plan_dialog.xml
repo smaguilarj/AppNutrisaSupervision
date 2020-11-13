@@ -146,6 +146,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:maxLines="2"
+        android:imeOptions="actionDone"
         app:counterEnabled="true"
         app:counterMaxLength="40"
         app:errorEnabled="true"
@@ -158,11 +159,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewResponsable">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/btnResponsable"
+            android:id="@+id/edtResponsable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Escribe aqui ..."
-            android:imeOptions="actionNext"
+            android:imeOptions="actionSend"
             android:inputType="textAutoComplete"
             android:maxLines="2"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -234,47 +235,18 @@
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="@+id/textViewEvaluador"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"/>
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edt_status"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:maxLines="2"
-        app:counterEnabled="true"
-        app:counterMaxLength="40"
-        app:errorEnabled="true"
-        android:visibility="invisible"
-        app:hintAnimationEnabled="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:hintTextColor="@color/primaryTextColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewStatus">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtStatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Escribe aqui ..."
-            android:imeOptions="actionNext"
-            android:inputType="textAutoComplete"
-            android:maxLines="2"/>
-    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/buttonEnviar"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
         android:text="Enviar datos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_status" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -283,7 +255,6 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/edt_status"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textViewStatus"
         app:layout_constraintTop_toBottomOf="@+id/textViewStatus">
@@ -297,7 +268,7 @@
             app:srcCompat="@drawable/ic_circulo_rojo" />
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/radioButtonRojo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="" />
@@ -311,7 +282,7 @@
             app:srcCompat="@drawable/ic_circulo_amarillo" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/radioButtonAmarillo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="" />
@@ -325,7 +296,7 @@
             app:srcCompat="@drawable/ic_circulo_verde" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/radioButtonVerde"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="" />
