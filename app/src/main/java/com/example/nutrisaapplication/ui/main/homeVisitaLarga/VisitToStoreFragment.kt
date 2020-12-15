@@ -70,6 +70,21 @@ class VisitToStoreFragment : Fragment() {
         linearLayoutPizarra.setOnClickListener {
             navigation.navigate(R.id.action_visitToStoreFragment_to_negocioPizarraFragment)
         }
+        linearLayoutAdmon.setOnClickListener {
+            navigation.navigate(R.id.action_visitToStoreFragment_to_negocioAdmonFragment)
+        }
+        linearLayoutKPI.setOnClickListener {
+            navigation.navigate(R.id.action_visitToStoreFragment_to_kpiFragment)
+        }
+        linearLayoutPrevencion.setOnClickListener {
+            navigation.navigate(R.id.action_visitToStoreFragment_to_prevencionPerdidasFragment)
+        }
+        linearLayoutSalidaAuditoria.setOnClickListener {
+            navigation.navigate(R.id.action_visitToStoreFragment_to_salidaVisitaOperacionesFragment)
+        }
+        linearLayoutConteo.setOnClickListener {
+            navigation.navigate(R.id.action_visitToStoreFragment_to_conteoVasosFragment)
+        }
     }
 
 }

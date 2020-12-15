@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.conteoVasos.ConteoVasosFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:scrollbarFadeDuration="1000"
+        android:scrollbarSize="12dip"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:scrollbars="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TableLayout
+                    android:id="@+id/tableLayout1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TableRow
+                        android:id="@+id/tableRow4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/celda"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_span="6"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="CONTEO DE VASOS"
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/blue_new_benefit">
+
+                        <TextView
+                            android:id="@+id/tv02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="PRODUCTO"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/tv03"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="SISTEMA"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/tv04"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="FISICO \nBARRA y BODEGA"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/TextView01"
+                            android:layout_height="match_parent"
+                            android:layout_span="1"
+                            android:background="@drawable/celda"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="MERMA Y CONSUMO"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="TOTAL\nFISICO"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/textViewDif"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="DIFERENCIA\nDIF"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow02"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_span="3"
+                        android:background="@drawable/celda_intermedia">
+
+                        <TextView
+                            android:id="@+id/textView03"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/colorBlack"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="start|center"
+                            android:text=" VASO DOBLE " />
+
+                        <EditText
+                            android:id="@+id/tvSistema1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:padding="5dp" />
+
+                        <EditText
+                            android:id="@+id/tvFisico1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:padding="5dp" />
+
+                        <EditText
+                            android:id="@+id/edtMerma1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/edtTotal1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/edtDiferencia1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_span="3"
+                        android:background="@drawable/celda_intermedia">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/colorBlack"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="start|center"
+                            android:text=" VASO SENCILLO " />
+
+                        <EditText
+                            android:id="@+id/tvSistema2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:padding="5dp" />
+
+                        <EditText
+                            android:id="@+id/tvFisico2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:padding="5dp" />
+
+                        <EditText
+                            android:id="@+id/edtMerma2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/edtTotal2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/edtDiferencia2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/textView08"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/colorBlack"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="start|center"
+                            android:text=" CONITO" />
+
+                        <EditText
+                            android:id="@+id/tvpaletas"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:padding="5dp" />
+
+                        <EditText
+                            android:id="@+id/tv08"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/imageView2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/imageView3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/imageView4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow04"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_span="3"
+                        android:background="@drawable/celda_intermedia">
+
+                        <TextView
+                            android:id="@+id/tvProducto4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="start|center"
+                            android:text=" VASO DOBLE"
+                            android:textColor="@color/colorBlack" />
+
+                        <EditText
+                            android:id="@+id/tvSistema4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:padding="5dp" />
+
+                        <EditText
+                            android:id="@+id/tvFisico4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/edtMerma4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/edtTotal4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/edtDiferencia4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_span="3"
+                        android:background="@drawable/celda_intermedia">
+
+
+                        <TextView
+                            android:id="@+id/tvProducto05"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="start|center"
+                            android:textColor="@color/colorBlack"
+                            android:text=" VASO SENCILLO" />
+
+                        <EditText
+                            android:id="@+id/tvSistema5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:padding="5dp" />
+
+                        <EditText
+                            android:id="@+id/tvFisico5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/edtMerma5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/edtTotal5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/edtDiferencia5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvProducto6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="start|center"
+                            android:textColor="@color/colorBlack"
+                            android:text=" WAFLE" />
+
+                        <EditText
+                            android:id="@+id/tvSistema6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/tvFisico6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/edtMerma6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/edtTotal"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/edtDiferencia"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvProducto7"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="start|center"
+                            android:textColor="@color/colorBlack"
+                            android:text=" CONITO" />
+
+                        <EditText
+                            android:id="@+id/tvSistema7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1"/>
+
+                        <EditText
+                            android:id="@+id/tvFisico7"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/edtMerma7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/edtTotal7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/edtDiferencia7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvProducto8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="start|center"
+                            android:textColor="@color/colorBlack"
+                            android:text=" PALETAS" />
+
+                        <EditText
+                            android:id="@+id/tvSistema8"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/tvFisico8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/edtMerma8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/edtTotal8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+
+                        <EditText
+                            android:id="@+id/edtDiferencia8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/celda_intermedia"
+                            android:gravity="center"
+                            android:maxLines="1" />
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/tableLayout2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tableLayout1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TableRow
+                        android:id="@+id/tableRow01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/celda"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/textView01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_span="6"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="CONTEO DE VASOS"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+                    </TableRow>
+
+                </TableLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

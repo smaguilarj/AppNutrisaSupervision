@@ -9,6 +9,7 @@
 <!--        <item name="colorAccent"> #F5B7C3</item>-->
     </style>
     <style name="AppTheme2" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">#03A9F4</item>

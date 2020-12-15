@@ -324,7 +324,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayout10"
+                android:id="@+id/linearLayoutPrevencion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -353,7 +353,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayout11"
+                android:id="@+id/linearLayoutConteo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -362,7 +362,7 @@
                 android:translationZ="2dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutPrevencion">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -383,7 +383,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayout12"
+                android:id="@+id/linearLayoutSalidaAuditoria"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -394,7 +394,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout11">
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutConteo">
 
                 <ImageView
                     android:layout_width="wrap_content"

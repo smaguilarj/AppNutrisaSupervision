@@ -87,4 +87,12 @@
     <string name="refri_barra">Los refrigeradores funcionan de manera adecuada y cuentan con termómetro (debe existir reporte a MDA).</string>
     <string name="insumos_congelado">Se cuenta con vasos, servilletas, portavasos suficientes para la operación del turno.</string>
     <string name="contenedor_barra">Se cuenta con los botes señalizados con sanitizante para boleadoras, vidrios , barra y trapos.</string>
+    <string name="carpetas_admon">Se cuenta con las 7  carpetas publicadas ( Comunicación, Calidad, Efectivo, Negocio, Gubernamental, Inventarios, Gerente de distrito).</string>
+    <string name="carpeta_comunicacion">La carpeta de comunicación cuenta con los comunicados  gerente distrito , comunicados operaciones semanal y mapa mensual  completos y  firmados por todo el personal.</string>
+    <string name="carpeta_efectivo">La carpeta de efectivo cuenta con formato de control de fondo fijo, formato de entregas a sorteck,formato de devoluciones, cupones voz del cliente, cupones generales , control de  depósitos parciales, control  ventas por turno y cortes, completos y actualizados con máximo de un día de retraso.</string>
+    <string name="cash">La carpeta Cash /Asuntos regulatorio, cuenta con constancias del IMSS de todo el personal, Guía de visita gubernamental , Ingreso de personal, Licencia de funcionamiento, protocolo de seguridad e higiene y medidas preventivas.</string>
+    <string name="control_inventario">La carpeta de inventarios cuenta con el formato de merma de alimentos, merma comercial, merma por degustacion,merma por lavado de maquina, merma fruta fresca, merma por daño físico, merma industrial, Peps (debe estar lo del mes corriente), control de temperaturas, control de merma por próximos a caducar, Transferencias Recall, Consumo interno (firmado por colaboradores y gerente), Resultados de inventarios mensuales y semanales (firmados por el gerente de la tienda)conteo de críticos.</string>
+    <string name="gerente_distrito"><![CDATA[La carpeta de gerente de distrito cuenta con los formatos de ultimas 5 visitas cortas con seguimientos , última vista de operaciones con seguimiento,p&L mensuales del año, copia del plan de acción y seguimientos ,auditoria de calidad con plan de acción.]]></string>
+    <string name="protección_civil">Se cuenta con la carpeta de protección civil. ( para ciudades donde aplique).</string>
+    <string name="title_activity_mapa">Map</string>
 </resources>

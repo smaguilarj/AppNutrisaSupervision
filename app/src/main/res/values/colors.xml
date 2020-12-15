@@ -111,7 +111,7 @@
     <!-- ways to deposit money -->
     <color name="colorWaysToDepositMoneyPagofonAgent">@color/nurisaSecondary</color>
     <color name="colorWaysToDepositMoneyBank">@color/nurisaSecondary</color>
-    <color name="colorWaysToDepositMoneyBBVA">#084484</color>
+    <color name="azul_rey">#084484</color>
 
     <color name="colorWaysToDepositMoneyWayBackgroundCardView">@color/colorWhite</color>
     <color name="colorWaysToDepositMoneyWayBackgroundBottom">@color/colorGeneralBackground</color>

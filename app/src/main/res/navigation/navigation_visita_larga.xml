@@ -31,6 +31,22 @@
         <action
             android:id="@+id/action_visitToStoreFragment_to_negocioPizarraFragment"
             app:destination="@id/negocioPizarraFragment" />
+
+        <action
+            android:id="@+id/action_visitToStoreFragment_to_kpiFragment"
+            app:destination="@id/kpiFragment" />
+        <action
+            android:id="@+id/action_visitToStoreFragment_to_negocioAdmonFragment"
+            app:destination="@id/negocioAdmonFragment" />
+        <action
+            android:id="@+id/action_visitToStoreFragment_to_prevencionPerdidasFragment"
+            app:destination="@id/prevencionPerdidasFragment" />
+        <action
+            android:id="@+id/action_visitToStoreFragment_to_salidaVisitaOperacionesFragment"
+            app:destination="@id/salidaVisitaOperacionesFragment" />
+        <action
+            android:id="@+id/action_visitToStoreFragment_to_conteoVasosFragment"
+            app:destination="@id/conteoVasosFragment" />
     </fragment>
     <fragment
         android:id="@+id/visitaLargaFragment"
@@ -75,5 +91,59 @@
         android:id="@+id/negocioPizarraFragment"
         android:name="com.example.nutrisaapplication.ui.main.negocioPizarra.NegocioPizarraFragment"
         android:label="NegocioPizarraFragment"
-        tools:layout="@layout/fragment_negocio_pizarra"/>
+        tools:layout="@layout/fragment_negocio_pizarra">
+        <action
+            android:id="@+id/action_negocioPizarraFragment_to_negocioAdmonFragment"
+            app:destination="@id/negocioAdmonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/negocioAdmonFragment"
+        android:name="com.example.nutrisaapplication.ui.main.negocioAdmin.view.NegocioAdmonFragment"
+        android:label="NegocioAdmonFragment"
+        tools:layout="@layout/fragment_negocio_admon"/>
+    <fragment
+        android:id="@+id/kpiFragment"
+        android:name="com.example.nutrisaapplication.ui.main.kpi.KpiFragment"
+        android:label="fragment_kpi"
+        tools:layout="@layout/fragment_kpi" >
+        <action
+            android:id="@+id/action_kpiFragment_to_kpiFragment2"
+            app:destination="@id/kpiFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/kpiFragment2"
+        android:name="com.example.nutrisaapplication.ui.main.kpi.KpiFragment2"
+        android:label="KpiFragment2"
+        tools:layout="@layout/fragment_kpi2">
+        <action
+            android:id="@+id/action_kpiFragment2_to_visitToStoreFragment"
+            app:destination="@id/visitToStoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/prevencionPerdidasFragment"
+        android:name="com.example.nutrisaapplication.ui.main.prevencionPerdidas.PrevencionPerdidasFragment"
+        android:label="PrevencionPerdidasFragment"
+        tools:layout="@layout/fragment_prevencion_perdidas"/>
+    <fragment
+        android:id="@+id/salidaVisitaOperacionesFragment"
+        android:name="com.example.nutrisaapplication.ui.main.salidaVisitaOperaciones.view.SalidaVisitaOperacionesFragment"
+        android:label="fragment_salida_visita_operaciones"
+        tools:layout="@layout/fragment_salida_visita_operaciones" >
+        <action
+            android:id="@+id/action_salidaVisitaOperacionesFragment_to_signatureFragment2"
+            app:destination="@id/signatureFragment2" />
+        <action
+            android:id="@+id/action_salidaVisitaOperacionesFragment_to_visitToStoreFragment"
+            app:destination="@id/visitToStoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signatureFragment2"
+        android:name="com.example.nutrisaapplication.ui.main.salidaVisita.view.SignatureFragment"
+        android:label="fragment_signature"
+        tools:layout="@layout/fragment_signature" />
+    <fragment
+        android:id="@+id/conteoVasosFragment"
+        android:name="com.example.nutrisaapplication.ui.main.conteoVasos.ConteoVasosFragment"
+        android:label="fragment_conteo_vasos"
+        tools:layout="@layout/fragment_conteo_vasos" />
 </navigation>

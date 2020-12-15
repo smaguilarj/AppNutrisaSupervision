@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.kpi.KpiFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/edt_visita_actual"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_border_table"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:maxLength="40"
+                android:paddingStart="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/textView1"
+                app:layout_constraintStart_toStartOf="@+id/textView1"
+                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_border_table"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:maxLength="40"
+                android:paddingStart="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/textView13"
+                app:layout_constraintStart_toEndOf="@+id/textView1"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            <EditText
+                android:id="@+id/edt_venta_neta"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/ic_border_table"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:maxLength="40"
+                android:paddingStart="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView_ven"
+                app:layout_constraintTop_toBottomOf="@+id/textView_ven" />
+
+            <TextView
+                android:id="@+id/textViewPpv_obje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ic_border_kpi"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:text="objetivo"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tv_title"
+                app:layout_constraintStart_toEndOf="@+id/textViewppv"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title2" />
+
+            <TextView
+                android:id="@+id/tv_title2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="T.P."
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editText" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_border_kpi"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:text="actual"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView13"
+                app:layout_constraintEnd_toStartOf="@+id/textView13"
+                app:layout_constraintStart_toStartOf="@+id/tv_title"
+                app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+            <EditText
+                android:id="@+id/edt_visitas"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_border_table"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:maxLength="40"
+                android:paddingStart="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/textView14"
+                app:layout_constraintStart_toEndOf="@+id/textView13"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+            <TextView
+                android:id="@+id/tv_title4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Venta comercial"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_venta_neta" />
+
+            <TextView
+                android:id="@+id/textView_pres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ic_border_kpi"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:text="objetivo"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tv_title"
+                app:layout_constraintStart_toEndOf="@+id/tv_pres"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title4" />
+            <EditText
+                android:id="@+id/edt_presupuesto"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/ic_border_table"
+                android:imeOptions="actionSend"
+                android:inputType="textPersonName"
+                android:maxLength="40"
+                android:paddingStart="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView_pres"
+                app:layout_constraintTop_toBottomOf="@+id/textView_pres" />
+
+            <TextView
+                android:id="@+id/tv_pres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ic_border_kpi"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:text="Comps"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_pres"
+                app:layout_constraintEnd_toStartOf="@+id/textView_pres"
+                app:layout_constraintStart_toEndOf="@+id/textViewPres"
+                app:layout_constraintTop_toTopOf="@+id/textView_pres" />
+
+            <EditText
+                android:id="@+id/edt_venta"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_border_table"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:maxLength="40"
+                android:paddingStart="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/textViewVenta"
+                app:layout_constraintStart_toStartOf="@+id/textViewVenta"
+                app:layout_constraintTop_toBottomOf="@+id/textViewVenta" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_border_kpi"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:text="actual"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/textViewppv"
+                app:layout_constraintStart_toStartOf="@+id/tv_title2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title2" />
+
+            <TextView
+                android:id="@+id/textView_ven"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_border_kpi"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:text="objetivo"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/edt_venta"
+                app:layout_constraintEnd_toEndOf="@+id/tv_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title3" />
+
+            <EditText
+                android:id="@+id/edt_ppv_obj"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_border_table"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName"
+                android:maxLength="40"
+                android:paddingStart="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/textViewPpv_obje"
+                app:layout_constraintStart_toStartOf="@+id/textViewPpv_obje"
+                app:layout_constraintTop_toBottomOf="@+id/textViewppv" />
+
+            <TextView
+                android:id="@+id/tv_title3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Topping Extra"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPpv" />
+
+            <EditText
+                android:id="@+id/edt_ppv"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_border_table"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:maxLength="40"
+                android:paddingStart="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/textView2"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_border_kpi"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:text="Comps"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView14"
+                app:layout_constraintEnd_toStartOf="@+id/textView14"
+                app:layout_constraintStart_toEndOf="@+id/textView1"
+                app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+            <TextView
+                android:id="@+id/textViewPres"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ic_border_kpi"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:text="actual"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_pres"
+                app:layout_constraintEnd_toStartOf="@+id/tv_pres"
+                app:layout_constraintStart_toStartOf="@+id/tv_title4"
+                app:layout_constraintTop_toTopOf="@+id/tv_pres" />
+
+            <TextView
+                android:id="@+id/textViewVenta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ic_border_kpi"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:text="actual"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/textView_ven"
+                app:layout_constraintStart_toStartOf="@+id/tv_title3"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title3" />
+
+            <EditText
+                android:id="@+id/editTextPres"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_border_table"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:maxLength="40"
+                android:paddingStart="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/textViewPres"
+                app:layout_constraintStart_toStartOf="@+id/textViewPres"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPres" />
+
+            <EditText
+                android:id="@+id/edt_pres"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_border_table"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:maxLength="40"
+                android:paddingStart="5dp"
+                app:layout_constraintEnd_toStartOf="@+id/edt_presupuesto"
+                app:layout_constraintStart_toEndOf="@+id/editTextPres"
+                app:layout_constraintTop_toBottomOf="@+id/tv_pres" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_border_kpi"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:text="objetivo"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tv_title"
+                app:layout_constraintStart_toEndOf="@+id/textView13"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+            <TextView
+                android:id="@+id/textViewppv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ic_border_kpi"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:text="Comps"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewPpv_obje"
+                app:layout_constraintEnd_toStartOf="@+id/textViewPpv_obje"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="@+id/textViewPpv_obje" />
+
+            <EditText
+                android:id="@+id/editTextPpv"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_border_table"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:maxLength="40"
+                android:paddingStart="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/textViewppv"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textViewppv" />
+
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Piezas"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_title5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_marginTop="20dp"
+                android:text="VOZ DEL CLIENTE"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tv_title4"
+                app:layout_constraintStart_toStartOf="@+id/tv_title4"
+                app:layout_constraintTop_toBottomOf="@+id/edt_pres" />
+
+            <TextView
+                android:id="@+id/textViewNutrisa"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ic_border_kpi"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:text="Actual"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/textView_nutrisa"
+                app:layout_constraintStart_toStartOf="@+id/tv_title5"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title5" />
+
+            <TextView
+                android:id="@+id/textView_nutrisa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_border_kpi"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:text="Objetivo"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tv_title5"
+                app:layout_constraintStart_toEndOf="@+id/textViewNutrisa"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title5" />
+
+            <EditText
+                android:id="@+id/editTextNutrisa"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_border_table"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:maxLength="40"
+                android:paddingStart="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/textViewNutrisa"
+                app:layout_constraintStart_toStartOf="@+id/textViewNutrisa"
+                app:layout_constraintTop_toBottomOf="@+id/textViewNutrisa" />
+
+            <EditText
+                android:id="@+id/editTextNutrisa2"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_border_table"
+                android:imeOptions="actionSend"
+                android:inputType="textPersonName"
+                android:maxLength="40"
+                android:paddingStart="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/textView_nutrisa"
+                app:layout_constraintStart_toEndOf="@+id/textViewNutrisa"
+                app:layout_constraintTop_toBottomOf="@+id/textView_nutrisa"/>
+
+            <Button
+                android:id="@+id/btn_enviarKpi2"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="10dp"
+                android:text="Enviar Kpi´s"
+                android:textColor="@color/colorBlack"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/nutrisaColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/editTextNutrisa2"
+                app:layout_constraintStart_toStartOf="@+id/editTextNutrisa"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNutrisa2"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

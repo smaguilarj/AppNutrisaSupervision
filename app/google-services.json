@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "262829813414",
-    "firebase_url": "https://nutrisa-6c75e.firebaseio.com",
-    "project_id": "nutrisa-6c75e",
-    "storage_bucket": "nutrisa-6c75e.appspot.com"
+    "project_number": "598426607142",
+    "firebase_url": "https://nutrisaapplication.firebaseio.com",
+    "project_id": "nutrisaapplication",
+    "storage_bucket": "nutrisaapplication.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:262829813414:android:134c00af4de7f0566c0e67",
+        "mobilesdk_app_id": "1:598426607142:android:5c548a0a0fb3573bdb10e7",
         "android_client_info": {
           "package_name": "com.example.nutrisaapplication"
         }
       },
       "oauth_client": [
         {
-          "client_id": "262829813414-8cb2s5r9rijf8shd8en9669v5t5bksrj.apps.googleusercontent.com",
+          "client_id": "598426607142-3u6satpls4951kem41o8q240noh8imf5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nutrisaapplication",
+            "certificate_hash": "f1a562cc08e29b153e7b19e873d6236f20acbc7d"
+          }
+        },
+        {
+          "client_id": "598426607142-fd8965don1helf8mn7itenmqdn61rv6d.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAHWwEnTmRP8_Oyq2KB1MVqQ90mFiHLuTo"
+          "current_key": "AIzaSyAjy6iZ9quY7fiObMyhiis6wVTScepLe5Q"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "262829813414-8cb2s5r9rijf8shd8en9669v5t5bksrj.apps.googleusercontent.com",
+              "client_id": "598426607142-fd8965don1helf8mn7itenmqdn61rv6d.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
