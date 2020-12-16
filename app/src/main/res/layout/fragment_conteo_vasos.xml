@@ -12,7 +12,7 @@
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:scrollbarFadeDuration="1000"
+        android:scrollbarFadeDuration="2000"
         android:scrollbarSize="12dip"
         android:scrollbars="none"
         android:scrollingCache="true"
@@ -25,7 +25,7 @@
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="150dp"
             android:scrollbars="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -33,14 +33,15 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TableLayout
                     android:id="@+id/tableLayout1"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="60dp"
+                    android:layout_marginStart="170dp"
+                    android:layout_marginEnd="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +51,7 @@
                         android:id="@+id/tableRow4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/celda"
+                        android:background="@drawable/celda_title_derecho"
                         android:gravity="center_horizontal">
 
                         <TextView
@@ -58,7 +59,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_span="6"
-                            android:gravity="center"
+                            android:gravity="start"
+                            android:layout_marginStart="70dp"
                             android:padding="10dp"
                             android:text="CONTEO DE VASOS"
                             android:textSize="18dp"
@@ -610,37 +612,122 @@
 
                 <TableLayout
                     android:id="@+id/tableLayout2"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:layout_marginStart="10dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/tableLayout1"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="@+id/tableLayout1"
+                    app:layout_constraintBottom_toBottomOf="@+id/tableLayout1">
 
                     <TableRow
                         android:id="@+id/tableRow01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/celda_title_izquierdo"
+                        android:gravity="center_horizontal">
+                        <TextView
+                            android:id="@+id/textView09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textSize="18dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow002"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/celda"
                         android:gravity="center_horizontal">
 
                         <TextView
-                            android:id="@+id/textView01"
+                            android:id="@+id/textView02"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_span="6"
                             android:gravity="center"
-                            android:padding="10dp"
-                            android:text="CONTEO DE VASOS"
-                            android:textSize="18dp"
+                            android:padding="18dp"
+                            android:text="TIPO"
+                            android:textColor="@color/white"
                             android:textStyle="bold"
                             android:typeface="serif" />
                     </TableRow>
+                    <TableRow
+                        android:id="@+id/tr3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="39dp"
+                        android:paddingBottom="40dp"
+                        android:background="@drawable/celda_intermedia"
+                        android:gravity="center_horizontal">
 
+                        <TextView
+                            android:id="@+id/textView003"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="start|center"
+                            android:textSize="18sp"
+                            android:text=" HELADO SUAVE " />
+                    </TableRow>
+                    <TableRow
+                        android:id="@+id/tableRowCon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="55dp"
+                        android:paddingBottom="58dp"
+                        android:background="@drawable/celda_intermedia"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/textView004"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="start|center"
+                            android:textSize="18sp"
+                            android:text=" HELADO DURO " />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRowPaletas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/celda_intermedia"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/textViewPaletas"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="start|center"
+                            android:text=" PALETAS "
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="18sp" />
+                    </TableRow>
                 </TableLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </HorizontalScrollView>
     </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="CONTEO DE VASOS"
+        android:textSize="18dp"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
