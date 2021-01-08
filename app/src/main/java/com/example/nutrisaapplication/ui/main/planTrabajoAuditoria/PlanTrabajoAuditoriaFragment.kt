@@ -56,10 +56,10 @@ class PlanTrabajoAuditoriaFragment : Fragment() {
             SharedApp.prefs.plan=true
             SharedApp.prefs.borrarLista=true
             entries.clear()
-            navigation.navigate(R.id.action_planTrabajoFragment_to_statusFragment)
+            navigation.navigate(R.id.action_planTrabajoAuditoriaFragment_to_visitToStoreFragment)
         }
         buttonAgregarPlan.setOnClickListener {
-            navigation.navigate(R.id.action_planTrabajoFragment_to_planDialogFragment)
+            navigation.navigate(R.id.action_planTrabajoAuditoriaFragment_to_planDialogLargoFragment)
         }
 
         val plan =planTrabajoViewModel.getListData()

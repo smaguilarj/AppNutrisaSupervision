@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -33,7 +34,7 @@
 
     <TextView
         android:id="@+id/txv_rapida"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Visita Rápida\n a  Tienda"
         android:gravity="center"
@@ -55,7 +56,7 @@
 
     <TextView
         android:id="@+id/txv_operaciones"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Visita Auditoria\n Operaciones"
        android:gravity="center"
@@ -88,5 +89,19 @@
         app:layout_constraintStart_toStartOf="@+id/imgViewRegional"
         app:layout_constraintTop_toBottomOf="@+id/imgViewRegional" />
 
+    <Button
+        android:id="@+id/buttonCerrar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_radius"
+        android:padding="5dp"
+        android:text="Cerrar sesion"
+        android:textAllCaps="false"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imgViewOperaciones"
+        app:layout_constraintStart_toStartOf="@+id/imgVisitaRapida"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewRegional" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

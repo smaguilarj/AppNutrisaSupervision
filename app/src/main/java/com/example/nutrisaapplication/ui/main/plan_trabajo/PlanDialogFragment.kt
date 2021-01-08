@@ -8,18 +8,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.nutrisaapplication.R
-import com.example.nutrisaapplication.data.SharedApp
 import com.example.nutrisaapplication.data.model.PlanTrabajoModel
 import com.example.nutrisaapplication.ui.main.plan_trabajo.viewmodel.PlanViewModel
 import kotlinx.android.synthetic.main.fragment_plan_dialog.*
-import kotlinx.android.synthetic.main.fragment_plan_dialog.buttonEnviar
+import kotlinx.android.synthetic.main.fragment_plan_dialog.btnEnviarDilog
 import java.util.*
-import kotlin.collections.ArrayList
 
 
 class PlanDialogFragment : Fragment() {
@@ -47,7 +44,7 @@ class PlanDialogFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         edtFechaCumplimiento.setOnClickListener { showDatePickerDialog() }
 
-        buttonEnviar.setOnClickListener {
+        btnEnviarDilog.setOnClickListener {
 
             if (radioButtonRojo.isChecked){
                 status = "Rojo"
@@ -73,7 +70,8 @@ class PlanDialogFragment : Fragment() {
             Log.i("list", "resultado de datos: $planTrabajo")
             navigation.navigate(R.id.action_planDialogFragment_to_planTrabajoFragment)
             return list
-        }/*else{
+        }
+        /*else{
             Toast.makeText(requireContext(), "todos los datos son obligatorios", Toast.LENGTH_SHORT).show()
             return null
         }*/

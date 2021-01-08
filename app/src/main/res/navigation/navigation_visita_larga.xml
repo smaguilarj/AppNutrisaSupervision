@@ -47,6 +47,9 @@
         <action
             android:id="@+id/action_visitToStoreFragment_to_conteoVasosFragment"
             app:destination="@id/conteoVasosFragment" />
+        <action
+            android:id="@+id/action_visitToStoreFragment_to_planDialogLargoFragment"
+            app:destination="@id/planDialogLargoFragment" />
     </fragment>
     <fragment
         android:id="@+id/visitaLargaFragment"
@@ -146,4 +149,25 @@
         android:name="com.example.nutrisaapplication.ui.main.conteoVasos.ConteoVasosFragment"
         android:label="fragment_conteo_vasos"
         tools:layout="@layout/fragment_conteo_vasos" />
+    <fragment
+        android:id="@+id/planDialogLargoFragment"
+        android:name="com.example.nutrisaapplication.ui.main.planTrabajoAuditoria.PlanDialogLargoFragment"
+        android:label="fragment_plan_dialog_largo"
+        tools:layout="@layout/fragment_plan_dialog_largo" >
+        <action
+            android:id="@+id/action_planDialogLargoFragment_to_planTrabajoAuditoriaFragment"
+            app:destination="@id/planTrabajoAuditoriaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/planTrabajoAuditoriaFragment"
+        android:name="com.example.nutrisaapplication.ui.main.planTrabajoAuditoria.PlanTrabajoAuditoriaFragment"
+        android:label="PlanTrabajoAuditoriaFragment"
+        tools:layout="@layout/fragment_plan_trabajo_auditoria">
+        <action
+            android:id="@+id/action_planTrabajoAuditoriaFragment_to_visitToStoreFragment"
+            app:destination="@id/visitToStoreFragment" />
+        <action
+            android:id="@+id/action_planTrabajoAuditoriaFragment_to_planDialogLargoFragment"
+            app:destination="@id/planDialogLargoFragment" />
+    </fragment>
 </navigation>

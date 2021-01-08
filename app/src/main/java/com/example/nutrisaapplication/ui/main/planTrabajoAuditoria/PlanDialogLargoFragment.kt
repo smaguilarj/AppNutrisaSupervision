@@ -14,7 +14,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.nutrisaapplication.R
 import com.example.nutrisaapplication.data.model.PlanTrabajoModel
 import com.example.nutrisaapplication.ui.main.plan_trabajo.viewmodel.PlanViewModel
-import kotlinx.android.synthetic.main.fragment_plan_dialog.*
+import kotlinx.android.synthetic.main.fragment_plan_dialog_largo.*
 import java.util.*
 
 class PlanDialogLargoFragment : Fragment() {
@@ -40,7 +40,7 @@ class PlanDialogLargoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         edtFechaCumplimiento.setOnClickListener { showDatePickerDialog() }
 
-        buttonEnviar.setOnClickListener {
+        btnEnviarDilog.setOnClickListener {
 
             if (radioButtonRojo.isChecked){
                 status = "Rojo"
@@ -60,29 +60,27 @@ class PlanDialogLargoFragment : Fragment() {
     fun checkInf():MutableList<PlanTrabajoModel>?  {
         if (selectedDate.isNotEmpty() && edtTienda.text.toString().isNotEmpty() && edtGerente.text.toString().isNotEmpty() && edtAcciones.text.toString().isNotEmpty()&&edtResponsable.text.toString().isNotEmpty()){
             val planTrabajo = PlanTrabajoModel(edtTienda.text.toString(), edtGerente.text.toString(), edtAcciones.text.toString(),edtResponsable.text.toString(),selectedDate,status)
-            //Toast.makeText(requireContext(), "este es el modelo: $planTrabajo", Toast.LENGTH_SHORT).show()
-            //val list = listOf<PlanTrabajoModel>(planTrabajo)
+           /* Toast.makeText(requireContext(), "este es el modelo: $planTrabajo", Toast.LENGTH_SHORT).show()
+            val list = listOf<PlanTrabajoModel>(planTrabajo)*/
             list.add(planTrabajo)
             Log.i("list", "resultado de datos: $planTrabajo")
-            navigation.navigate(R.id.action_planDialogFragment_to_planTrabajoFragment)
+            navigation.navigate(R.id.action_planDialogLargoFragment_to_planTrabajoAuditoriaFragment)
             return list
-        }/*else{
-            Toast.makeText(requireContext(), "todos los datos son obligatorios", Toast.LENGTH_SHORT).show()
-            return null
+        }
+       /* else{    Toast.makeText(requireContext(), "todos los datos son obligatorios", Toast.LENGTH_SHORT).show()
+                   return null
         }*/
         return null
     }
-
     /* fun crearListaPlan():List<PlanTrabajoModel> {
          val plan = PlanTrabajoModel(edtTienda.text.toString(), edtGerente.text.toString(), edtAcciones.text.toString(),edtResponsable.text.toString(),selectedDate,status)
          //val plan = PlanTrabajoModel("prueba it","ivan","ninguna","Antonio","2/10/20","Verde")
          val list= listOf<PlanTrabajoModel>(plan)
-        return list
-    }*/
+        return list }*/
 
     private fun showDatePickerDialog() {
         /* val newFragment = DatePickerFragment()
-         newFragment.show(requireActivity().supportFragmentManager, "datePicker")*/
+           newFragment.show(requireActivity().supportFragmentManager, "datePicker")*/
         val newFragment = DatePickerFragment.newInstance(DatePickerDialog.OnDateSetListener { _, year, month, day ->
             // +1 because January is zero
             selectedDate = day.toString() + "/" + (month + 1) + "/" + year

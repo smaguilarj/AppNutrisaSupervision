@@ -95,4 +95,21 @@
     <string name="gerente_distrito"><![CDATA[La carpeta de gerente de distrito cuenta con los formatos de ultimas 5 visitas cortas con seguimientos , última vista de operaciones con seguimiento,p&L mensuales del año, copia del plan de acción y seguimientos ,auditoria de calidad con plan de acción.]]></string>
     <string name="protección_civil">Se cuenta con la carpeta de protección civil. ( para ciudades donde aplique).</string>
     <string name="title_activity_mapa">Map</string>
+    <string name="title_activity_navigation_drawer">Notificaciones</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">antonioacevedot@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Configuración</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="sub_header">Cerrar sesion</string>
+    <string name="configuracion">Configuración</string>
+    <string name="menu_rapida">Visita Rapida</string>
+    <string name="menu_larga">Visita Larga</string>
+    <string name="menu_principal">Menu Principal</string>
+    <string name="no_message_text">No tienes notificaciones.</string>
 </resources>

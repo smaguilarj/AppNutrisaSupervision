@@ -85,6 +85,11 @@ class VisitToStoreFragment : Fragment() {
         linearLayoutConteo.setOnClickListener {
             navigation.navigate(R.id.action_visitToStoreFragment_to_conteoVasosFragment)
         }
+
+        linearLayoutPlan.setOnClickListener {
+            navigation.navigate(R.id.action_visitToStoreFragment_to_planDialogLargoFragment)
+        }
+
     }
 
 }
