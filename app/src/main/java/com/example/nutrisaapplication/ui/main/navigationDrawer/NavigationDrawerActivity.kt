@@ -1,6 +1,9 @@
 package com.example.nutrisaapplication.ui.main.navigationDrawer
 
+import android.content.BroadcastReceiver
+import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -10,25 +13,35 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.lifecycle.ViewModelProviders
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.nutrisaapplication.R
+import com.example.nutrisaapplication.ui.base.BaseActivity
 import com.example.nutrisaapplication.ui.main.login.LoginActivity
+import com.example.nutrisaapplication.ui.main.notificacion.FcmFirebaseActivity
+import com.example.nutrisaapplication.ui.main.notificacion.model.CloudMessangingService
+import com.example.nutrisaapplication.ui.main.notificacion.model.PushNotification
+import com.example.nutrisaapplication.ui.main.notificacion.viewmodel.NotificationViewmodel
 import com.google.android.material.internal.NavigationMenuItemView
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_navigation_drawer.*
 
 
-class NavigationDrawerActivity : AppCompatActivity() {
+class NavigationDrawerActivity : BaseActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     lateinit var drawerLayout:DrawerLayout
     private var fireBase: FirebaseAuth? = null
 
+    val viewModel by lazy {
+        ViewModelProviders.of(this).get(NotificationViewmodel::class.java)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_navigation_drawer)
@@ -60,6 +73,24 @@ class NavigationDrawerActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         control()
+      /* val mNotificationsReceiver = object : BroadcastReceiver() {
+            override fun onReceive(context: Context?, intent: Intent) {
+                val title = intent.getStringExtra("title")
+                val description = intent.getStringExtra("description")
+                val expiryDate = intent.getStringExtra("expiry_date")
+                savePushMessage(title, description, expiryDate)
+                Toast.makeText(applicationContext, "este es el primero", Toast.LENGTH_SHORT).show()
+            }
+        }
+        LocalBroadcastManager.getInstance(this).registerReceiver(mNotificationsReceiver, IntentFilter(CloudMessangingService.INTENT_ACTION_SEND_MESSAGE))
+   */
+    }
+
+    private fun savePushMessage(title: String?, description: String?, expiryDate: String?) {
+        val lista = PushNotification("0",title,description,expiryDate)
+        val dataList= mutableListOf<PushNotification>()
+        dataList.add(lista)
+        viewModel.recibir(dataList)
     }
 
     private fun control(): Boolean {

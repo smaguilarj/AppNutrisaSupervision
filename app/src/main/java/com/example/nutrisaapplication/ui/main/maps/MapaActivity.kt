@@ -5,12 +5,10 @@ import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.example.nutrisaapplication.R
-import com.example.nutrisaapplication.utils.distanceTo
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationRequest
@@ -178,30 +176,30 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
         }
 
             //.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
-        val GOLDEN_GATE= LatLng(19.4551, -96.9662)
-        val PIRAMIDES= LatLng(19.5548008, -96.9648655)
-        val TORRE_PISA = LatLng(19.4590949, -96.953369)
+        val TIENDA_NUTRISA1= LatLng(19.3418869, -99.181587)
+        val TIENDA_NUTRISA2= LatLng(19.5548008, -96.9648655)
+        val TIENDA_NUTRISA3 = LatLng(19.4590949, -96.953369)
         marcadorGolden = mMap.addMarker(
             MarkerOptions()
-                .position(GOLDEN_GATE)
-                .title("Campo deportivo").snippet("Lugar en estados unidos")
+                .position(TIENDA_NUTRISA1)
+                .title("Nutrisa Universidad").snippet("Av. Universidad # 1894 Col. Oxtopulco Universidad CP. 4350 Del. o Mpio. Alvaro Obregón")
                 .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_shop_yellow))
         )
 
         marcadorGolden?.tag=0
         marcadorPiramide = mMap.addMarker(
             MarkerOptions()
-                .position(PIRAMIDES)
-                .snippet("Primaide")
-                .title("Piramides de Giza")
+                .position(TIENDA_NUTRISA2)
+                .snippet("Periférico Sur # 4690 Col. Jardines del Pedregal de San Angel CP. 4500 Del. o Mpio. Coyoacán")
+                .title("Nutrisa Perisur 1")
                 .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_shop_yellow))
         )
         marcadorPiramide?.tag=0
         marcadorTorre = mMap.addMarker(
             MarkerOptions()
-                .position(TORRE_PISA)
-                .snippet("Hamburguesas May zamora")
-                .title("Hamburguesas May")
+                .position(TIENDA_NUTRISA3)
+                .snippet("Av. San Antonio # 100 Col. Nápoles CP. 3810 Del. o Mpio. Benito Juárez")
+                .title("Nutrisa Nápoles")
                 .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_shop_yellow))
         )
         marcadorTorre?.tag=0
@@ -221,25 +219,25 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
 
     fun prueba(){
         val marcadores: MutableList<LatLng> = ArrayList()
-        val PRUEBA1= LatLng(19.4551, -96.9662)
-        val PRUEBA2= LatLng(19.4546, -96.9664)
+        val PRUEBA1= LatLng(19.3418869, -99.181587)
+        val PRUEBA2= LatLng(19.5548008, -96.9648655)
         val PRUEBA3 = LatLng(19.4590949, -96.953369)
         marcadores.add(PRUEBA1)
         mMap.addMarker(
-            MarkerOptions().position(PRUEBA1).title("Ciclovia Callao")
-                .snippet("Calle / Bidireccional / Alcántara a Sánchez Fontecilla")
+            MarkerOptions().position(PRUEBA1).title("Nutrisa Universidad")
+                .snippet("Av. Universidad # 1894 Col. Oxtopulco Universidad CP. 4350 Del. o Mpio. Alvaro Obregón")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
         )
         marcadores.add(PRUEBA2)
         mMap.addMarker(
-            MarkerOptions().position(PRUEBA2).title("Ciclovia Antonio Varas")
-                .snippet("Calle y Vereda / Bidireccional / Nueva Providencia a Irarrázaval")
+            MarkerOptions().position(PRUEBA2).title("Nutrisa Perisur 1")
+                .snippet("Periférico Sur # 4690 Col. Jardines del Pedregal de San Angel CP. 4500 Del. o Mpio. Coyoacán")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
         )
         marcadores.add(PRUEBA3)
         mMap.addMarker(
-            MarkerOptions().position(PRUEBA3).title("AntiA")
-                .snippet("Calle y Vereda / Bidireccional / Nueva Providencia a Irarrázaval")
+            MarkerOptions().position(PRUEBA3).title("Nutrisa Nápoles")
+                .snippet("Av. San Antonio # 100 Col. Nápoles CP. 3810 Del. o Mpio. Benito Juárez")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
         )
         val miPos = miPosicion

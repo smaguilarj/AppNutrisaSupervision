@@ -1,9 +1,6 @@
 package com.example.nutrisaapplication.ui.base
 
-import android.content.ContentValues
-import android.content.Context
-import android.content.DialogInterface
-import android.content.Intent
+import android.content.*
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Color
@@ -18,25 +15,64 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.example.nutrisaapplication.R
+import com.example.nutrisaapplication.ui.main.notificacion.FcmFirebaseActivity
+import com.example.nutrisaapplication.ui.main.notificacion.model.CloudMessangingService.Companion.INTENT_ACTION_SEND_MESSAGE
+import com.google.android.gms.common.internal.Constants
 import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream
 
 
 open class BaseActivity : AppCompatActivity() {
-    companion object {
-        var showSessionMessage = false
-        var isLogged = false
-    }
+
+
+        private lateinit var broadcastReceiver: BroadcastReceiver
+
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            broadcastReceiver = object : BroadcastReceiver() {
+                override fun onReceive(p0: Context?, intent: Intent?) {
+                    val title = intent?.getStringExtra("title")
+                    val description = intent?.getStringExtra("description")
+                    val expiryDate = intent?.getStringExtra("expiry_date")
+                    if (intent != null) {
+                        handleBroadcastActions(intent)
+                    }
+                }
+
+            }
+        }
+
+        private fun handleBroadcastActions(intent: Intent) {
+            when (intent.action) {
+                INTENT_ACTION_SEND_MESSAGE -> {
+                    onHandleActivity()
+                }
+            }
+        }
+
+        protected open fun onHandleActivity() {
+            val intent = Intent(this, FcmFirebaseActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
+        }
+
+        override fun onResume() {
+            super.onResume()
+            registerReceiver(broadcastReceiver, IntentFilter(INTENT_ACTION_SEND_MESSAGE))
+        }
+
+        override fun onPause() {
+            super.onPause()
+            unregisterReceiver(broadcastReceiver)
+        }
 
     /*private val baseViewModel by lazy {
         ViewModelProvider(this).get(BaseViewModel::class.java)
     }
-
     private val loader by lazy {
         LoaderDialog(this)
     }
-
     private val observerLogout = Observer<Resource<Boolean>> {
         hideProgressLoader()
         when (it.status) {
@@ -48,36 +84,6 @@ open class BaseActivity : AppCompatActivity() {
                 showProgressLoader()
             }
         }
-    }*/
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        //retrieveResponseServices()
-       /* AppCenter.start(
-            application, "ba2c3137-be9b-47bf-a2fa-92cd226e3e5c",
-            Analytics::class.java, Crashes::class.java
-        )*/
-    }
-
-   /* override fun onDestroy() {
-        super.onDestroy()
-        App.instance.mixpanelHelper.flush()
-    }
-
-    private fun retrieveResponseServices() {
-        baseViewModel.logout.observe(this, observerLogout)
-    }
-
-
-    fun logout() {
-        baseViewModel.logout()
-    }
-
-    fun goToMainActivity() {
-        App.instance.sessionHelper.logout()
-        val intent = Intent(applicationContext, LoginActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-        startActivity(intent)
     }*/
 
     fun changeActivity(activity: Class<*>, args: List<Pair<String, String>> = emptyList()) {
@@ -203,4 +209,6 @@ open class BaseActivity : AppCompatActivity() {
         intent.type = type
         startActivity(intent)
     }
+
+
 }
