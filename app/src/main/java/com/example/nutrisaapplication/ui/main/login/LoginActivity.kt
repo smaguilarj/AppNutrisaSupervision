@@ -116,7 +116,7 @@ class LoginActivity : AppCompatActivity() {
             btn_submit.isEnabled=true
         }
     }
- /*   FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser()
+   /* FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser()
     if (user != null) {
         // Name, email address, and profile photo Url
         String name = user.getDisplayName();
