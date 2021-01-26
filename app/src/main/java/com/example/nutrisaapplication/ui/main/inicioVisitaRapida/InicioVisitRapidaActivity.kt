@@ -144,7 +144,6 @@ class InicioVisitRapidaActivity : BaseActivity(), AdapterView.OnItemSelectedList
                         }
 
                         list.add(item.getValue(FirebaseData::class.java)!!)
-                        Nombre_tienda:
                         Log.i("tienda", "MutableListOf: $list")
                         objectMap = item.value as MutableMap<String, Objects>
 
