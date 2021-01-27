@@ -6,21 +6,19 @@ import org.jetbrains.annotations.PropertyKey
 
 data class FirebaseData(
     @PropertyName("Consecutivo")
-    val Consecutivo: Int,
+    val Consecutivo: String,
     @PropertyName("Numero")
-    val numero:Int?,
+    val numero:String?,
     @PropertyName("Numero_herdez")
-    val Numero_herdez:Int?,
-    @PropertyName("Nombre de tienda")
-    val nombreTienda:String,
+    val Numero_herdez:String?,
+    @PropertyName("Nombre_tienda")
+    val Nombre_tienda:String?,
     @PropertyName("Estatus")
     val estatus:String?,
     @PropertyName("Inversion")
     val inversion:String?,
     @PropertyName("Formato")
     val formato:String?,
-    @PropertyName("Fecha Apertura")
-    val fechaApertura:Int?,
     @PropertyName("Email_tienda")
     val email_tienda:String?,
     @PropertyName("Region")
@@ -28,7 +26,7 @@ data class FirebaseData(
     @PropertyName("Regional")
     val regional:String?,
     @PropertyName("Telefono_region")
-    val telefono_region:Any?,
+    val telefono_region:String?,
     @PropertyName("Email_region")
     val email_region:String?,
     @PropertyName("Distrito")
@@ -36,11 +34,11 @@ data class FirebaseData(
     @PropertyName("Distrital")
     val distrital:String?,
     @PropertyName("Telefono_distrital")
-    val telefono_distrital:Any?,
+    val telefono_distrital:String?,
     @PropertyName("Email_distrital")
     val email_distrital:String?,
-    @PropertyName("Telefono de tienda")
-    val telefonoOficina:Any?,
+    @PropertyName("Telefono_tiendaRegional")
+    val Telefono_tiendaRegional:String?,
     @PropertyName("Estado")
     val estado:String?,
     @PropertyName("Municipio")
@@ -48,5 +46,5 @@ data class FirebaseData(
     @PropertyName("Domicilio")
     val domicilio:String?)
 {
-    constructor() : this(0,0, 0, "", "", "", "",null,"","","",null,"","","","","",0,"","","")
+    constructor() : this("", "", "", "", "", "","","","","","","","","","","","","","","")
 }
