@@ -5,10 +5,12 @@ import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.example.nutrisaapplication.R
+import com.example.nutrisaapplication.data.model.FirebaseData
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationRequest
@@ -21,6 +23,8 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.firebase.database.*
+
 
 class MapaActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerClickListener {
 
@@ -36,15 +40,21 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
     private var marcadorPiramide:Marker?= null
     private var marcadorTorre:Marker?= null
     var miPosicion:LatLng? = null
+    private lateinit var mDatabase: DatabaseReference
+    val listaTiendas = mutableListOf<FirebaseData>()
+    val listaShop = arrayListOf<String>()
+    val listaShopName= arrayListOf<String>()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mapa)
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
-        val mapFragment2 = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
+        //val mapFragment2 = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
-
+        mDatabase = FirebaseDatabase.getInstance().reference
+        obtenerTiendas()
         funsedLocationClient = FusedLocationProviderClient(this)
         inicializarLocation()
 
@@ -80,41 +90,56 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
                             ).show()
                             // Add a marker in Sydney and move the camera
                             miPosicion = LatLng(ubicacion.latitude, ubicacion.longitude)
-                            mMap.addMarker(
-                                MarkerOptions().position(miPosicion!!).title("Aqui estoy")
-                            )
-                            //mMap.moveCamera(CameraUpdateFactory.newLatLng(miPosicion))
-                            val zoomLevel = 19.0f
-                            mMap.moveCamera(
-                                CameraUpdateFactory.newLatLngZoom(
-                                    miPosicion,
-                                    zoomLevel
-                                )
-                            )
                         }
+                        mMap.addMarker(MarkerOptions().position(miPosicion!!).title("Aqui estoy"))
+                        //mMap.moveCamera(CameraUpdateFactory.newLatLng(miPosicion))
+                        val zoomLevel = 19.0f
+                        mMap.moveCamera(
+                            CameraUpdateFactory.newLatLngZoom(
+                                miPosicion,
+                                zoomLevel
+                            )
+                        )
                     }
             }
         }
     }
 
+    private fun obtenerTiendas() {
+
+        val tiendas = mDatabase.child("tienda").addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                for (item in snapshot.children) {
+                    listaTiendas.add(item.getValue(FirebaseData::class.java)!!)
+                }
+                listaTiendas.forEachIndexed { index, firebaseData ->
+                    firebaseData.Nombre_tienda?.let { listaShopName.add(it)}
+                    firebaseData.domicilio?.let { listaShop.add(it) }
+                }
+                val padre = snapshot.key
+                val resultado = snapshot.children
+                resultado.forEach { result-> val madre = result.key
+                    Log.i("tienda", "resultado madre key: $madre ")}
+                Log.i("tienda", "resultado key: $padre ")
+                Log.i("tienda", "resultado: $resultado ")
+                Log.i("tienda", "respuesta lista:  $listaShop")
+            }
+            override fun onCancelled(error: DatabaseError) {
+                Log.e("tienda", error.message)
+            }
+        })
+    }
+
     private fun inicializarLocation(){
         locationRequest = LocationRequest()
-        locationRequest?.interval = 100000
-        locationRequest?.fastestInterval=50000
+        locationRequest?.interval = 1000000
+        locationRequest?.fastestInterval=500000
         locationRequest?.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
     }
 
     @SuppressLint("MissingPermission")
     private fun obtenerUbicacion() {
-        /*funsedLocationClient?.lastLocation?.addOnSuccessListener(
-             this,
-             object : OnSuccessListener<Location> {
-                 override fun onSuccess(location: Location?) {
-                     if (location != null) {
-                         Toast.makeText(applicationContext, location.latitude.toString()+ "-"+ location.longitude.toString(), Toast.LENGTH_LONG).show()
-                     }
-                 }
-             })*/
+
         funsedLocationClient?.requestLocationUpdates(locationRequest, callback, null)
     }
 
@@ -168,36 +193,51 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
         mMap.isMyLocationEnabled=true
         mMap.uiSettings.isMyLocationButtonEnabled=true
         mMap.uiSettings.isZoomControlsEnabled=true
-
         if(validarPermisos()){
             obtenerUbicacion()
         }else{
             pedirPermisos()
         }
-
-            //.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+        val listLatLng= arrayListOf<LatLng>()
         val TIENDA_NUTRISA1= LatLng(19.3418869, -99.181587)
+        listLatLng.add(TIENDA_NUTRISA1)
         val TIENDA_NUTRISA2= LatLng(19.5548008, -96.9648655)
+        listLatLng.add(TIENDA_NUTRISA2)
         val TIENDA_NUTRISA3 = LatLng(19.4590949, -96.953369)
-        marcadorGolden = mMap.addMarker(
-            MarkerOptions()
-                .position(TIENDA_NUTRISA1)
-                .title("Nutrisa Universidad").snippet("Av. Universidad # 1894 Col. Oxtopulco Universidad CP. 4350 Del. o Mpio. Alvaro Obregón")
-                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_shop_yellow))
-        )
+        listLatLng.add(TIENDA_NUTRISA3)
+        val TIENDA_NUTRISA4= LatLng(19.3418869, -99.191587)
+        listLatLng.add(TIENDA_NUTRISA4)
+        val TIENDA_NUTRISA5 = LatLng(19.4490949, -96.953369)
+        listLatLng.add(TIENDA_NUTRISA5)
+        val TIENDA_NUTRISA6= LatLng(19.3518869, -99.191587)
+        listLatLng.add(TIENDA_NUTRISA6)
 
+        for(tienda in listaTiendas){
+            val nombre = tienda.Nombre_tienda
+            val direccion= tienda.domicilio
+            listLatLng.forEach {
+
+            }
+            marcadorGolden = mMap.addMarker(
+                MarkerOptions()
+                    .position(listLatLng.random())
+                    .title(nombre)
+                    .snippet(direccion)
+                    .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_shop_yellow))
+            )
+        }
         marcadorGolden?.tag=0
-        marcadorPiramide = mMap.addMarker(
+      /*  marcadorPiramide = mMap.addMarker(
             MarkerOptions()
                 .position(TIENDA_NUTRISA2)
                 .snippet("Periférico Sur # 4690 Col. Jardines del Pedregal de San Angel CP. 4500 Del. o Mpio. Coyoacán")
                 .title("Nutrisa Perisur 1")
                 .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_shop_yellow))
         )
-        marcadorPiramide?.tag=0
+        marcadorPiramide?.tag=0*/
         marcadorTorre = mMap.addMarker(
             MarkerOptions()
-                .position(TIENDA_NUTRISA3)
+                .position(TIENDA_NUTRISA1)
                 .snippet("Av. San Antonio # 100 Col. Nápoles CP. 3810 Del. o Mpio. Benito Juárez")
                 .title("Nutrisa Nápoles")
                 .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_shop_yellow))
@@ -222,6 +262,32 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
         val PRUEBA1= LatLng(19.3418869, -99.181587)
         val PRUEBA2= LatLng(19.5548008, -96.9648655)
         val PRUEBA3 = LatLng(19.4590949, -96.953369)
+        val listLatLng= arrayListOf<LatLng>()
+        val TIENDA_NUTRISA1= LatLng(19.3418869, -99.181587)
+        listLatLng.add(TIENDA_NUTRISA1)
+        val TIENDA_NUTRISA2= LatLng(19.5548008, -96.9648655)
+        listLatLng.add(TIENDA_NUTRISA2)
+        val TIENDA_NUTRISA3 = LatLng(19.4590949, -96.953369)
+        listLatLng.add(TIENDA_NUTRISA3)
+        val TIENDA_NUTRISA4= LatLng(19.3418869, -99.191587)
+        listLatLng.add(TIENDA_NUTRISA4)
+        val TIENDA_NUTRISA5 = LatLng(19.4490949, -96.953369)
+        listLatLng.add(TIENDA_NUTRISA5)
+        val TIENDA_NUTRISA6= LatLng(19.3518869, -99.191587)
+        listLatLng.add(TIENDA_NUTRISA6)
+
+        for(tienda in listaTiendas){
+            val nombre = tienda.Nombre_tienda
+            val direccion= tienda.domicilio
+
+            marcadorGolden = mMap.addMarker(
+                MarkerOptions()
+                    .position(listLatLng.random())
+                    .title(nombre)
+                    .snippet(direccion)
+                    .icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_shop_yellow))
+            )
+        }
         marcadores.add(PRUEBA1)
         mMap.addMarker(
             MarkerOptions().position(PRUEBA1).title("Nutrisa Universidad")
@@ -241,26 +307,22 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
         )
         val miPos = miPosicion
-        var posicionMasCercana:LatLng? = null
-        var distanciaActual = Double.MAX_VALUE
         var distancia:Float?= null
         val results = floatArrayOf(.1f)
 
         for(marcador in marcadores) marcadores.forEachIndexed { index, latLng ->
-
             if (miPos != null) {
                 Location.distanceBetween(
-                    miPos.latitude, miPos.longitude,
-                    PRUEBA2.latitude, PRUEBA2.longitude,
+                    miPos.latitude,
+                    miPos.longitude,
+                    PRUEBA2.latitude,
+                    PRUEBA2.longitude,
                     results
                 )
                 distancia= results[0]
             }
                    }
         Toast.makeText(this, "la distancia es de: $distancia metros ", Toast.LENGTH_SHORT).show()
-
-// en este punto, posicionMasCercana, tiene la latitud y longitud del punto
-// mas cercano a miPos
     }
 
     private fun validarPermisos():Boolean{
@@ -306,7 +368,5 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
         super.onPause()
         detenerActualizacionUbicacion()
     }
-
-
-
 }
+

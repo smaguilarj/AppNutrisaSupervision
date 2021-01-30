@@ -14,11 +14,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="8dp"
         android:text="Selecciona tu región"
         android:textColor="@color/primaryTextColor"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
     <TextView
         android:id="@+id/textView3"
@@ -114,7 +114,6 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -233,9 +232,21 @@
         android:id="@+id/buttonVisitaRapida"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="14dp"
         android:text="Enviar datos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/layout_comentarios"
-        app:layout_constraintStart_toStartOf="@+id/layout_comentarios" />
+        app:layout_constraintStart_toStartOf="@+id/layout_comentarios"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtn_mapa" />
+
+    <ImageButton
+        android:id="@+id/imgBtn_mapa"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonVisitaRapida"
+        app:layout_constraintEnd_toEndOf="@+id/layout_comentarios"
+        app:layout_constraintStart_toStartOf="@+id/layout_comentarios"
+        app:layout_constraintTop_toBottomOf="@+id/layout_comentarios"
+        app:srcCompat="@drawable/ic_mapa" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

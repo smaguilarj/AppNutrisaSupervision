@@ -46,13 +46,6 @@
             </intent-filter>-->
         </activity>
 
-      <!--  <receiver android:name=".ui.main.supervision.SupervisionActivity"
-            tools:ignore="Instantiatable">
-        <intent-filter>
-            <action android:name="android.intent.action.BOOT_COMPLETED" />
-            <action android:name="android.intent.action.USER_PRESENT" />
-        </intent-filter>
-    </receiver>-->
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -140,7 +133,7 @@
             android:theme="@style/NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity

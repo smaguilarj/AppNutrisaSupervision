@@ -8,10 +8,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.nutrisaapplication.R
+import com.example.nutrisaapplication.data.SharedApp
 import com.example.nutrisaapplication.data.model.PlanTrabajoModel
 import com.example.nutrisaapplication.ui.main.plan_trabajo.viewmodel.PlanViewModel
 import kotlinx.android.synthetic.main.fragment_plan_dialog.*
@@ -45,7 +47,6 @@ class PlanDialogFragment : Fragment() {
         edtFechaCumplimiento.setOnClickListener { showDatePickerDialog() }
 
         btnEnviarDilog.setOnClickListener {
-
             if (radioButtonRojo.isChecked){
                 status = "Rojo"
                 Log.i("list","resulado: $status")
@@ -60,6 +61,8 @@ class PlanDialogFragment : Fragment() {
             }
             checkInf()?.let { it1 -> planDialogViewModel.setListData(it1) }
         }
+        val tienda=SharedApp.prefs.tienda
+        edtTienda.setText(tienda)
     }
    fun checkInf():MutableList<PlanTrabajoModel>?  {
         if (selectedDate.isNotEmpty() && edtTienda.text.toString().isNotEmpty() && edtGerente.text.toString().isNotEmpty() && edtAcciones.text.toString().isNotEmpty()&&edtResponsable.text.toString().isNotEmpty()){
@@ -71,11 +74,11 @@ class PlanDialogFragment : Fragment() {
             navigation.navigate(R.id.action_planDialogFragment_to_planTrabajoFragment)
             return list
         }
-        /*else{
-            Toast.makeText(requireContext(), "todos los datos son obligatorios", Toast.LENGTH_SHORT).show()
+        else{
+            Toast.makeText(requireContext(), "ingresar datos obligatorios", Toast.LENGTH_SHORT).show()
             return null
-        }*/
-       return null
+            }
+       //return null
     }
 
     /* fun crearListaPlan():List<PlanTrabajoModel> {

@@ -14,6 +14,8 @@ class Preference(context: Context) {
     val PLAN = "plan"
     val VISITA_RAPIDA = "visitaRapida"
     val PLAN_TRABAJO = "plan_trabajo"
+    val TIENDA = "tienda"
+
 
     val prefs: SharedPreferences = context.getSharedPreferences(PREFS_NAME, 0)
 
@@ -41,6 +43,9 @@ class Preference(context: Context) {
     var plan: Boolean
         get() = prefs.getBoolean(PLAN, false)
         set(value) = prefs.edit().putBoolean(PLAN, value).apply()
+    var tienda: String?
+        get() = prefs.getString(TIENDA, "")
+        set(value) = prefs.edit().putString(TIENDA, value).apply()
 /*    var user: String
         get() = prefs.getString(USER, "")!!
         set(value) = prefs.edit().putString(USER, value).apply()*/

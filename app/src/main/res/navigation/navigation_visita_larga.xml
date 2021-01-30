@@ -120,7 +120,7 @@
         tools:layout="@layout/fragment_kpi2">
         <action
             android:id="@+id/action_kpiFragment2_to_visitToStoreFragment"
-            app:destination="@id/visitToStoreFragment" />
+            app:destination="@id/visitToStoreFragment"/>
     </fragment>
     <fragment
         android:id="@+id/prevencionPerdidasFragment"

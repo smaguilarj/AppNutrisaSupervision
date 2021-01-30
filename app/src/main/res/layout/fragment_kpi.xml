@@ -42,6 +42,7 @@
                 android:inputType="textPersonName"
                 android:maxLength="40"
                 android:paddingStart="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/edt_visitas"
                 app:layout_constraintEnd_toEndOf="@+id/textView13"
                 app:layout_constraintStart_toEndOf="@+id/textView1"
                 app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -71,9 +72,9 @@
                 android:text="objetivo"
                 android:textColor="@color/colorBlack"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/tv_title"
+                app:layout_constraintEnd_toEndOf="@+id/tv_title2"
                 app:layout_constraintStart_toEndOf="@+id/textView13"
-                app:layout_constraintTop_toBottomOf="@+id/tv_title2" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_title2"/>
 
             <TextView
                 android:id="@+id/tv_title2"
@@ -109,17 +110,14 @@
                 android:id="@+id/textView1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:background="@drawable/ic_border_kpi"
                 android:padding="5dp"
                 android:paddingStart="10dp"
                 android:text="actual"
                 android:textColor="@color/colorBlack"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/textView13"
-                app:layout_constraintEnd_toStartOf="@+id/textView13"
-                app:layout_constraintStart_toStartOf="@+id/tv_title"
-                app:layout_constraintTop_toTopOf="@+id/textView13" />
+                app:layout_constraintStart_toStartOf="@+id/tv_title_not"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_not" />
 
             <EditText
                 android:id="@+id/edt_visitas"
@@ -138,7 +136,6 @@
                 android:id="@+id/tvVentaComps"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:background="@drawable/ic_border_kpi"
                 android:padding="5dp"
                 android:paddingStart="10dp"
@@ -178,7 +175,7 @@
                 android:text="objetivo"
                 android:textColor="@color/colorBlack"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/tv_title"
+                app:layout_constraintEnd_toEndOf="@+id/tv_title4"
                 app:layout_constraintStart_toEndOf="@+id/tv_pres"
                 app:layout_constraintTop_toBottomOf="@+id/tv_title4" />
             <EditText
@@ -227,8 +224,7 @@
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_height="0dp"
                 android:background="@drawable/ic_border_kpi"
                 android:padding="5dp"
                 android:paddingStart="10dp"
@@ -236,22 +232,21 @@
                 android:textColor="@color/colorBlack"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/textViewppv"
-                app:layout_constraintEnd_toStartOf="@+id/textViewppv"
-                app:layout_constraintStart_toStartOf="@+id/tv_title"
+                app:layout_constraintEnd_toEndOf="@+id/edt_visita_actual"
+                app:layout_constraintStart_toStartOf="@+id/tv_title2"
                 app:layout_constraintTop_toTopOf="@+id/textViewppv" />
 
             <TextView
                 android:id="@+id/textView_ven"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:background="@drawable/ic_border_kpi"
                 android:padding="5dp"
                 android:paddingStart="10dp"
                 android:text="objetivo"
                 android:textColor="@color/colorBlack"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/tv_title"
+                app:layout_constraintEnd_toEndOf="@+id/tv_title3"
                 app:layout_constraintStart_toEndOf="@+id/textView13"
                 app:layout_constraintTop_toBottomOf="@+id/tv_title3" />
 
@@ -303,7 +298,6 @@
                 android:id="@+id/textView13"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:background="@drawable/ic_border_kpi"
                 android:padding="5dp"
                 android:paddingStart="10dp"
@@ -334,8 +328,7 @@
             <TextView
                 android:id="@+id/textViewVenta"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_height="0dp"
                 android:background="@drawable/ic_border_kpi"
                 android:padding="5dp"
                 android:paddingStart="10dp"
@@ -345,7 +338,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/tvVentaComps"
                 app:layout_constraintEnd_toStartOf="@+id/tvVentaComps"
                 app:layout_constraintStart_toStartOf="@+id/tv_title3"
-                app:layout_constraintTop_toTopOf="@+id/tvVentaComps" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_title3" />
 
             <EditText
                 android:id="@+id/editTextPres"
@@ -375,7 +368,7 @@
 
             <TextView
                 android:id="@+id/textView14"
-                android:layout_width="0dp"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/ic_border_kpi"
@@ -384,9 +377,8 @@
                 android:text="objetivo"
                 android:textColor="@color/colorBlack"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/tv_title"
-                app:layout_constraintStart_toEndOf="@+id/textView13"
-                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+                app:layout_constraintEnd_toEndOf="@+id/tv_title_not"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_not" />
 
             <TextView
                 android:id="@+id/textViewppv"
