@@ -10,7 +10,14 @@ import com.example.nutrisaapplication.ui.main.homeVisitaRapida.MenuActivity
 import com.example.nutrisaapplication.ui.main.login.LoginActivity
 import com.example.nutrisaapplication.ui.main.navigationDrawer.NavigationDrawerActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.karumi.dexter.Dexter
+import com.karumi.dexter.PermissionToken
+import com.karumi.dexter.listener.PermissionDeniedResponse
+import com.karumi.dexter.listener.PermissionGrantedResponse
+import com.karumi.dexter.listener.PermissionRequest
+import com.karumi.dexter.listener.single.PermissionListener
 import kotlinx.android.synthetic.main.activity_supervision.*
+import java.util.jar.Manifest
 
 class SupervisionActivity : BaseActivity() {
 
@@ -19,6 +26,7 @@ class SupervisionActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_supervision)
+        //Dexter.withActivity(this).withPermission(android.Manifest.permission.CAMERA).withListener(this).check()
 
         fireBase= FirebaseAuth.getInstance()
         imgVisitaRapida.setOnClickListener {
@@ -41,4 +49,5 @@ class SupervisionActivity : BaseActivity() {
     }
 
     override fun onBackPressed() = Unit
+
 }

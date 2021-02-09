@@ -37,7 +37,6 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
     var locationRequest: LocationRequest?= null
     var callback: LocationCallback? = null
     private var marcadorGolden:Marker?= null
-    private var marcadorPiramide:Marker?= null
     private var marcadorTorre:Marker?= null
     var miPosicion:LatLng? = null
     private lateinit var mDatabase: DatabaseReference
@@ -89,7 +88,8 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
                                 Toast.LENGTH_LONG
                             ).show()
                             // Add a marker in Sydney and move the camera
-                            miPosicion = LatLng(ubicacion.latitude, ubicacion.longitude)
+                           // miPosicion = LatLng(ubicacion.latitude, ubicacion.longitude)
+                            miPosicion = LatLng(19.51227240142162, -96.87669618956023)
                         }
                         mMap.addMarker(MarkerOptions().position(miPosicion!!).title("Aqui estoy"))
                         //mMap.moveCamera(CameraUpdateFactory.newLatLng(miPosicion))
@@ -118,8 +118,9 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
                 }
                 val padre = snapshot.key
                 val resultado = snapshot.children
-                resultado.forEach { result-> val madre = result.key
-                    Log.i("tienda", "resultado madre key: $madre ")}
+                resultado.forEach { result-> val madre = result.key}
+
+                //Log.i("tienda", "resultado madre key: $madre ")
                 Log.i("tienda", "resultado key: $padre ")
                 Log.i("tienda", "resultado: $resultado ")
                 Log.i("tienda", "respuesta lista:  $listaShop")
@@ -139,7 +140,6 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
 
     @SuppressLint("MissingPermission")
     private fun obtenerUbicacion() {
-
         funsedLocationClient?.requestLocationUpdates(locationRequest, callback, null)
     }
 
@@ -199,10 +199,10 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
             pedirPermisos()
         }
         val listLatLng= arrayListOf<LatLng>()
-        val TIENDA_NUTRISA1= LatLng(19.3418869, -99.181587)
-        listLatLng.add(TIENDA_NUTRISA1)
-        val TIENDA_NUTRISA2= LatLng(19.5548008, -96.9648655)
+        val TIENDA_NUTRISA2= LatLng(20.569646100474888, -97.43648778046871)
         listLatLng.add(TIENDA_NUTRISA2)
+        val TIENDA_NUTRISA1= LatLng(19.512671851728445, -96.8769268595166)
+        listLatLng.add(TIENDA_NUTRISA1)
         val TIENDA_NUTRISA3 = LatLng(19.4590949, -96.953369)
         listLatLng.add(TIENDA_NUTRISA3)
         val TIENDA_NUTRISA4= LatLng(19.3418869, -99.191587)
@@ -215,9 +215,7 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
         for(tienda in listaTiendas){
             val nombre = tienda.Nombre_tienda
             val direccion= tienda.domicilio
-            listLatLng.forEach {
 
-            }
             marcadorGolden = mMap.addMarker(
                 MarkerOptions()
                     .position(listLatLng.random())
@@ -259,14 +257,14 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
 
     fun prueba(){
         val marcadores: MutableList<LatLng> = ArrayList()
-        val PRUEBA1= LatLng(19.3418869, -99.181587)
-        val PRUEBA2= LatLng(19.5548008, -96.9648655)
+        val PRUEBA2= LatLng(20.569646100474888, -97.43648778046871)
+        val PRUEBA1= LatLng(19.512671851728445, -96.8769268595166)
         val PRUEBA3 = LatLng(19.4590949, -96.953369)
         val listLatLng= arrayListOf<LatLng>()
-        val TIENDA_NUTRISA1= LatLng(19.3418869, -99.181587)
-        listLatLng.add(TIENDA_NUTRISA1)
-        val TIENDA_NUTRISA2= LatLng(19.5548008, -96.9648655)
+        val TIENDA_NUTRISA2= LatLng(20.569646100474888, -97.43648778046871)
         listLatLng.add(TIENDA_NUTRISA2)
+        val TIENDA_NUTRISA1= LatLng(19.512671851728445, -96.8769268595166)
+        listLatLng.add(TIENDA_NUTRISA1)
         val TIENDA_NUTRISA3 = LatLng(19.4590949, -96.953369)
         listLatLng.add(TIENDA_NUTRISA3)
         val TIENDA_NUTRISA4= LatLng(19.3418869, -99.191587)
@@ -296,8 +294,8 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
         )
         marcadores.add(PRUEBA2)
         mMap.addMarker(
-            MarkerOptions().position(PRUEBA2).title("Nutrisa Perisur 1")
-                .snippet("Periférico Sur # 4690 Col. Jardines del Pedregal de San Angel CP. 4500 Del. o Mpio. Coyoacán")
+            MarkerOptions().position(PRUEBA2).title("Las Américas Xalapa")
+                .snippet("Plaza las Americas, Carr. Xalapa Veracruz 2.5 680-Int.29, Pastoresa, 91193 Xalapa-Enríquez, Ver.")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
         )
         marcadores.add(PRUEBA3)
@@ -310,13 +308,13 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
         var distancia:Float?= null
         val results = floatArrayOf(.1f)
 
-        for(marcador in marcadores) marcadores.forEachIndexed { index, latLng ->
+        marcadores.forEachIndexed { index, latLng ->
             if (miPos != null) {
                 Location.distanceBetween(
                     miPos.latitude,
                     miPos.longitude,
-                    PRUEBA2.latitude,
-                    PRUEBA2.longitude,
+                    PRUEBA1.latitude,
+                    PRUEBA1.longitude,
                     results
                 )
                 distancia= results[0]
@@ -328,7 +326,6 @@ class MapaActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnMarkerC
     private fun validarPermisos():Boolean{
         val hayUbicacionPrecisa= ActivityCompat.checkSelfPermission(this, permisoFineLocation) == PackageManager.PERMISSION_GRANTED
         val hayUbicacionOrdinaria = ActivityCompat.checkSelfPermission(this, permisoCoarseLocation) == PackageManager.PERMISSION_GRANTED
-
         return hayUbicacionPrecisa && hayUbicacionOrdinaria
     }
     override fun onRequestPermissionsResult(

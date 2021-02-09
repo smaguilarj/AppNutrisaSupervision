@@ -31,6 +31,8 @@ class CajaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //action_bodegaPizarraFragment_to_menuFragment
+        edt3.setText("Esta es una prueba para el pdf")
+
         imb_yes11.setOnClickListener { tomaFoto(1) }
         imb_yes4.setOnClickListener { tomaFoto(2) }
         imb_no11.setOnClickListener { tomaFoto(3) }
