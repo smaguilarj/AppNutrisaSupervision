@@ -14,10 +14,12 @@ import java.io.*
 class PdfDocumentAdapter(context: Context?, path: String) : PrintDocumentAdapter() {
     internal var context:Context?=null
     internal var path=""
+    var ejemplo:String? = ""
 
     init {
         this.context=context
         this.path=path
+        ejemplo= "Laura"
     }
 
     override fun onLayout(
@@ -48,6 +50,7 @@ class PdfDocumentAdapter(context: Context?, path: String) : PrintDocumentAdapter
     ) {
         var ine: InputStream? = null
         var out: OutputStream? = null
+
         try {
             val file= File(path)
             ine=FileInputStream(file)

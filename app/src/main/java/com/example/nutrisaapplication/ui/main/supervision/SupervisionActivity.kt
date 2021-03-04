@@ -46,6 +46,7 @@ class SupervisionActivity : BaseActivity() {
             this.startActivity( Intent(this, LoginActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
             finish()
         }
+        println("Este es un mensaje por consola")
     }
 
     override fun onBackPressed() = Unit

@@ -38,7 +38,8 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_path"/>
         </provider>
-        <activity android:name=".ui.main.notificacion.FcmFirebaseActivity"
+        <activity
+            android:name=".ui.main.notificacion.FcmFirebaseActivity"
             android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/MaterialComponent">
            <!-- <intent-filter>
@@ -104,11 +105,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>-->
         </activity>
-        <activity
+     <!--   <activity
             android:name=".ui.main.maps.MapsActivity"
             android:screenOrientation="userPortrait"
             android:theme="@style/AppTheme2">
-        </activity>
+        </activity>-->
         <activity
             android:name=".ui.main.login.recuperar_contraseña.RecuperarPasswordActivity"
             android:screenOrientation="userPortrait"

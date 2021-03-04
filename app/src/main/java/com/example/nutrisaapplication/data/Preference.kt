@@ -14,7 +14,12 @@ class Preference(context: Context) {
     val PLAN = "plan"
     val VISITA_RAPIDA = "visitaRapida"
     val PLAN_TRABAJO = "plan_trabajo"
+
     val TIENDA = "tienda"
+    val REGION = "region"
+    val DISTRITO = "distrito"
+    val EVALUADOR = "evaluador"
+    val RESPONSABLE="responsable"
 
 
     val prefs: SharedPreferences = context.getSharedPreferences(PREFS_NAME, 0)
@@ -46,6 +51,18 @@ class Preference(context: Context) {
     var tienda: String?
         get() = prefs.getString(TIENDA, "")
         set(value) = prefs.edit().putString(TIENDA, value).apply()
+    var regionS: String?
+        get() = prefs.getString(REGION, "")
+        set(value) = prefs.edit().putString(REGION, value).apply()
+    var distritoS: String?
+        get() = prefs.getString(DISTRITO, "")
+        set(value) = prefs.edit().putString(DISTRITO, value).apply()
+    var evaluador: String?
+        get() = prefs.getString(EVALUADOR, "")
+        set(value) = prefs.edit().putString(EVALUADOR, value).apply()
+    var responsableTurno: String?
+        get() = prefs.getString(RESPONSABLE, "")
+        set(value) = prefs.edit().putString(RESPONSABLE, value).apply()
 /*    var user: String
         get() = prefs.getString(USER, "")!!
         set(value) = prefs.edit().putString(USER, value).apply()*/

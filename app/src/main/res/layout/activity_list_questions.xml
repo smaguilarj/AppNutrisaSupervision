@@ -49,7 +49,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Selecciona tu destino"
+        android:text="Selecciona tu distrito"
         android:textColor="@color/primaryTextColor"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/spinnerL" />
@@ -149,7 +149,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spinner_tiendaL">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edittext_nombre"
+            android:id="@+id/edittext_evaluador"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="34dp"

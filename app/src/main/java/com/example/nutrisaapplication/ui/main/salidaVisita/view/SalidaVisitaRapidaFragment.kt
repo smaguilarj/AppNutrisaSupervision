@@ -3,6 +3,8 @@ package com.example.nutrisaapplication.ui.main.salidaVisita.view
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import android.print.PrintAttributes
@@ -13,7 +15,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.nutrisaapplication.R
@@ -33,8 +34,11 @@ import com.karumi.dexter.listener.PermissionGrantedResponse
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.single.PermissionListener
 import kotlinx.android.synthetic.main.fragment_salida_visita_rapida.*
+import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
+import java.io.IOException
+import java.net.URL
 
 
 class SalidaVisitaRapidaFragment : Fragment() {
@@ -42,6 +46,7 @@ class SalidaVisitaRapidaFragment : Fragment() {
     val navigation by lazy {
         findNavController()
     }
+
     val file_name = "Reporte Nutrisa.pdf"
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -156,20 +161,76 @@ class SalidaVisitaRapidaFragment : Fragment() {
                 addNewItem(document, "Prueba1", Element.ALIGN_CENTER, headingStyle)
                 val valueStyle2= Font(fontName, valueFontSize, Font.NORMAL, BaseColor.GREEN)
                 addNewItem(document, "Se guardo correctamente el PDF", Element.AUTHOR, valueStyle2)
+
+
+                val url = "https://kodejava.org/wp-content/uploads/2017/01/"+"kodejava.png"
+                val imageUrl = ("http://www.google.com/intl/en_ALL/"
+                        + "images/logos/images_logo_lg.gif")
+                addImage(document, imageUrl)
+
+                val bitmap = BitmapFactory.decodeResource(
+                    requireContext().resources,
+                    R.drawable.nutrisa
+                )
+                val stream = ByteArrayOutputStream()
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
+                val imagen: Image = Image.getInstance(stream.toByteArray())
+                imagen.scaleToFit(150f, 150f)
+                document.add(imagen)
                 document.close()
+
                 Toast.makeText(requireContext(), "documento guardado", Toast.LENGTH_LONG).show()
                 activity?.onBackPressed()
                 printPDF()
             }catch (e: Exception){
                 Toast.makeText(requireContext(), "error: +$e", Toast.LENGTH_LONG).show()
-                Log.i("pdf",e.message)
+                if(e!=null)
+                Log.i("pdf", e.message)
             }
     }
+
+    private fun addImage(document: Document, url: String) {
+        try {
+            /*PdfWriter.getInstance(doc, FileOutputStream("ImageDemo.pdf"))
+            doc.open()*/
+            // Creating image by file name
+           /* val filename = "other-sample/src/main/resources/java.gif"
+            var image = Image.getInstance(filename)
+            document.add(image)*/
+            // The following line to prevent the "Server returned
+            // HTTP response code: 403" error.
+            //System.setProperty("http.agent", "Chrome")
+            val image = Image.getInstance(URL(url))
+            document.add(image)
+        } catch (e: DocumentException) {
+            e.printStackTrace()
+        } catch (e: IOException) {
+            e.printStackTrace()
+        } finally {
+            document.close()
+        }
+    }
+
+    /*  @Throws(DocumentException::class)
+      fun addImage(document: Document, ivPhoto: ImageView) {
+          try {
+              val drawable = ivPhoto.getDrawable() as BitmapDrawable
+              val bitmap = drawable.bitmap
+              val stream = ByteArrayOutputStream()
+              bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
+              val imageInByte = stream.toByteArray()
+              val image = Image.getInstance(imageInByte)
+              document.add(image)
+          } catch (ex: IOException) {
+              return
+          }
+      }*/
 
     private fun printPDF() {
         val printManager = activity?.getSystemService(Context.PRINT_SERVICE) as PrintManager
         try {
-            val printAdapter= PdfDocumentAdapter(activity, Commone.getAppPath(activity?.applicationContext!!) + file_name
+            val printAdapter= PdfDocumentAdapter(
+                activity, Commone.getAppPath(activity?.applicationContext!!) + file_name
             )
             printManager.print("Document", printAdapter, PrintAttributes.Builder().build())
         }catch (e: Exception){

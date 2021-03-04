@@ -155,7 +155,7 @@
             app:layout_constraintEnd_toEndOf="@+id/btn_reset"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/btn_reset"
-            app:layout_constraintTop_toBottomOf="@+id/layoutEmail" />
+            app:layout_constraintTop_toBottomOf="@+id/layoutEmail"/>
 
         <Button
             android:id="@+id/btn_reset"

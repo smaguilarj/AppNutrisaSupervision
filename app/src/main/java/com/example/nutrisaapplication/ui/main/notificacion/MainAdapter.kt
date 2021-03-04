@@ -40,11 +40,8 @@ class MainAdapter(val context: Context, val listeners: NotificationInterface) : 
         }
     }
     override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): MainAdapter.ViewHolder {
-        val view =
-            LayoutInflater.from(context).inflate(R.layout.item_list_notification, parent, false)
+        parent: ViewGroup, viewType: Int): MainAdapter.ViewHolder {
+        val view = LayoutInflater.from(context).inflate(R.layout.item_list_notification, parent, false)
         return ViewHolder(view,listeners)
     }
 
@@ -54,6 +51,7 @@ class MainAdapter(val context: Context, val listeners: NotificationInterface) : 
         holder.body.setText(newNotification.mDescription)
         holder.date.setText(String.format("Válido hasta el %s", newNotification.mExpiryDate))
         holder.tvBtn.setText("Mostrar")
+
     }
 
     override fun getItemCount(): Int {

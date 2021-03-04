@@ -79,11 +79,19 @@ class InicioVisitRapidaActivity : BaseActivity(), OnItemSelectedListener {
         buttonVisitaRapida.setOnClickListener {
             onBackPressed()
             SharedApp.prefs.visitaRapida = true
+            val tienda = SharedApp.prefs.tienda
+            val region = SharedApp.prefs.regionS
+            val distrito = SharedApp.prefs.distritoS
+            SharedApp.prefs.evaluador= edittext_evaluador.text.toString()
+            val evaluador=SharedApp.prefs.evaluador
+            SharedApp.prefs.responsableTurno= edittext_responsable.text.toString()
+            val responsableTurno=SharedApp.prefs.responsableTurno
+            Toast.makeText(applicationContext, "NOMBRE: $region-$distrito-$tienda-$evaluador-$responsableTurno", Toast.LENGTH_LONG).show()
+
         }
         imgBtn_mapa.setOnClickListener {
             this.startActivity( Intent(this, MapaActivity::class.java))
         }
-
     }
 
     private fun getShop(listTienda: ArrayList<String>) {
@@ -98,9 +106,11 @@ class InicioVisitRapidaActivity : BaseActivity(), OnItemSelectedListener {
                 val seleccionado = adapter?.getItemAtPosition(position).toString()
                 if (seleccionado != "Selecciona la tienda"){
                     SharedApp.prefs.tienda = seleccionado
-                    Toast.makeText(applicationContext, "item seleccionado: $seleccionado", Toast.LENGTH_LONG).show()
-                }
+                   val region = SharedApp.prefs.regionS
+                    val distrito = SharedApp.prefs.distritoS
 
+                    //Toast.makeText(applicationContext, "NOMBRE: $region-$distrito-$seleccionado", Toast.LENGTH_LONG).show()
+                }
                 Log.i("tienda", seleccionado)
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {
@@ -142,130 +152,171 @@ class InicioVisitRapidaActivity : BaseActivity(), OnItemSelectedListener {
         when (item) {
             "CENTRO NORTE" -> {
                 getDistrito(listCentroNorte)
+                SharedApp.prefs.regionS = "CENTRO NORTE"
             }
             "CENTRO SUR" -> {
                 getDistrito(listCentroSur)
+                SharedApp.prefs.regionS = "CENTRO SUR"
             }
             "PACÍFICO" -> {
                 getDistrito(listPacifico)
+                SharedApp.prefs.regionS = "PACÍFICO"
             }
             "FRANQUICIAS" -> {
                 getDistrito(listFranquicia)
+                SharedApp.prefs.regionS = "FRANQUICIAS"
             }
             "NORTE GOLFO" -> {
                 getDistrito(listNorteGolfo)
+                SharedApp.prefs.regionS = "NORTE GOLFO"
             }
             "BENITO JUÁREZ" -> {
                 getShop(listBenito)
+                SharedApp.prefs.distritoS = "BENITO JUÁREZ"
             }
             "CENTRO" -> {
                 getShop(listCentro)
-
+                SharedApp.prefs.distritoS = "CENTRO"
             }
             "COACALCO" -> {
                 getShop(listCoacalco)
+                SharedApp.prefs.distritoS = "COACALCO"
             }
             "COAPA" -> {
                 getShop(listCoapa)
+                SharedApp.prefs.distritoS = "COAPA"
             }
             "COYOACÁN" -> {
                 getShop(listCoyoacan)
+                SharedApp.prefs.distritoS = "COYOACÁN"
             }
             "ECATEPEC" -> {
                 getShop(listEcatepec)
+                SharedApp.prefs.distritoS = "ECATEPEC"
             }
             "FR CN" -> {
                 getShop(listFRCN)
+                SharedApp.prefs.distritoS = "FR CN"
             }
             "FR CS" -> {
                 getShop(listFRCS)
+                SharedApp.prefs.distritoS = "FR CS"
             }
             "FR NG" -> {
                 getShop(listaFRNG)
+                SharedApp.prefs.distritoS = "FR NG"
             }
             "FR PC" -> {
                 getShop(listaFRPC)
+                SharedApp.prefs.distritoS = "FR PC"
             }
             "GAM" -> {
                 getShop(listGam)
+                SharedApp.prefs.distritoS = "GAM"
             }
             "GUADALAJARA 1" -> {
                 getShop(listGuadalajara1)
+                SharedApp.prefs.distritoS = "GUADALAJARA 1"
             }
             "GUADALAJARA 2" -> {
                 getShop(listGuadalajara2)
+                SharedApp.prefs.distritoS = "GUADALAJARA 2"
             }
             "GUADALAJARA 3" -> {
                 getShop(listGuadalajara3)
+                SharedApp.prefs.distritoS = "GUADALAJARA 3"
             }
             "GUANAJUATO" -> {
                 getShop(listGuanajuato)
+                SharedApp.prefs.distritoS = "GUANAJUATO"
             }
             "GUERRERO" -> {
                 getShop(listGuerrero)
+                SharedApp.prefs.distritoS = "GUERRERO"
             }
             "HUASTECA POTOSINA" -> {
                 getShop(listPotosi)
+                SharedApp.prefs.distritoS = "HUASTECA POTOSINA"
             }
             "LEÓN" -> {
                 getShop(listLeon)
+                SharedApp.prefs.distritoS = "LEÓN"
             }
             "MONTERREY 1" -> {
                 getShop(listMonterrey1)
+                SharedApp.prefs.distritoS = "MONTERREY 1"
             }
             "MONTERREY 2" -> {
                 getShop(listMonterrey2)
+                SharedApp.prefs.distritoS = "MONTERREY 2"
             }
             "MONTERREY 3" -> {
                 getShop(listMonterrey3)
+                SharedApp.prefs.distritoS = "MONTERREY 3"
             }
             "MORELOS" -> {
                 getShop(listMorelos)
+                SharedApp.prefs.distritoS = "MORELOS"
             }
             "NAUCALPAN" -> {
                 getShop(listNaucalpan)
+                SharedApp.prefs.distritoS = "NAUCALPAN"
             }
             "NEZAHUALCÓYOTL" -> {
                 getShop(listNeza)
+                SharedApp.prefs.distritoS = "NEZAHUALCÓYOTL"
             }
             "NOROESTE" -> {
                 getShop(listNoroeste)
+                SharedApp.prefs.distritoS = "NOROESTE"
             }
             "OAXACA CHIAPAS" -> {
                 getShop(listOaxaca)
+                SharedApp.prefs.distritoS = "OAXACA CHIAPAS"
             }
             "POLANCO" -> {
                 getShop(listPolanco)
+                SharedApp.prefs.distritoS = "POLANCO"
             }
             "QUERÉTARO" -> {
                 getShop(listQueretaro)
+                SharedApp.prefs.distritoS = "QUERÉTARO"
             }
             "QUINTANA ROO" -> {
                 getShop(listRoo)
+                SharedApp.prefs.distritoS = "QUINTANA ROO"
             }
             "SANTA FE" -> {
                 getShop(listSantafe)
+                SharedApp.prefs.distritoS = "SANTA FE"
             }
             "TLÁHUAC" -> {
                 getShop(listTlahuac)
+                SharedApp.prefs.distritoS = "TLÁHUAC"
             }
             "TLALNEPANTLA" -> {
                 getShop(listTlanepantla)
+                SharedApp.prefs.distritoS = "TLALNEPANTLA"
             }
             "TLALPAN" -> {
                 getShop(listTlalpan)
+                SharedApp.prefs.distritoS = "TLALPAN"
             }
             "TOLUCA" -> {
                 getShop(listToluca)
+                SharedApp.prefs.distritoS = "TOLUCA"
             }
             "VERACRUZ 1" -> {
                 getShop(listVer1)
+                SharedApp.prefs.distritoS = "VERACRUZ 1"
             }
             "VERACRUZ 2" -> {
                 getShop(listVer2)
+                SharedApp.prefs.distritoS = "VERACRUZ 2"
             }
             "VILLAHERMOSA" -> {
                 getShop(listVillahermosa)
+                SharedApp.prefs.distritoS = "VILLAHERMOSA"
             }
         }
     }
