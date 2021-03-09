@@ -72,7 +72,7 @@ class SalidaVisitaRapidaFragment : Fragment() {
             Dexter.withActivity(activity).withPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE).withListener(
                 object : PermissionListener {
                     override fun onPermissionGranted(p0: PermissionGrantedResponse?) {
-                        createPDFFile(activity?.let { it1 -> Commone.getAppPath(it1) } + file_name)
+                        createPDFFile(activity?.let { it1 -> Commone.getAppPath(it1)} + file_name)
                     }
 
                     override fun onPermissionDenied(permiso: PermissionDeniedResponse?) {
@@ -166,7 +166,7 @@ class SalidaVisitaRapidaFragment : Fragment() {
                 val url = "https://kodejava.org/wp-content/uploads/2017/01/"+"kodejava.png"
                 val imageUrl = ("http://www.google.com/intl/en_ALL/"
                         + "images/logos/images_logo_lg.gif")
-                addImage(document, imageUrl)
+                //addImage(document, url)
 
                 val bitmap = BitmapFactory.decodeResource(
                     requireContext().resources,
@@ -178,14 +178,15 @@ class SalidaVisitaRapidaFragment : Fragment() {
                 imagen.scaleToFit(150f, 150f)
                 document.add(imagen)
                 document.close()
-
                 Toast.makeText(requireContext(), "documento guardado", Toast.LENGTH_LONG).show()
                 activity?.onBackPressed()
                 printPDF()
             }catch (e: Exception){
-                Toast.makeText(requireContext(), "error: +$e", Toast.LENGTH_LONG).show()
-                if(e!=null)
-                Log.i("pdf", e.message)
+                //Toast.makeText(requireContext(), "error: +$e", Toast.LENGTH_LONG).show()
+                    if(e != null){
+                        Log.i("pdf", e.message)
+                    }
+
             }
     }
 

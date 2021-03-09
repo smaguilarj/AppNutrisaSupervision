@@ -13,6 +13,10 @@ import androidx.navigation.fragment.findNavController
 import com.example.nutrisaapplication.R
 import com.example.nutrisaapplication.data.SharedApp
 import com.github.dhaval2404.imagepicker.ImagePicker
+import com.google.android.gms.tasks.OnFailureListener
+import com.google.android.gms.tasks.OnSuccessListener
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.SetOptions
 import kotlinx.android.synthetic.main.fragment_bodega_pizarra.*
 import java.io.File
 
@@ -20,15 +24,13 @@ class BodegaPizarraFragment : Fragment() {
 
     var respuesta:String=""
     var pregunta=0
+    private var dbFireStore = FirebaseFirestore.getInstance()
+    private var mapa = mutableMapOf<String, String>()
 
     private val navigation by lazy {
         findNavController()
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,12 +48,23 @@ class BodegaPizarraFragment : Fragment() {
         imb_no4.setOnClickListener { tomaFoto(4) }
         imb_yes20.setOnClickListener { tomaFoto(5) }
         imb_no20.setOnClickListener {tomaFoto(6)}
-        imb_na3.setOnClickListener { pregunta=18; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
-        imb_na4.setOnClickListener { pregunta=19; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
-        img_na20.setOnClickListener { pregunta=20; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}
+        imb_na3.setOnClickListener { pregunta=18; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta"); mapa.put("respuesta18",respuesta)}
+        imb_na4.setOnClickListener { pregunta=19; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta"); mapa.put("respuesta19",respuesta)}
+        img_na20.setOnClickListener { pregunta=20; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta"); mapa.put("respuesta20",respuesta)}
 
-        buttonEnviarPlan.setOnClickListener {navigation.navigate(R.id.action_bodegaPizarraFragment_to_planDialogFragment); SharedApp.prefs.bodega=true }
-        //startActivity(Intent(requireContext(),TableLayoutActivity::class.java))
+        buttonEnviarPlan.setOnClickListener {navigation.navigate(R.id.action_bodegaPizarraFragment_to_planDialogFragment); SharedApp.prefs.bodega=true
+            val name=SharedApp.prefs.pdfname
+            if (name != null) {
+                dbFireStore.collection("pdf").document(name).set(mapa, SetOptions.merge())
+                    .addOnSuccessListener(OnSuccessListener {
+                        Toast.makeText(requireContext(), "se guardo correctamente", Toast.LENGTH_LONG).show()
+                        Log.d("respuesta", "Documento escrito correctamente!")
+                    })
+                    .addOnFailureListener(OnFailureListener {
+                            e -> Log.d("respuesta", "Error al escribir el documento", e)
+                    })
+            }
+        }
     }
 
     private fun tomaFoto(code: Int) {
@@ -75,27 +88,33 @@ class BodegaPizarraFragment : Fragment() {
                 1 -> {
                     img_question3.setImageURI(fileUri);respuesta="SI";pregunta=18
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
+                    mapa.put("respuesta18",respuesta)
                 }
                 2 -> {
                     img_question4.setImageURI(fileUri);respuesta="SI";pregunta=19
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
+                    mapa.put("respuesta19",respuesta)
                 }
                 3 -> {
                     img_question3.setImageURI(fileUri);respuesta="NO";pregunta=18
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
+                    mapa.put("respuesta18",respuesta)
                 }
                 4-> {
                     img_question4.setImageURI(fileUri);respuesta="NO";pregunta=19
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
+                    mapa.put("respuesta19",respuesta)
                 }
                 5 -> {
                     img_question20.setImageURI(fileUri);respuesta="SI";pregunta=20
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
+                    mapa.put("respuesta20",respuesta)
                 }
 
                 6 -> {
                     img_question20.setImageURI(fileUri);respuesta="NO";pregunta=20
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
+                    mapa.put("respuesta20",respuesta)
                 }
 
             }

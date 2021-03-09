@@ -13,20 +13,19 @@ import androidx.navigation.fragment.findNavController
 import com.example.nutrisaapplication.R
 import com.example.nutrisaapplication.data.SharedApp
 import com.github.dhaval2404.imagepicker.ImagePicker
-import com.google.firebase.database.DatabaseReference
+import com.google.android.gms.tasks.OnFailureListener
+import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.storage.StorageReference
+import com.google.firebase.firestore.SetOptions
 import kotlinx.android.synthetic.main.fragment_barra.*
 import java.io.File
 
 
 class BarraFragment : Fragment() {
-    var respuesta:String=""
-    var pregunta=0
-    var dbFireStore = FirebaseFirestore.getInstance()
-    private lateinit var mDatabaseReference: DatabaseReference
-    private lateinit var mStorageReference:StorageReference
-
+    var respuesta: String = ""
+    var pregunta = 0
+    private var dbFireStore = FirebaseFirestore.getInstance()
+    private var mapa = mutableMapOf<String, String>()
 
     private val navigate by lazy {
         findNavController()
@@ -50,27 +49,46 @@ class BarraFragment : Fragment() {
         imb_yes14.setOnClickListener { tomaFoto(6) }
         imb_no20.setOnClickListener { tomaFoto(7) }
         imb_no14.setOnClickListener { tomaFoto(8) }
-        imb_na11.setOnClickListener { pregunta=7; respuesta="NA";Log.d(
-            "respuesta",
-            "pregunta: $pregunta respuesta:$respuesta"
-        )}
-        imb_na4.setOnClickListener { pregunta=8; respuesta="NA";Log.d(
-            "respuesta",
-            "pregunta: $pregunta respuesta:$respuesta"
-        )}
-        img_na20.setOnClickListener { pregunta=9; respuesta="NA";Log.d(
-            "respuesta",
-            "pregunta: $pregunta respuesta:$respuesta"
-        )}
-        img_na14.setOnClickListener { pregunta=10; respuesta="NA";Log.d(
-            "respuesta",
-            "pregunta: $pregunta respuesta:$respuesta"
-        )}
+        imb_na11.setOnClickListener {
+            pregunta = 7; respuesta = "NA";Log.d("respuesta", "pregunta: $pregunta respuesta:$respuesta")
+            mapa.put("pregunta7",pregunta.toString())
+            mapa.put("respuesta7",respuesta)
+        }
+        imb_na4.setOnClickListener {
+            pregunta = 8; respuesta = "NA";Log.d("respuesta", "pregunta: $pregunta respuesta:$respuesta")
+            mapa.put("pregunta8",pregunta.toString())
+            mapa.put("respuesta8",respuesta)
+        }
+        img_na20.setOnClickListener {
+            pregunta= 9; respuesta = "NA";Log.d("respuesta", "pregunta: $pregunta respuesta:$respuesta")
+            mapa.put("pregunta9",pregunta.toString())
+            mapa.put("respuesta9",respuesta)
+        }
+        img_na14.setOnClickListener {
+            pregunta = 10; respuesta = "NA";Log.d("respuesta", "pregunta: $pregunta respuesta:$respuesta")
+            mapa.put("pregunta10",pregunta.toString())
+            mapa.put("respuesta10",respuesta)
+        }
 
-        habilitarBoton()
+       // habilitarBoton()
         buttonEnviarPlan.setOnClickListener {
-            SharedApp.prefs.barras= true
+            SharedApp.prefs.barras = true
             navigate.navigate(R.id.action_barraFragment_to_cajaFragment)
+            val name = SharedApp.prefs.pdfname
+            if (name != null) {
+                dbFireStore.collection("pdf").document(name).set(mapa, SetOptions.merge())
+                    .addOnSuccessListener(OnSuccessListener {
+                        Toast.makeText(
+                            requireContext(),
+                            "se guardo correctamente",
+                            Toast.LENGTH_LONG
+                        ).show()
+                        Log.d("respuesta", "Documento escrito correctamente!")
+                    })
+                    .addOnFailureListener(OnFailureListener { e ->
+                        Log.d("respuesta", "Error al escribir el documento", e)
+                    })
+            }
         }
     }
 
@@ -98,35 +116,51 @@ class BarraFragment : Fragment() {
             when (requestCode) {
                 1 -> {
                     img_question3.setImageURI(fileUri);respuesta = "SI";pregunta = 7
-                    Log.d("respuesta", "pregunta: $pregunta respuesta:$respuesta")
+                    Log.d("respuesta", "pregunta7: $pregunta respuesta7:$respuesta")
+                    mapa.put("pregunta7",pregunta.toString())
+                    mapa.put("respuesta7",respuesta)
                 }
                 2 -> {
                     img_question4.setImageURI(fileUri);respuesta = "SI";pregunta = 8
-                    Log.d("respuesta", "pregunta: $pregunta respuesta:$respuesta")
+                    Log.d("respuesta", "pregunta8: $pregunta respuesta8:$respuesta")
+                    mapa.put("pregunta8",pregunta.toString())
+                    mapa.put("respuesta8",respuesta)
                 }
                 3 -> {
                     img_question3.setImageURI(fileUri);respuesta = "NO";pregunta = 7
-                    Log.d("respuesta", "pregunta: $pregunta respuesta:$respuesta")
+                    Log.d("respuesta", "pregunta7: $pregunta respuesta7:$respuesta")
+                    mapa.put("pregunta7",pregunta.toString())
+                    mapa.put("respuesta7",respuesta)
                 }
                 4 -> {
                     img_question4.setImageURI(fileUri);respuesta = "NO";pregunta = 8
-                    Log.d("respuesta", "pregunta: $pregunta respuesta:$respuesta")
+                    Log.d("respuesta", "pregunta8: $pregunta respuesta8:$respuesta")
+                    mapa.put("pregunta8",pregunta.toString())
+                    mapa.put("respuesta8",respuesta)
                 }
                 5 -> {
                     img_question20.setImageURI(fileUri);respuesta = "SI";pregunta = 9
                     Log.d("respuesta", "pregunta: $pregunta respuesta:$respuesta")
+                    mapa.put("pregunta9",pregunta.toString())
+                    mapa.put("respuesta9",respuesta)
                 }
                 6 -> {
                     img_question14.setImageURI(fileUri);respuesta = "SI";pregunta = 10
                     Log.d("respuesta", "pregunta: $pregunta respuesta:$respuesta")
+                    mapa.put("pregunta10",pregunta.toString())
+                    mapa.put("respuesta10",respuesta)
                 }
                 7 -> {
                     img_question20.setImageURI(fileUri);respuesta = "NO";pregunta = 9
                     Log.d("respuesta", "pregunta: $pregunta respuesta:$respuesta")
+                    mapa.put("pregunta9",pregunta.toString())
+                    mapa.put("respuesta9",respuesta)
                 }
                 8 -> {
                     img_question14.setImageURI(fileUri);respuesta = "NO";pregunta = 10
                     Log.d("respuesta", "pregunta: $pregunta respuesta:$respuesta")
+                    mapa.put("pregunta10",pregunta.toString())
+                    mapa.put("respuesta10",respuesta)
                 }
             }
             //You can get File object from intent

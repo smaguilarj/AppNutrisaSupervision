@@ -13,6 +13,11 @@ import androidx.navigation.fragment.findNavController
 import com.example.nutrisaapplication.R
 import com.example.nutrisaapplication.data.SharedApp
 import com.github.dhaval2404.imagepicker.ImagePicker
+import com.google.android.gms.tasks.OnFailureListener
+import com.google.android.gms.tasks.OnSuccessListener
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.fragment_fachada.*
 import java.io.File
 
@@ -24,6 +29,9 @@ class FachadaFragment : Fragment() {
     private var pregunta2=0
     private var completo1=false
     private var completo2=false
+    private var dbFireStore = FirebaseFirestore.getInstance()
+    var mapa = mutableMapOf<String,String>()
+
 
     private val navigation by lazy {
         findNavController()
@@ -38,16 +46,29 @@ class FachadaFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        imb_yes1.setOnClickListener { tomaFoto(1);Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta") }
-        imb_yes4.setOnClickListener { tomaFoto(2);Log.d("respuesta","pregunta: $pregunta2 respuesta:$respuesta2") }
-        imb_no1.setOnClickListener { tomaFoto(3);Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta") }
-        imb_no4.setOnClickListener { tomaFoto(4);Log.d("respuesta","pregunta: $pregunta2 respuesta:$respuesta2") }
-        imb_na1.setOnClickListener { pregunta=1; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta");completo1=true; habilitarBtn() }
-        imb_na4.setOnClickListener { pregunta=2; respuesta="NA";Log.d("respuesta","pregunta: $pregunta2 respuesta:$respuesta2");completo2=true; habilitarBtn() }
+        imb_yes1.setOnClickListener { tomaFoto(1);Log.d("respuesta","pregunta1: $pregunta respuesta1:$respuesta")}
+        imb_yes4.setOnClickListener { tomaFoto(2);Log.d("respuesta","pregunta2: $pregunta2 respuesta2:$respuesta2") }
+        imb_no1.setOnClickListener { tomaFoto(3);Log.d("respuesta","pregunta1: $pregunta respuesta1:$respuesta") }
+        imb_no4.setOnClickListener { tomaFoto(4);Log.d("respuesta","pregunta2: $pregunta2 respuesta2:$respuesta2") }
+        imb_na1.setOnClickListener { pregunta=1; respuesta="NA";Log.d("respuesta","pregunta1: $pregunta respuesta1:$respuesta");completo1=true; habilitarBtn();mapa.put("pregunta1",pregunta.toString())
+            mapa.put("respuesta1",respuesta) }
+        imb_na4.setOnClickListener { pregunta2=2; respuesta2="NA";Log.d("respuesta","pregunta2: $pregunta2 respuesta2:$respuesta2");completo2=true; habilitarBtn(); mapa.put("pregunta2",pregunta2.toString())
+            mapa.put("respuesta2",respuesta2) }
         buttonFachada.isEnabled=false
         buttonFachada.setOnClickListener {
             SharedApp.prefs.fachada= true
             navigation.navigate(R.id.action_fachadaFragment_to_pisoFragment)
+            val name=SharedApp.prefs.pdfname
+            if (name != null) {
+                dbFireStore.collection("pdf").document(name).set(mapa)
+                    .addOnSuccessListener(OnSuccessListener {
+                        Toast.makeText(requireContext(), "incercion correcta", Toast.LENGTH_LONG).show()
+                        Log.d("respuesta", "Documento escrito correctamente!")
+                    })
+                    .addOnFailureListener(OnFailureListener {
+                            e -> Log.d("respuesta", "Error al escribir el documento", e)
+                    })
+            }
         }
     }
 
@@ -80,23 +101,31 @@ class FachadaFragment : Fragment() {
             when (requestCode) {
                 1 -> {
                     img_question3.setImageURI(fileUri);respuesta="SI";pregunta=1
-                    Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
+                    Log.d("respuesta","pregunta1: $pregunta respuesta1:$respuesta")
                     completo1=true
+                    mapa.put("pregunta1",pregunta.toString())
+                    mapa.put("respuesta1",respuesta)
                 }
                 2 -> {
-                    img_question4.setImageURI(fileUri);respuesta="SI";pregunta=2
-                    Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
+                    img_question4.setImageURI(fileUri);respuesta2="SI";pregunta2=2
+                    Log.d("respuesta","pregunta2: $pregunta2 respuesta2:$respuesta2")
                     completo2=true
+                    mapa.put("pregunta2",pregunta2.toString())
+                    mapa.put("respuesta2",respuesta2)
                 }
                 3 -> {
                     img_question3.setImageURI(fileUri);respuesta="NO";pregunta=1
-                    Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
+                    Log.d("respuesta","pregunta1: $pregunta respuesta1:$respuesta")
                     completo1=true
+                    mapa.put("pregunta1",pregunta.toString())
+                    mapa.put("respuesta1",respuesta)
                 }
                 4-> {
-                    img_question4.setImageURI(fileUri);respuesta="NO";pregunta=2
-                    Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
+                    img_question4.setImageURI(fileUri);respuesta2="NO";pregunta2=2
+                    Log.d("respuesta","pregunta2: $pregunta2 respuesta2:$respuesta2")
                     completo2=true
+                    mapa.put("pregunta2",pregunta2.toString())
+                    mapa.put("respuesta2",respuesta2)
                 }
             }
             //You can get File object from intent

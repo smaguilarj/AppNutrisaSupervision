@@ -87,7 +87,7 @@ class InicioVisitRapidaActivity : BaseActivity(), OnItemSelectedListener {
             SharedApp.prefs.responsableTurno= edittext_responsable.text.toString()
             val responsableTurno=SharedApp.prefs.responsableTurno
             Toast.makeText(applicationContext, "NOMBRE: $region-$distrito-$tienda-$evaluador-$responsableTurno", Toast.LENGTH_LONG).show()
-
+            SharedApp.prefs.pdfname="$region-$distrito-$tienda-$evaluador-$responsableTurno"
         }
         imgBtn_mapa.setOnClickListener {
             this.startActivity( Intent(this, MapaActivity::class.java))

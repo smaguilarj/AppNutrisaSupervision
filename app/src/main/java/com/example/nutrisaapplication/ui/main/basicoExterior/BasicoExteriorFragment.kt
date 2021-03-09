@@ -37,7 +37,7 @@ class BasicoExteriorFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         checkOption()
         imb_yes1.setOnClickListener { tomaFoto(1) }
-        imb_yes2.setOnClickListener { tomaFoto(2) }
+        imb_yes4.setOnClickListener { tomaFoto(2) }
         imb_no3.setOnClickListener { tomaFoto(3) }
         imb_no2.setOnClickListener { tomaFoto(4) }
         imb_na1.setOnClickListener { pregunta=1; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")}

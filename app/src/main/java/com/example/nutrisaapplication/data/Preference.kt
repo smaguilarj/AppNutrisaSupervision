@@ -20,6 +20,7 @@ class Preference(context: Context) {
     val DISTRITO = "distrito"
     val EVALUADOR = "evaluador"
     val RESPONSABLE="responsable"
+    val PDFNAME="pdfname"
 
 
     val prefs: SharedPreferences = context.getSharedPreferences(PREFS_NAME, 0)
@@ -63,6 +64,9 @@ class Preference(context: Context) {
     var responsableTurno: String?
         get() = prefs.getString(RESPONSABLE, "")
         set(value) = prefs.edit().putString(RESPONSABLE, value).apply()
+    var pdfname: String?
+        get() = prefs.getString(PDFNAME, "")
+        set(value) = prefs.edit().putString(PDFNAME, value).apply()
 /*    var user: String
         get() = prefs.getString(USER, "")!!
         set(value) = prefs.edit().putString(USER, value).apply()*/
