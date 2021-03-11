@@ -2,6 +2,7 @@ package com.example.nutrisaapplication.ui.main.piso.view
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -15,9 +16,25 @@ import com.example.nutrisaapplication.data.SharedApp
 import com.github.dhaval2404.imagepicker.ImagePicker
 import com.google.android.gms.tasks.OnFailureListener
 import com.google.android.gms.tasks.OnSuccessListener
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
+import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.fragment_piso.*
+import kotlinx.android.synthetic.main.fragment_piso.buttonEnviarPlan
+import kotlinx.android.synthetic.main.fragment_piso.imb_na4
+import kotlinx.android.synthetic.main.fragment_piso.imb_no14
+import kotlinx.android.synthetic.main.fragment_piso.imb_no20
+import kotlinx.android.synthetic.main.fragment_piso.imb_no4
+import kotlinx.android.synthetic.main.fragment_piso.imb_yes14
+import kotlinx.android.synthetic.main.fragment_piso.imb_yes20
+import kotlinx.android.synthetic.main.fragment_piso.imb_yes4
+import kotlinx.android.synthetic.main.fragment_piso.img_na14
+import kotlinx.android.synthetic.main.fragment_piso.img_na20
+import kotlinx.android.synthetic.main.fragment_piso.img_question14
+import kotlinx.android.synthetic.main.fragment_piso.img_question20
+import kotlinx.android.synthetic.main.fragment_piso.img_question3
+import kotlinx.android.synthetic.main.fragment_piso.img_question4
 import java.io.File
 
 class PisoFragment : Fragment() {
@@ -26,6 +43,7 @@ class PisoFragment : Fragment() {
     var pregunta=0
     private var dbFireStore = FirebaseFirestore.getInstance()
     private var mapa= mutableMapOf<String,String>()
+    private lateinit var mPhotoUri: Uri
 
     private val navigation by lazy {
         findNavController()
@@ -50,17 +68,13 @@ class PisoFragment : Fragment() {
         imb_no20.setOnClickListener { tomaFoto(7) }
         imb_no14.setOnClickListener { tomaFoto(8) }
         imb_na3.setOnClickListener { pregunta=3; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
-            mapa.put("pregunta3",pregunta.toString())
-            mapa.put("respuesta3",respuesta)}
+            mapa.put("pregunta3",respuesta)}
         imb_na4.setOnClickListener { pregunta=4; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
-            mapa.put("pregunta4",pregunta.toString())
-            mapa.put("respuesta4",respuesta)}
+            mapa.put("pregunta4",respuesta)}
         img_na20.setOnClickListener { pregunta=5; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
-            mapa.put("pregunta5",pregunta.toString())
-            mapa.put("respuesta5",respuesta)}
+            mapa.put("pregunta5",respuesta)}
         img_na14.setOnClickListener { pregunta=6; respuesta="NA";Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
-            mapa.put("pregunta6",pregunta.toString())
-            mapa.put("respuesta6",respuesta)}
+            mapa.put("pregunta6",respuesta)}
         buttonEnviarPlan.setOnClickListener {
             navigation.navigate(R.id.action_pisoFragment_to_barraFragment);SharedApp.prefs.piso=true
             val name=SharedApp.prefs.pdfname
@@ -74,6 +88,30 @@ class PisoFragment : Fragment() {
                             e -> Log.d("respuesta", "Error al escribir el documento", e)
                     })
             }
+        }
+    }
+
+    private fun savePhoto(fotoName: String){
+        val name = SharedApp.prefs.pdfname
+        val storageRef = FirebaseStorage.getInstance().reference
+        val ref = name?.let { storageRef.child("imagenes").child("$it/"+fotoName) }
+        if(mPhotoUri != null){
+            ref?.putFile(mPhotoUri)
+                ?.addOnProgressListener {
+                    val progress= (100*it.bytesTransferred/it.totalByteCount).toDouble()
+                    progressBarP.progress= progress.toInt()
+                    tvProgressP.text= "Completado: $progress%"
+                }
+                ?.addOnCompleteListener{
+                    //progressBar.visibility= View.INVISIBLE
+                    //Toast.makeText(requireContext(), "el porcentaje es 100%", Toast.LENGTH_SHORT).show()
+                }
+                ?.addOnSuccessListener {
+                    Snackbar.make(requireView(), "success", Snackbar.LENGTH_SHORT).show()
+                }
+                ?.addOnFailureListener {
+                    Snackbar.make(requireView(), "error al subir:", Snackbar.LENGTH_SHORT).show()
+                }
         }
     }
     //onRequestChangeFragment(BarraFragment(), R.id.nav_host_fragment, false, "")
@@ -93,55 +131,55 @@ class PisoFragment : Fragment() {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK) {
             //Image Uri will not be null for RESULT_OK
-            val fileUri = data?.data
+            mPhotoUri = data?.data!!
             when (requestCode) {
                 1 -> {
-                    img_question3.setImageURI(fileUri);respuesta="SI";pregunta=3
-                    mapa.put("pregunta3",pregunta.toString())
-                    mapa.put("respuesta3",respuesta)
+                    img_question3.setImageURI(mPhotoUri);respuesta="SI";pregunta=3
+                    mapa.put("pregunta3",respuesta)
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
+                    savePhoto("fotoPregunta3")
                 }
                 2 -> {
-                    img_question4.setImageURI(fileUri);respuesta="SI";pregunta=4
+                    img_question4.setImageURI(mPhotoUri);respuesta="SI";pregunta=4
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
-                    mapa.put("pregunta4",pregunta.toString())
-                    mapa.put("respuesta4",respuesta)
+                    mapa.put("pregunta4",respuesta)
+                    savePhoto("fotoPregunta4")
                 }
                 3 -> {
-                    img_question3.setImageURI(fileUri);respuesta="NO";pregunta=3
+                    img_question3.setImageURI(mPhotoUri);respuesta="NO";pregunta=3
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
-                    mapa.put("pregunta3",pregunta.toString())
-                    mapa.put("respuesta3",respuesta)
+                    mapa.put("pregunta3",respuesta)
+                    savePhoto("fotoPregunta3")
                 }
                 4-> {
-                    img_question4.setImageURI(fileUri);respuesta="NO";pregunta=4
+                    img_question4.setImageURI(mPhotoUri);respuesta="NO";pregunta=4
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
-                    mapa.put("pregunta4",pregunta.toString())
-                    mapa.put("respuesta4",respuesta)
+                    mapa.put("pregunta4",respuesta)
+                    savePhoto("fotoPregunta4")
                 }
                 5 -> {
-                    img_question20.setImageURI(fileUri);respuesta="SI";pregunta=5
+                    img_question20.setImageURI(mPhotoUri);respuesta="SI";pregunta=5
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
-                    mapa.put("pregunta5",pregunta.toString())
-                    mapa.put("respuesta5",respuesta)
+                    mapa.put("pregunta5",respuesta)
+                    savePhoto("fotoPregunta5")
                 }
                 6-> {
-                    img_question14.setImageURI(fileUri);respuesta="SI";pregunta=6
+                    img_question14.setImageURI(mPhotoUri);respuesta="SI";pregunta=6
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
-                    mapa.put("pregunta6",pregunta.toString())
-                    mapa.put("respuesta6",respuesta)
+                    mapa.put("pregunta6",respuesta)
+                    savePhoto("fotoPregunta6")
                 }
                 7 -> {
-                    img_question20.setImageURI(fileUri);respuesta="NO";pregunta=5
+                    img_question20.setImageURI(mPhotoUri);respuesta="NO";pregunta=5
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
-                    mapa.put("pregunta5",pregunta.toString())
-                    mapa.put("respuesta5",respuesta)
+                    mapa.put("pregunta5",respuesta)
+                    savePhoto("fotoPregunta5")
                 }
                 8-> {
-                    img_question14.setImageURI(fileUri);respuesta="NO";pregunta=6
+                    img_question14.setImageURI(mPhotoUri);respuesta="NO";pregunta=6
                     Log.d("respuesta","pregunta: $pregunta respuesta:$respuesta")
-                    mapa.put("pregunta6",pregunta.toString())
-                    mapa.put("respuesta6",respuesta)
+                    mapa.put("pregunta6",respuesta)
+                    savePhoto("fotoPregunta6")
                 }
             }
             //You can get File object from intent

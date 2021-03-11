@@ -22,8 +22,8 @@
         android:id="@+id/imb_na1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_block_50"
         android:background="@android:color/transparent"
+        android:src="@drawable/ic_block_50"
         app:layout_constraintBottom_toBottomOf="@+id/imb_no1"
         app:layout_constraintEnd_toEndOf="@+id/textView6"
         app:layout_constraintStart_toEndOf="@+id/imb_no1"
@@ -33,11 +33,11 @@
         android:id="@+id/imb_no1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="@+id/imb_yes1"
         app:layout_constraintEnd_toStartOf="@+id/imb_na1"
         app:layout_constraintStart_toEndOf="@+id/imb_yes1"
         app:layout_constraintTop_toTopOf="@+id/imb_yes1"
-        android:background="@android:color/transparent"
         app:srcCompat="@mipmap/ic_cancel" />
 
     <ImageButton
@@ -82,7 +82,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imb_no1"
         app:layout_constraintStart_toStartOf="@+id/imb_no1"
-        app:layout_constraintTop_toBottomOf="@+id/imb_no1"/>
+        app:layout_constraintTop_toBottomOf="@+id/imb_no1" />
 
 
     <TextView
@@ -172,7 +172,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imb_no4"
         app:layout_constraintStart_toStartOf="@+id/imb_no4"
-        app:layout_constraintTop_toBottomOf="@+id/imb_no4"/>
+        app:layout_constraintTop_toBottomOf="@+id/imb_no4" />
 
     <ImageView
         android:id="@+id/img_question4"
@@ -248,15 +248,16 @@
             android:inputType="textAutoComplete"
             android:maxLines="2" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:text="@string/title_fachada"
-        android:textStyle="bold"
-        android:textSize="18sp"
         android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="parent" />
@@ -266,12 +267,33 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:enabled="false"
         android:text="Enviar datos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
-        app:layout_constraintStart_toStartOf="@+id/guideline7" />
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/tvProgressF" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tvProgressF"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/img_question4" />
+
+    <TextView
+        android:id="@+id/tvProgressF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="0%"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
