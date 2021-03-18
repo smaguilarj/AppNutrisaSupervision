@@ -133,13 +133,13 @@ class BarraFragment : Fragment() {
                 }
             ?.addOnCompleteListener{
                 //progressBar.visibility= View.INVISIBLE
-                Toast.makeText(requireContext(), "el porcentaje es 100%", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(requireContext(), "el porcentaje es 100%", Toast.LENGTH_SHORT).show()
             }
                 ?.addOnSuccessListener {
-                   Snackbar.make(requireView(), "success", Snackbar.LENGTH_SHORT).show()
+                   Snackbar.make(requireView(), "Completado", Snackbar.LENGTH_SHORT).show()
                 }
                 ?.addOnFailureListener {
-                    Snackbar.make(requireView(), "error al subir:", Snackbar.LENGTH_SHORT).show()
+                    Snackbar.make(requireView(), "Error al subir la foto", Snackbar.LENGTH_SHORT).show()
                 }
         }
     }

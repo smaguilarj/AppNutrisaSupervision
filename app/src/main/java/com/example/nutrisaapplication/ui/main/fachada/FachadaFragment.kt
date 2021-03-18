@@ -54,10 +54,10 @@ class FachadaFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        imb_yes1.setOnClickListener { tomaFoto(1);Log.d("respuesta","pregunta1: $pregunta respuesta1:$respuesta")}
-        imb_yes4.setOnClickListener { tomaFoto(2);Log.d("respuesta","pregunta2: $pregunta2 respuesta2:$respuesta2") }
-        imb_no1.setOnClickListener { tomaFoto(3);Log.d("respuesta","pregunta1: $pregunta respuesta1:$respuesta") }
-        imb_no4.setOnClickListener { tomaFoto(4);Log.d("respuesta","pregunta2: $pregunta2 respuesta2:$respuesta2") }
+        imb_yes1.setOnClickListener { tomaFoto(1);Log.d("respuesta","pregunta1: $pregunta respuesta1:$respuesta");habilitarBtn()}
+        imb_yes4.setOnClickListener { tomaFoto(2);Log.d("respuesta","pregunta2: $pregunta2 respuesta2:$respuesta2");habilitarBtn() }
+        imb_no1.setOnClickListener { tomaFoto(3);Log.d("respuesta","pregunta1: $pregunta respuesta1:$respuesta");habilitarBtn() }
+        imb_no4.setOnClickListener { tomaFoto(4);Log.d("respuesta","pregunta2: $pregunta2 respuesta2:$respuesta2");habilitarBtn() }
         imb_na1.setOnClickListener { pregunta=1; respuesta="NA";Log.d("respuesta","pregunta1: $pregunta respuesta1:$respuesta");completo1=true; habilitarBtn();mapa.put("pregunta1",respuesta) }
         imb_na4.setOnClickListener { pregunta2=2; respuesta2="NA";Log.d("respuesta","pregunta2: $pregunta2 respuesta2:$respuesta2");completo2=true; habilitarBtn(); mapa.put("pregunta2",respuesta2) }
         buttonFachada.isEnabled=false
@@ -118,7 +118,7 @@ class FachadaFragment : Fragment() {
                     Snackbar.make(requireView(), "Completado", Snackbar.LENGTH_SHORT).show()
                 }
                 ?.addOnFailureListener {
-                    Snackbar.make(requireView(), "Error al subir el archivo", Snackbar.LENGTH_SHORT).show()
+                    Snackbar.make(requireView(), "Error al subir la foto", Snackbar.LENGTH_SHORT).show()
                 }
         }
     }
