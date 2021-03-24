@@ -6,8 +6,9 @@ import com.google.android.gms.maps.model.LatLng
 
 
 fun LatLng.toLocation() = Location("").apply {
-    latitude = latitude
-    longitude = longitude
+    latitude=this.latitude
+    longitude=this.longitude
 }
 
 fun LatLng.distanceTo(latLng: LatLng) = toLocation().distanceTo(latLng.toLocation())
+ fun LatLng.algo()=""

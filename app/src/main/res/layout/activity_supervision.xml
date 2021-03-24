@@ -8,7 +8,7 @@
     android:background="@color/cardview_light_background"
     tools:context=".ui.main.supervision.SupervisionActivity">
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageView_logo"
         android:layout_width="0dp"
         android:layout_height="130dp"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/nutrisalogoverde" />
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imgVisitaRapida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
         app:layout_constraintStart_toStartOf="@+id/imgVisitaRapida"
         app:layout_constraintTop_toBottomOf="@+id/imgVisitaRapida" />
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imgViewOperaciones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
         app:layout_constraintStart_toStartOf="@+id/imgViewOperaciones"
         app:layout_constraintTop_toBottomOf="@+id/imgViewOperaciones" />
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imgViewRegional"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

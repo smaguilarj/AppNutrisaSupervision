@@ -119,9 +119,16 @@ class LoginActivity : AppCompatActivity() {
                         Toast.makeText(
                             this,
                             "error de datos verifica tu email o contraseña",
-                            Toast.LENGTH_SHORT
+                            Toast.LENGTH_LONG
+                        ).show()
+                        val error=task.getException()?.message
+                        Toast.makeText(
+                            this,
+                            "error: $error",
+                            Toast.LENGTH_LONG
                         ).show()
                     }
+
                     btn_submit.isEnabled=true
                 }
         }else{
