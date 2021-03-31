@@ -19,11 +19,14 @@ class LoginActivity : AppCompatActivity() {
 
     private var auth: FirebaseAuth
     var dataList = ArrayList<String>()
+    companion object {
+        const val EMIAL_INVALIDO = "no es un email valido"
+        const val OBLIGATORIO="Campo obligatorio"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        //prueba()
         println("la cadena es: " + subCadena(""))
         btn_submit.setOnClickListener {
             btn_submit.isEnabled= false
@@ -39,8 +42,7 @@ class LoginActivity : AppCompatActivity() {
     private fun validation() {
         et_user_name.setOnFocusChangeListener { view, b ->
             if(!Validations.isValidEmail(et_user_name.text.toString())) {
-            et_user_name.error="no es un email valido"
-            et_user_name.setError("no es un email valido")
+            et_user_name.error=EMIAL_INVALIDO
         }else{
                et_user_name.error = null
             }
@@ -49,31 +51,29 @@ class LoginActivity : AppCompatActivity() {
         et_user_name.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {
                 if (!Validations.isValidEmail(et_user_name.text.toString())) {
-                    et_user_name.error = "no es un email valido"
+                    et_user_name.error = EMIAL_INVALIDO
                 }
                 if (et_user_name.text.toString().isEmpty()) {
-                    et_user_name.setError("campo obligatorio");
+                    et_user_name.error = OBLIGATORIO
                 }
             }
 
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 if (!Validations.isValidEmail(et_user_name.text.toString())) {
-                    et_user_name.error = "no es un email valido"
-                    et_user_name.setError("no es un email valido")
+                    et_user_name.error = EMIAL_INVALIDO
                 }
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 if (!Validations.isValidEmail(et_user_name.text.toString())) {
-                    et_user_name.error = "no es un email valido"
-                    et_user_name.setError("no es un email valido")
+                    et_user_name.error = EMIAL_INVALIDO
                 }
             }
         })
         et_email.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {
                 if (et_email.getText().toString().isEmpty()) {
-                    et_email.setError("campo obligatorio");
+                    et_email.setError(OBLIGATORIO)
                 } else {
                     et_email.error = null
                 }
@@ -81,15 +81,15 @@ class LoginActivity : AppCompatActivity() {
 
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 if (et_email.getText().toString().isEmpty()) {
-                    et_email.setError("campo obligatorio");
+                    et_email.error = OBLIGATORIO
                 } else {
                     et_email.error = null
                 }
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                if (et_email.getText().toString().isEmpty()) {
-                    et_email.setError("campo obligatorio");
+                if (et_email.text.toString().isEmpty()) {
+                    et_email.error = OBLIGATORIO
                 } else {
                     et_email.error = null
                 }

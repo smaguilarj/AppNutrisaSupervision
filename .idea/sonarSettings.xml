@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="projectSettings">
+    <option name="alternativeWorkingDirPath" value="$PROJECT_DIR$" />
+    <option name="localAnalysisScripName" value="&lt;NO LOCAL ANALYSIS&gt;" />
+    <option name="resources">
+      <list>
+        <Resource>
+          <option name="key" value="com.example.nutrisaapplication" />
+          <option name="name" value="Nutrisa" />
+          <option name="qualifier" value="TRK" />
+        </Resource>
+      </list>
+    </option>
+    <option name="serverName" value="NutrisaApp" />
+    <option name="useAlternativeWorkingDir" value="true" />
+    <option name="workingDirSelection" value="&lt;PROJECT&gt;" />
+  </component>
+</project>

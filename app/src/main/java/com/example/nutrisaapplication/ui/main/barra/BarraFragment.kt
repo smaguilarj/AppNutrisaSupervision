@@ -98,7 +98,7 @@ class BarraFragment : Fragment() {
                             "se guardo correctamente",
                             Toast.LENGTH_LONG
                         ).show()
-                        Log.d("respuesta", "Documento escrito correctamente!")
+                        Log.d("respuesta", "Documento guardado!")
                     })
                     .addOnFailureListener(OnFailureListener { e ->
                         Log.d("respuesta", "Error al escribir el documento", e)
@@ -106,8 +106,6 @@ class BarraFragment : Fragment() {
             }
         }
     }
-
-
     private fun tomaFoto(code: Int) {
         ImagePicker.with(this)
             .cameraOnly()
@@ -131,10 +129,6 @@ class BarraFragment : Fragment() {
                     progressBar.progress= progress.toInt()
                     tvProgress.text= "Completado: $progress%"
                 }
-            ?.addOnCompleteListener{
-                //progressBar.visibility= View.INVISIBLE
-                //Toast.makeText(requireContext(), "el porcentaje es 100%", Toast.LENGTH_SHORT).show()
-            }
                 ?.addOnSuccessListener {
                    Snackbar.make(requireView(), "Completado", Snackbar.LENGTH_SHORT).show()
                 }
@@ -155,14 +149,12 @@ class BarraFragment : Fragment() {
                     img_question3.setImageURI(mPhotoUri);respuesta = "SI";pregunta = 7
                     Log.d("respuesta", "pregunta7: $pregunta respuesta7:$respuesta")
                     mapa.put("pregunta7", respuesta)
-                   // mapa.put("respuesta7", respuesta)
                     savePhoto("fotoPregunta7")
                 }
                 2 -> {
                     img_question4.setImageURI(mPhotoUri);respuesta = "SI";pregunta = 8
                     Log.d("respuesta", "pregunta8: $pregunta respuesta8:$respuesta")
                     mapa.put("pregunta8", respuesta)
-                    //mapa.put("respuesta8", respuesta)
                     savePhoto("fotoPregunta8")
                 }
                 3 -> {
