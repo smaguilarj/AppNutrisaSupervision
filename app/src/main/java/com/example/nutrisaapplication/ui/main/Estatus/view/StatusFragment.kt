@@ -32,6 +32,7 @@ class StatusFragment : Fragment() {
         siguiente.setOnClickListener {
             navigation.navigate(R.id.action_statusFragment_to_salidaVisitaRapidaFragment)
         }
+        textViewTienda.text = SharedApp.prefs.pdfname
     }
 
     override fun onResume() {

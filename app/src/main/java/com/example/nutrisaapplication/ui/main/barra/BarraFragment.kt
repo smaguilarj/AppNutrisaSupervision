@@ -79,10 +79,7 @@ class BarraFragment : Fragment() {
             mapa.put("pregunta9", respuesta)
         }
         img_na14.setOnClickListener {
-            pregunta = 10; respuesta = "NA";Log.d(
-            "respuesta",
-            "pregunta: $pregunta respuesta:$respuesta"
-        )
+            pregunta = 10; respuesta = "NA";Log.d("respuesta", "pregunta: $pregunta respuesta:$respuesta")
             mapa.put("pregunta10", respuesta)
         }
 

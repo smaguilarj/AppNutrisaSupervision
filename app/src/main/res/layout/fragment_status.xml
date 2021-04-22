@@ -91,13 +91,15 @@
 
     <TextView
         android:id="@+id/textViewTienda"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center_horizontal"
         android:text="4 PRUEBAS IT-NAUCALPAN-NORTE GOLFO-ANTONIO"
         android:textColor="@color/primaryTextColor"
-        app:layout_constraintEnd_toEndOf="@+id/textViewTitle"
-        app:layout_constraintStart_toStartOf="@+id/textViewTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
 
     <TextView
