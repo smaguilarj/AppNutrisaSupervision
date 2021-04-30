@@ -17,3 +17,5 @@ Oapp/src/main/java/com/example/nutrisaapplication/ui/main/barra/BarraFragment.kt
 Xapp/src/main/java/com/example/nutrisaapplication/ui/main/bodega/BodegaPizarraFragment.kt,9/6/96f8575b12b5044c1206d2ad4dabefa13922bf6a
 }
 Mapp/src/main/java/com/example/nutrisaapplication/ui/main/caja/CajaFragment.kt,2/5/2588ef9e3d47df8c1e3d6a6bcd94b29a4cb2a9bf
+‡
+Wapp/src/main/java/com/example/nutrisaapplication/ui/main/Estatus/view/StatusFragment.kt,0/9/09d3fdd5379dba5e1f6014e82909149d9923bdad

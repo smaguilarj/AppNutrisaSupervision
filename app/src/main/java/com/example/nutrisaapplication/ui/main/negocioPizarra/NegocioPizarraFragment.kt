@@ -238,9 +238,6 @@ class NegocioPizarraFragment : Fragment() {
         var status7 = "VISIBLE"
         var status8 = "VISIBLE"
         var status9 = "VISIBLE"
-       /* var status10 = "VISIBLE"
-        var status11 = "VISIBLE"
-        var status12 = "VISIBLE"*/
 
         imageButton40.setOnClickListener {
             if (status == "VISIBLE") {
