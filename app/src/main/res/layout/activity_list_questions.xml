@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
     android:backgroundTint="@color/common_google_signin_btn_text_dark_pressed"
     android:background="@color/common_google_signin_btn_text_dark_pressed"
     tools:context=".ui.main.inicioVisitaLarga.VisitaLargaActivity">
@@ -135,7 +143,6 @@
         android:id="@+id/layoutNombre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginBottom="1dp"
         android:textColorHint="#818181"
         android:visibility="visible"
@@ -198,17 +205,17 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layout_comentarios"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:layout_marginBottom="110dp"
         android:textColorHint="#818181"
         android:visibility="visible"
         app:counterEnabled="true"
         app:counterMaxLength="40"
         app:errorEnabled="true"
         app:hintTextColor="@color/primaryTextColor"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintBottom_toTopOf="@+id/imgBtn_mapa"
         app:layout_constraintEnd_toEndOf="@+id/spinner_tiendaL"
         app:layout_constraintStart_toStartOf="@+id/spinner_tiendaL"
         app:layout_constraintTop_toBottomOf="@+id/layout_responsable">
@@ -241,8 +248,10 @@
 
     <ImageButton
         android:id="@+id/imgBtn_mapa"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonVisitaRapida"
         app:layout_constraintEnd_toEndOf="@+id/layout_comentarios"
         app:layout_constraintStart_toStartOf="@+id/layout_comentarios"
@@ -250,3 +259,4 @@
         app:srcCompat="@drawable/ic_mapa" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
